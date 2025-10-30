@@ -1,460 +1,2459 @@
+@include('layouts.mainsite.header')
 
-                          @include('layouts.mainsite.header')
+<div id="Main-Sec" class="main-section">
+    <div class="container-block">
+        <div class="main-block">
+            <div class="dop-main-block">
+                <div class="main-title-block">
+                    <h1 class="h1">POWERING<br>YOUR DAILY</h1>
+                    <div class="div-block-7">
+                        <h2 class="heading-2"><span class="text-span-9">
+                            </span>CRYPTO<span class="text-span-10"> </span><span
+                                class="text-span-11">RETURNS</span></h2>
+                    </div>
+                </div>
+                <div class="maiin-sec-buttons">
 
-<div class="hero">
-<div class="container">
-    <div class="row">
-        <div class="col-md-2 mb-3 mb-md-0">
-            <div class="social">
-                <!-- <a href="https://t.me/XYOLOW_FAM" target="_blank">
-                <img src="{{asset('')}}assets/images/tg.png" style="max-width: 1.7rem;">
-                </a>
-                <a href="https://t.me/XYOFLOW_HELPTEAM" target="_blank">
-                <img src="{{asset('')}}assets/images/tg.png" style="max-width: 1.7rem;">
-                </a>
-                <a href="https://x.com/FlowXyoFam" target="_blank">
-                <img src="{{asset('')}}assets/images/tw.png" style="max-width: 1.9rem;">
-                </a>
-                <a href="https://h-metrics.com/project/Helix Fund.com/" target="_blank">
-                <img src="{{asset('')}}assets/images/hm.png" style="max-width: 1.7rem;">
-                </a> -->
-            </div>
-        </div>
-        <div class="col-md-9 mb-3 mb-md-0">
-            <h1 style="null">Your <span class="gradient-text">Gateway</span> to <br> Consistent <span class="gradient-text">Crypto </span> Flow</h1>
-            <p class="text-center" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Join the next generation of crypto investors and grow your wealth in the
-                Helix Fund ecosystem.</p>
-            <div class="d-flex justify-content-center">
-                <a href="{{route('register')}}" class="button" style="translate: none; rotate: none; scale: none; transform: translate(0px, 20px); opacity: 1;">Join Us</a>
-            </div>
-        </div>
-        <div class="col-md-2 mb-3 mb-md-0"></div>
-    </div>
-</div>
-</div>
-<div class="about-us">
-<div class="container">
-    <div class="row mb-6">
-        <div class="col-12 text-start">
-            <h2 style="translate: none; rotate: none; scale: none;  transform: translate(0px, 30px);margin-bottom: 50px;">About <span class="gradient-text">Us</span></h2>
-            <a href="{{route('about-us')}}" class="text-white">Read More →</a>
-        </div>
-    </div>
-    <div class="row g-4">
-        <div class="col-md-8">
-            <div class="card h-100 bento-card featured" style="translate: none; rotate: none; scale: none;  transform: translate(0px, 50px);">
-                <div class="card-body">
-                    <div class="card-icon">
-                        <i class="bx bx-line-chart" style="font-size: 2rem; color: #72a1de"></i>
-                    </div>
-                    <h3>Investment Excellence</h3>
-                    <p>Helix Fund is a modern crypto investment platform designed for those who value speed, transparency, and consistent returns. Our mission is to simplify high-yield investing by offering automated, reliable, and well-structured plans that fit both beginners and experienced users.</p>
-                    <p>Founded by a team of crypto traders and blockchain enthusiasts, Helix Fund was built to give people an opportunity to grow their capital through carefully calculated strategies. We focus on short- and mid-term investment cycles, ensuring daily or hourly profitability, depending on the plan you choose.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 bento-card" style="translate: none; rotate: none; scale: none;  transform: translate(0px, 50px);">
-                <div class="card-body">
-                    <div class="card-icon">
-                        <i class="bx bx-shield-quarter" style="font-size: 2rem; color: #72a1de"></i>
-                    </div>
-                    <h4>Security First</h4>
-                    <p>Bank-grade security protocols protecting your assets 24/7</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 bento-card" style="translate: none; rotate: none; scale: none;  transform: translate(0px, 50px);">
-                <div class="card-body">
-                    <div class="card-icon">
-                        <i class="bx bx-support" style="font-size: 2rem; color: #72a1de"></i>
-                    </div>
-                    <h4>Online Help Team</h4>
-                    <p>Expert assistance available round the clock for all your needs</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="card h-100 bento-card" style="translate: none; rotate: none; scale: none;  transform: translate(0px, 50px);">
-                <div class="card-body">
-                    <div class="card-icon">
-                        <i class="bx bx-wallet" style="font-size: 2rem; color: #72a1de"></i>
-                    </div>
-                    <h3>Diverse Portfolio</h3>
-                    <p>With a commitment to clear communication, instant withdrawals, and a smooth user experience, Helix Fund brings together technology, trust, and performance — all in one seamless platform. Our community grows every day, and we’re excited to help more people stay in the flow of the crypto world.
-                    </p>
+                    <a href="{{route('login')}}"
+                        class="get-button get-button--alt">
+                        <div class="text-block-3">SIGN UP</div>
+                        <div class="div-block-8">
+                            <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
+                                loading="lazy" alt class="image-7">
+                            <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                loading="lazy" alt class="image-7 dops">
+                        </div>
+                    </a>
+
+                    <a href="{{route('login')}}" class="get-button" style>
+                        <div class="text-block-3" style>SIGN IN</div>
+                        <div class="div-block-8">
+                            <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
+                                loading="lazy" alt class="image-7" style>
+                            <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                loading="lazy" alt class="image-7 dops" style>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
+    <div class="div-block-66">
+        <div class="html-embed">
+            <video
+                class="BackMainSec video-bg"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                poster="{{asset('')}}assets/Model_1.webp">
 
-<section class="unique-section">
-    <div class="container">
-        <div class="text-center">
-        <h1>Investment <span class="gradient-text">Plans</span></h1>
-        <p class="lead mt-4 mb-5" style="color: rgba(255, 255, 255, 0.9); max-width: 800px; margin: 0 auto;">
-            Choose the perfect investment strategy to maximize your crypto earnings
-        </p>
+                <source src="{{asset('')}}assets/Model_1.mp4" type="video/mp4">
+
+                <source src="{{asset('')}}assets/Model_1.webm" type="video/webm">
+            </video>
+            <noscript><img src="{{asset('')}}assets/Model_1.webp"
+                    alt="Temining video"></noscript>
+
+        </div>
     </div>
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <div class="card h-100 bento-card plan-card" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                    <div class="card-body text-center">
-                        <div class="card-icon mx-auto">
-                            <i class="bx bx-rocket" style="font-size: 2.5rem; color: #72a1de"></i>
-                        </div>
-                        <h3 class="gradient-text mb-4">HF-1</h3>
-                        <div class="price-wrap mb-4">
-                        <span class="price">1.25-1.50</span>
-                        <span class="currency">%</span>
-                        </div>
-                        <ul class="features-list">
-                            <li><i class="bx bx-check"></i> Daily Return</li>
-                            <li><i class="bx bx-check"></i>  2 Trade Assigned</li>
-                            <li><i class="bx bx-check"></i>No referrals Needed</li>
-                            <li><i class="bx bx-check"></i> Deposit $10 - $100</li>
-                            <li><i class="bx bx-check"></i> Min Withdrawal : $10</li>
-                        </ul>
-                        <a href="{{route('register')}}" class="button mt-4">Start Investing</a>
-                    </div>
-                </div>
-            </div>
+    <div class="div-block-68">
+        <a href="https://t.me/temining_group" class="link-block">
+            <div class="text-block-17">Chat Telegram</div>
+        </a>
+    </div>
+</div>
+</div>
 
-            <div class="col-lg-4">
-                <div class="card h-100 bento-card plan-card featured" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                    <div class="card-body text-center">
-                        <div class="card-icon mx-auto">
-                            <i class="bx bx-diamond" style="font-size: 2.5rem; color: #72a1de"></i>
-                        </div>
-                        <h3 class="gradient-text mb-4">HF -2</h3>
-                        <div class="price-wrap mb-4">
-                            <span class="price">1.55-2.00</span>
-                            <span class="currency">%</span>
-                        </div>
-                        <ul class="features-list">
-                             <li><i class="bx bx-check"></i> Daily Return</li>
-                            <li><i class="bx bx-check"></i> 4 Trade Assigned</li>
-                            <li><i class="bx bx-check"></i> Requires 5 Valid referrals</li>
-                            <li><i class="bx bx-check"></i> Deposit $200 - $300</li>
-                            <li><i class="bx bx-check"></i> Min Withdrawal : $10</li>
-                        </ul>
-                        <a href="{{route('register')}}" class="button mt-4">Start Investing</a>
-                    </div>
+<section class="statistics-section">
+    <h2 class="statistics-heading">PROJECT STATISTICS</h2>
+    <div class="slider-wrapper">
+        <div class="statistics-container">
+            <div class="stat-item">
+                <div class="stat-value">
+                    <span class="stat-number">604</span>
                 </div>
+                <div class="stat-label">Registered Users</div>
             </div>
-
-            <div class="col-lg-4">
-                <div class="card h-100 bento-card plan-card" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                    <div class="card-body text-center">
-                        <div class="card-icon mx-auto">
-                            <i class="bx bx-crown" style="font-size: 2.5rem; color: #72a1de"></i>
-                        </div>
-                        <h3 class="gradient-text mb-4">HF-3</h3>
-                        <div class="price-wrap mb-4">
-                            <span class="price">2.25-2.50</span>
-                            <span class="currency">%</span>
-                        </div>
-                        <ul class="features-list">
-                            <li><i class="bx bx-check"></i> Daily Return</li>
-                            <li><i class="bx bx-check"></i> 6 Trade Assigned</li>
-                            <li><i class="bx bx-check"></i> Requires 10 Valid referrals</li>
-                            <li><i class="bx bx-check"></i> Deposit $400 - $500</li>
-                            <li><i class="bx bx-check"></i> Min Withdrawal : $10</li>
-                        </ul>
-                        <a href="{{route('register')}}" class="button mt-4">Start Investing</a>
-                    </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-value">
+                    <span class="stat-number">74730.96</span> USD
                 </div>
+                <div class="stat-label">Total Invested</div>
             </div>
-            
-          
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-value">
+                    <span class="stat-number">40161.43</span> USD
+                </div>
+                <div class="stat-label">Total Withdrawn</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <div class="stat-value">
+                    <span class="stat-number">5</span>
+                </div>
+                <div class="stat-label">Days Online</div>
+            </div>
         </div>
     </div>
 </section>
 
-<!--
-<div class="statistics">
-<div class="container">
-    <div class="row">
-        <div class="col-md-3 mb-3 mb-md-0">
-            <div class="stats-item">
-                <div class="stats-icon">
-                    <i class='bx bx-calendar'></i>
-                </div>
-                <div class="d-block">
-                    <h4 class="m-0 gradient-text">1</h4>
-                    <p class="m-0">Days Online</p>
-                </div>
-            </div>
+<section id="services" class="services-section">
+    <div class="container-block services-cont">
+        <div class="services-block-back" style>
+            <h3 class="heading-3">OUR SERVICES</h3>
         </div>
-        <div class="col-md-3 mb-3 mb-md-0">
-            <div class="stats-item">
-                <div class="stats-icon">
-                    <i class='bx bx-user-voice'></i>
+        <div class="serv-appl-block">
+            <div class="div-block-87" bis_skin_checked="1">
+                <div class="serv-application" style>
+                    <div class="image-appl">
+                        <img src="{{asset('')}}assets/cloudminng.webp" loading="lazy" alt
+                            class="image">
+                    </div>
+                    <h4 class="h-appl">CLOUD <br> MINING</h4>
+                    <p class="text-appl">Rent the power of our equipment and earn
+                        income without purchasing and setting up your own farms.</p>
+                    <div class="buttton-appl" bis_skin_checked="1">
+                        <a href="about/index.html" class="div-block-15 w-inline-block">
+                            <div class="text-block-6" bis_skin_checked="1">Learn
+                                more</div>
+                            <div class="div-block-8 dop-serv" bis_skin_checked="1">
+                                <div class="div-block-59" style bis_skin_checked="1"></div>
+                                <img src="{{asset('')}}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
+                                    loading="lazy" alt class="image-11">
+                                <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                    loading="lazy" alt class="image-dop">
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="d-block">
-                    <h4 class="m-0 gradient-text"></h4>
-                    <p class="m-0">Total Investors</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-3 mb-md-0">
-            <div class="stats-item">
-                <div class="stats-icon">
-                    <i class='bx bxs-wallet-alt'></i>
-                </div>
-                <div class="d-block">
-                <span>$</span><h4 class="m-0 gradient-text"></h4>
-                    <p class="m-0">Investments</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 mb-3 mb-md-0">
-            <div class="stats-item">
-                <div class="stats-icon">
-                    <i class='bx bx-wallet' ></i>
-                </div>
-                <div class="d-block">
-                <span>$</span><h4 class="m-0 gradient-text"></h4>
-                    <p class="m-0">Paidout</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<div class="transacrions">
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 mb-3 mb-md-0">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Latest Deposits</h3>
-                </div>
-                <div class="card-body">
-                                    
-                                    </div>
-            </div>
-        </div>
-        <div class="col-md-6 mb-3 mb-md-0">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Latest Withdrawals</h3>
-                </div>
-                <div class="card-body">
-                                    
-                                    </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
--->
 
-
-<div class="referrals">
-<div class="container">
-    <div class="row mb-4">
-        <div class="col-12 text-center">
-            <h2 style="translate: none; rotate: none; scale: none;   transform: translate(0px, 30px);">Referral Program</h2>
-            <p class="lead" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 20px);">Earn extra rewards by inviting other people. </p><h3 class="gradient-text">Referral rewards include balance reinvests.</h3><p></p>
-        </div>
-    </div>
-    <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card h-100 bento-card referral-card" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                <div class="card-body text-center">
-                    <div class="card-icon">
-                        <i class="bx bx-medal" style="font-size: 2.5rem; color: #72a1de"></i>
+                <div class="serv-application">
+                    <div class="image-appl">
+                        <img src="{{asset('')}}assets/plansicons.webp" loading="lazy" alt
+                            class="image">
                     </div>
-                    <h3 class="gradient-text">Level 1</h3>
-                    <div class="commission">
-                        <span class="percentage">5%</span>
-                        <p class="mb-3">Level Referral Commission</p>
+                    <h4 class="h-appl">INVESMENT <br> PLANS</h4>
+                    <p class="text-appl"> Flexible rates for any budget. Choose the
+                        best contract and start earning today.</p>
+                    <div class="buttton-appl" bis_skin_checked="1">
+                        <a href="#plans" class="div-block-15 w-inline-block">
+                            <div class="text-block-6" bis_skin_checked="1">Learn
+                                more</div>
+                            <div class="div-block-8 dop-serv" bis_skin_checked="1">
+                                <div class="div-block-59" style bis_skin_checked="1"></div>
+                                <img src="{{asset('')}}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
+                                    loading="lazy" alt class="image-11">
+                                <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                    loading="lazy" alt class="image-dop">
+                            </div>
+                        </a>
                     </div>
-                    <p>Earn a 5% commission on the earnings of your direct referrals (Team Referrals 1)</p>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 bento-card referral-card featured" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                <div class="card-body text-center">
-                    <div class="card-icon">
-                        <i class="bx bxs-medal" style="font-size: 2.5rem; color: #72a1de"></i>
+            <div class="div-block-87" bis_skin_checked="1">
+                <div class="serv-application">
+                    <div class="image-appl">
+                        <img src="{{asset('')}}assets/63fb03c555817f411e0a6c6a_Tech%20Support.webp"
+                            loading="lazy" alt class="image">
                     </div>
-                    <h3 class="gradient-text">Level 2</h3>
-                    <div class="commission">
-                        <span class="percentage">10%</span>
-                        <p class="mb-3">Second Level Commission</p>
+                    <h4 class="h-appl">SECURITY & <br> SUPPORT</h4>
+                    <p class="text-appl"> Modern encryption protocols and
+                        round-the-clock monitoring for complete protection of your
+                        assets.</p>
+                    <div class="buttton-appl" bis_skin_checked="1">
+                        <a href="#contact" class="div-block-15 w-inline-block">
+                            <div class="text-block-6" bis_skin_checked="1">Learn
+                                more</div>
+                            <div class="div-block-8 dop-serv" bis_skin_checked="1">
+                                <div class="div-block-59" style bis_skin_checked="1"></div>
+                                <img src="{{asset('')}}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
+                                    loading="lazy" alt class="image-11">
+                                <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                    loading="lazy" alt class="image-dop">
+                            </div>
+                        </a>
                     </div>
-                    <p>Earn a 2% commission on the earnings of your direct referrals (Team Referrals 2)</p>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 bento-card referral-card" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                <div class="card-body text-center">
-                    <div class="card-icon">
-                        <i class="bx bxs-badge-check" style="font-size: 2.5rem; color: #72a1de"></i>
+                <div class="serv-application">
+                    <div class="image-appl">
+                        <img src="{{asset('')}}assets/63fb03c5284d872b691b47d9_Consulting.webp"
+                            loading="lazy" alt class="image">
                     </div>
-                    <h3 class="gradient-text">Level 3</h3>
-                    <div class="commission">
-                        <span class="percentage">15%</span>
-                        <p class="mb-3">Third Level Commission</p>
-                    </div>
-                    <p>Earn a 15% commission on the earnings of your direct referrals (Team Referrals 3)</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-     <div class="row g-4">
-        <div class="col-md-4">
-            <div class="card h-100 bento-card referral-card" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                <div class="card-body text-center">
-                    <div class="card-icon">
-                        <i class="bx bx-medal" style="font-size: 2.5rem; color: #72a1de"></i>
-                    </div>
-                    <h3 class="gradient-text">Level 4</h3>
-                    <div class="commission">
-                        <span class="percentage">20%</span>
-                        <p class="mb-3">Level Referral Commission</p>
-                    </div>
-                    <p>Earn a 20% commission on the earnings of your direct referrals (Team Referrals 4)</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 bento-card referral-card featured" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                <div class="card-body text-center">
-                    <div class="card-icon">
-                        <i class="bx bxs-medal" style="font-size: 2.5rem; color: #72a1de"></i>
-                    </div>
-                    <h3 class="gradient-text">Level 5</h3>
-                    <div class="commission">
-                        <span class="percentage">25%</span>
-                        <p class="mb-3">Second Level Commission</p>
-                    </div>
-                    <p>Earn a 25% commission on the earnings of your direct referrals (Team Referrals 5)</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 bento-card referral-card" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                <div class="card-body text-center">
-                    <div class="card-icon">
-                        <i class="bx bxs-badge-check" style="font-size: 2.5rem; color: #72a1de"></i>
-                    </div>
-                    <h3 class="gradient-text">Level 6</h3>
-                    <div class="commission">
-                        <span class="percentage">30%</span>
-                        <p class="mb-3">Third Level Commission</p>
-                    </div>
-                    <p>Earn a 30% commission on the earnings of your direct referrals (Team Referrals 6)</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="col-md-4">
-            <div class="card h-100 bento-card referral-card" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                <div class="card-body text-center">
-                    <div class="card-icon">
-                        <i class="bx bxs-badge-check" style="font-size: 2.5rem; color: #72a1de"></i>
-                    </div>
-                    <h3 class="gradient-text">Level 7</h3>
-                    <div class="commission">
-                        <span class="percentage">35%</span>
-                        <p class="mb-3">Third Level Commission</p>
-                    </div>
-                    <p>Earn a 35% commission on the earnings of your direct referrals (Team Referrals 7)</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row " style="margin-top: 80px;">
-        <div class="col-12 text-center">
-            <a href="{{route('register')}}" class="button">Start Earning Now</a>
-        </div>
-    </div>
-</div>
-</div>
-<div class="cta-section">
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <div class="card bento-card featured text-center" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 50px);">
-                <div class="card-body">
-                    <h2>Ready to Start Your <span class="gradient-text">Crypto Journey?</span></h2>
-                    <p class="lead mb-4">Join thousands of successful investors in the Helix Fund ecosystem</p>
-                    <div class="cta-buttons">
-                        <a href="{{route('register')}}" class="button" style="translate: none; rotate: none; scale: none;   transform: translate(0px, 30px);">Create Account</a>
+                    <h4 class="h-appl">DASHBOARD & PAYOUTS</h4>
+                    <p class="text-appl">Track your income in real time and withdraw
+                        funds conveniently through our platform.</p>
+                    <div class="buttton-appl" bis_skin_checked="1">
+                        <a href="login/index.html" class="div-block-15 w-inline-block">
+                            <div class="text-block-6" bis_skin_checked="1">Learn
+                                more</div>
+                            <div class="div-block-8 dop-serv" bis_skin_checked="1">
+                                <div class="div-block-59" style bis_skin_checked="1"></div>
+                                <img src="{{asset('')}}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
+                                    loading="lazy" alt class="image-11">
+                                <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                    loading="lazy" alt class="image-dop">
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+<div id="About-Sec" class="about-section">
+    <div class="container-block about-cont">
+        <div class="about-block">
+            <div class="about-block-dop" style>
+                <h3 class="heading-4">ABOUT</h3>
+                <div class="div-block-20">
+                    <h2 class="heading-5">EXPERTS IN </h2>
+                    <h2 class="heading-6">PROFIT <span
+                            class="text-span-2">GENERATION</span></h2>
+                </div>
+                <div class="div-block-19">
+                    <p class="paragraph-2">TeMining was founded by a team of
+                        blockchain veterans and financial analysts with one goal in
+                        mind: to maximize your profits in the digital asset market. We
+                        combine powerful and energy-efficient equipment with
+                        cutting-edge analytics to ensure that our capacity is always
+                        focused on mining the most profitable cryptocurrencies. We are
+                        your strategic partner in the world of finance, providing a
+                        secure and transparent platform for generating stable passive
+                        income.</p>
+                </div>
+                <div class="div-block-58">
+                    <a href="about/index.html"
+                        class="get-button dop-get-button w-inline-block">
+                        <div class="text-block-3 tb3">Learn more</div>
+                        <div class="div-block-8 db8">
+                            <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
+                                loading="lazy"
+                                data-w-id="70ea1f66-2daa-d3dd-db2a-33322b23b5a2" alt
+                                class="image-7">
+                            <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                loading="lazy"
+                                data-w-id="70ea1f66-2daa-d3dd-db2a-33322b23b5a3" alt
+                                class="image-7 dops">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="div-block-66-copy">
+        <div class="w-embed">
+
+            <video
+                class="BackAboutSec"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                poster="{{asset('')}}assets/Model_2.webp">
+
+                <source src="{{asset('')}}assets/Model_2.mp4" type="video/mp4">
+
+                <source src="{{asset('')}}assets/Model_2.webm" type="video/webm">
+            </video>
+            <noscript><img src="{{asset('')}}assets/Model_2.webp"
+                    alt="Temining video"></noscript>
+
+        </div>
+    </div>
+    <div class="div-block-75">
+        <div class="lottie-animation-5"
+            data-w-id="9e693724-b351-43fc-33d5-91147a7006fa"
+            data-animation-type="lottie"
+            data-src="https://temining.cc/imagen/640a0cdc3c34ed31367ec789_3_section_4_fly_window%20(1).json"
+            data-loop="1" data-direction="1" data-autoplay="1"
+            data-is-ix2-target="0" data-renderer="svg" data-default-duration="6"
+            data-duration="0"></div>
+    </div>
+    <div class="div-block-78">
+        <div class="div-block-79">
+            <div class="lottie-animation-6"
+                data-w-id="49c1f7d6-7cc6-5a1f-f7e7-2062c40e8a86"
+                data-animation-type="lottie"
+                data-src="https://temining.cc/imagen/640a0ce0a873b651b9b19855_3_section_3_fly_window%20(2).json"
+                data-loop="1" data-direction="1" data-autoplay="1"
+                data-is-ix2-target="0" data-renderer="svg" data-default-duration="4"
+                data-duration="0"></div>
+        </div>
+    </div>
 </div>
+
+<div id="news" class="news-section">
+
+    <div class="container-block plans-cont" id="plans">
+        <div class="plans-head">
+            <h2 class="heading-5">Tariff Plans</h2>
+        </div>
+
+        <div class="plans-grid">
+            <a href="login/index.html" class="plan-card w-inline-block">
+                <img class="plan-decor" src="{{asset('')}}assets/plan1.webp" alt />
+                <div>
+                    <div class="plan-percent">4.5% Hourly</div>
+                    <div class="plan-term">108% Total return after 24 hours</div>
+                    <div class="plan-accrual">Investment amount: $10 - $100000</div>
+                    <div class="plan-accrual">Accruals: 4.5% every hour</div>
+                    <div class="plan-accrual">Net profit: 8%</div>
+                    <div class="plan-accrual">Principal return: Included in
+                        payments</div>
+                    <div class="plan-accrual">Withdrawal: Instant</div>
+                </div>
+
+                <div class="plan-cta">
+                    <div class="get-button">
+                        <div class="text-block-3">INVEST NOW</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="login/index.html" class="plan-card w-inline-block">
+                <img class="plan-decor" src="{{asset('')}}assets/plan2.webp" alt />
+                <div>
+                    <div class="plan-percent">114%</div>
+                    <div class="plan-term">After 1 day</div>
+                    <div class="plan-accrual">Investment amount: $10 - $100000</div>
+                    <div class="plan-accrual">Accruals: 114% after 1 day</div>
+                    <div class="plan-accrual">Net profit: 14%</div>
+                    <div class="plan-accrual">Principal return: Included in
+                        payments</div>
+                    <div class="plan-accrual">Withdrawal: Instant</div>
+                </div>
+                <div class="plan-cta">
+                    <div class="get-button">
+                        <div class="text-block-3">INVEST NOW</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="login/index.html" class="plan-card w-inline-block">
+                <img class="plan-decor" src="{{asset('')}}assets/plan3.webp" alt />
+                <div>
+                    <div class="plan-percent">300%</div>
+                    <div class="plan-term">After 7 days</div>
+                    <div class="plan-accrual">Investment amount: $10 - $100000</div>
+                    <div class="plan-accrual">Accruals: once every 7 days</div>
+                    <div class="plan-accrual">Net profit: 200%</div>
+                    <div class="plan-accrual">Principal return: Included in
+                        payments</div>
+                    <div class="plan-accrual">Withdrawal: Instant</div>
+                </div>
+                <div class="plan-cta">
+                    <div class="get-button">
+                        <div class="text-block-3">INVEST NOW</div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="login/index.html" class="plan-card w-inline-block">
+                <img class="plan-decor" src="{{asset('')}}assets/plan4.webp" alt />
+                <div>
+                    <div class="plan-percent">1200%</div>
+                    <div class="plan-term">After 12 days</div>
+                    <div class="plan-accrual">Investment amount: $10 - $100000</div>
+                    <div class="plan-accrual">Accruals: once every 12 days</div>
+                    <div class="plan-accrual">Net profit: 1100%</div>
+                    <div class="plan-accrual">Principal return: Included in
+                        payments</div>
+                    <div class="plan-accrual">Withdrawal: Instant</div>
+                </div>
+                <div class="plan-cta">
+                    <div class="get-button">
+                        <div class="text-block-3">INVEST NOW</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="div-block-67" bis_skin_checked="1">
+        <div class="w-embed"
+            bis_skin_checked="1">
+
+            <video
+                class="BackNews video-bg"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                poster="{{asset('')}}assets/Model_3.webp">
+
+                <source src="{{asset('')}}assets/Model_3.mp4" type="video/mp4">
+
+                <source src="{{asset('')}}assets/Model_3.webm" type="video/webm">
+            </video>
+            <noscript><img src="{{asset('')}}assets/Model_3.webp"
+                    alt="Temining video"></noscript>
+
+            <style>
+                .BackNews {
+                    height: 100%;
+                    width: 900px;
+                    object-fit: cover;
+                }
+            </style>
+        </div>
+    </div>
+    <div class="div-block-76" bis_skin_checked="1"></div>
+
 </div>
-          @include('layouts.mainsite.footer')
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-<script src="{{asset('')}}assets/js/gsap.min.js"></script>
-<script src="{{asset('')}}assets/js/ScrollTrigger.min.js"></script>
-<script src="{{asset('')}}assets/js/SplitText.min.js"></script>
-<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-<script src="{{asset('')}}assets/js/app.js"></script>
+<style>
 
+</style>
 
-<script>
-    window.addEventListener('load', function() {
-    // All resources (images, scripts, stylesheets, etc.) are loaded
-    const preloaderContainer = document.querySelector('.preloader-container');
-    const content = document.querySelector('.content');
+<section id="referral" class="referral-section">
+    <div id="particles-js"></div>
 
-    if (preloaderContainer) {
-        // Add the 'hidden' class to trigger the fade-out animation
-        preloaderContainer.classList.add('hidden');
+    <div class="referral-container">
+        <div class="referral-block-back">
+            <h3 class="heading-3">REFERRAL PROGRAM</h3>
+            <p class="paragraph-referral">
+                Invite new investors and earn passive income. Your reward depends on
+                the level in your structure.
+            </p>
+            <div class="referral-button-wrapper" style="display: none;">
+                <a href="#contact" class="get-button referral-button">
+                    <div class="text-block-3">Get Your Link</div>
+                    <div class="div-block-8">
+                        <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
+                            loading="lazy" alt class="image-7">
+                    </div>
+                </a>
+            </div>
+        </div>
 
-        // Optional: If you want to completely remove the preloader from the DOM
-        // after the transition, you can listen for the 'transitionend' event.
-        preloaderContainer.addEventListener('transitionend', function() {
-            if (preloaderContainer.style.opacity === '0' || getComputedStyle(preloaderContainer).opacity === '0') {
-                 preloaderContainer.style.display = 'none'; // Or preloaderContainer.remove();
-            }
-        }, { once: true }); // {once: true} ensures the event listener is removed after it fires
-    }
+        <div class="referral-levels-container">
+            <div class="referral-card">
+                <div class="referral-level-title">Level 1</div>
+                <div class="referral-percentage">7%</div>
+                <p class="referral-description">From the deposits of personally
+                    invited partners.</p>
+            </div>
+            <div class="referral-card">
+                <div class="referral-level-title">Level 2</div>
+                <div class="referral-percentage">2%</div>
+                <p class="referral-description">From deposits of partners invited by
+                    your referrals.</p>
+            </div>
+            <div class="referral-card">
+                <div class="referral-level-title">Level 3</div>
+                <div class="referral-percentage">1%</div>
+                <p class="referral-description">From deposits of third-level
+                    partners in your structure.</p>
+            </div>
+        </div>
+    </div>
+    <div class="referral-button-wrapper desktop-only">
+        <a href="login/index.html" class="get-button referral-button">
+            <div class="text-block-3">Get Your Link</div>
+            <div class="div-block-8">
+                <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
+                    loading="lazy" alt class="image-7">
+            </div>
+        </a>
+    </div>
+</section>
 
-    if (content) {
-        content.style.display = 'block'; // Or any other display type you need, e.g., 'flex'
-        // If you used opacity for content:
-        // content.style.opacity = '1';
-        // content.style.visibility = 'visible';
-    }
-});
+<script defer>
+    (() => {
+        const DUR = 420;
+        const EASE = 'cubic-bezier(.2,.7,.2,1)';
+        const readVar = (el, name, fb) => (getComputedStyle(el).getPropertyValue(name).trim() || fb);
 
-// Fallback in case 'load' event doesn't fire or takes too long (e.g., for broken images)
-// You might want to adjust the timeout duration
-setTimeout(function() {
-    const preloaderContainer = document.querySelector('.preloader-container');
-    const content = document.querySelector('.content');
+        const baseTf = (el) => (getComputedStyle(el).transform === 'none' ? '' : getComputedStyle(el).transform);
+        const tfAdd = (base, extra) => (base ? base + ' ' : '') + extra;
 
-    if (preloaderContainer && !preloaderContainer.classList.contains('hidden')) {
-        console.warn("Preloader timeout reached. Forcing hide.");
-        preloaderContainer.classList.add('hidden');
-        if (preloaderContainer.style.opacity === '0' || getComputedStyle(preloaderContainer).opacity === '0') {
-            preloaderContainer.style.display = 'none';
-        }
-        if (content) {
-            content.style.display = 'block';
-        }
-    }
-}, 10000); // 10 seconds timeout as an example
+        document.querySelectorAll('.get-button').forEach((btn) => {
+            const label = btn.querySelector('.text-block-3');
+            const box = btn.querySelector('.div-block-8');
+            const main = box?.querySelector('.image-7:not(.dops)');
+            const dops = box?.querySelector('.image-7.dops');
+            if (!label || !box || !main || !dops) return;
+
+            const BTN_BG = readVar(btn, '--btn-bg');
+            const BTN_BG_HOV = readVar(btn, '--btn-bg-hover');
+            const BOX_BG = readVar(btn, '--box-bg');
+            const BOX_BG_HOV = readVar(btn, '--box-bg-hover');
+            const TEXT_IDLE = readVar(btn, '--text-idle');
+            const TEXT_HOVER = readVar(btn, '--text-hover');
+            const SHIFT_TEXT = parseInt(readVar(btn, '--shift-text', '59'), 10);
+            const SHIFT_BOX = parseInt(readVar(btn, '--shift-box', '-138'), 10);
+            const ROTATE = readVar(btn, '--dops-rotate', '45deg');
+
+            const baseLbl = baseTf(label);
+            const baseBox = baseTf(box);
+            const baseDops = baseTf(dops);
+
+            [btn, label, box, main, dops].forEach(el => {
+                el.style.transition = 'none';
+                el.style.willChange = 'transform, color, background-color, opacity, filter';
+            });
+
+            btn.style.backgroundColor = BTN_BG;
+            box.style.backgroundColor = BOX_BG;
+            label.style.color = TEXT_IDLE;
+            main.style.opacity = '1';
+            dops.style.opacity = '0';
+            dops.style.transform = tfAdd(baseDops, 'rotate(0deg)');
+            main.style.filter = 'none';
+            dops.style.filter = 'none';
+
+            requestAnimationFrame(() => {
+                btn.style.transition = `background-color ${DUR}ms ${EASE}, border-color ${DUR}ms ${EASE}, box-shadow ${DUR}ms ${EASE}`;
+                label.style.transition = `transform ${DUR}ms ${EASE}, color ${DUR}ms ${EASE}`;
+                box.style.transition = `transform ${DUR}ms ${EASE}, background-color ${DUR}ms ${EASE}`;
+                main.style.transition = `opacity ${DUR}ms ${EASE}`;
+                dops.style.transition = `transform ${DUR}ms ${EASE}, opacity ${DUR}ms ${EASE}, filter ${DUR}ms ${EASE}`;
+
+                const enter = () => {
+                    btn.style.backgroundColor = BTN_BG_HOV;
+                    label.style.color = TEXT_HOVER;
+                    box.style.backgroundColor = BOX_BG_HOV;
+                    label.style.transform = tfAdd(baseLbl, `translateX(${SHIFT_TEXT}px)`);
+                    box.style.transform = tfAdd(baseBox, `translateX(${SHIFT_BOX}px)`);
+                    main.style.opacity = '0';
+                    dops.style.opacity = '1';
+                    dops.style.transform = tfAdd(baseDops, `rotate(${ROTATE})`);
+
+                    if (btn.classList.contains('get-button--alt')) {
+                        dops.style.filter = 'brightness(0) invert(1)';
+                    }
+                };
+
+                const leave = () => {
+                    btn.style.backgroundColor = BTN_BG;
+                    label.style.color = TEXT_IDLE;
+                    box.style.backgroundColor = BOX_BG;
+                    label.style.transform = baseLbl;
+                    box.style.transform = baseBox;
+                    main.style.opacity = '1';
+                    dops.style.opacity = '0';
+                    dops.style.transform = tfAdd(baseDops, 'rotate(0deg)');
+
+                    if (btn.classList.contains('get-button--alt')) {
+                        dops.style.filter = 'none';
+                    }
+                };
+
+                btn.addEventListener('pointerenter', enter, {
+                    passive: true
+                });
+                btn.addEventListener('pointerleave', leave, {
+                    passive: true
+                });
+                btn.addEventListener('focus', enter, true);
+                btn.addEventListener('blur', leave, true);
+            });
+        });
+    })();
 </script>
 
+<section id="compit-pay">
+    <div class="container-3 cp-wrap">
+        <header class="cp-head" data-appear>
+            <h2 class="cp-title">ACCEPTED <span>PAYMENTS</span></h2>
+            <p class="cp-sub">Choose a network and calculate your returns</p>
+        </header>
+
+        <div class="cp-layout">
+            <!-- LEFT: COINS -->
+            <div class="cp-coins" data-appear>
+                <!-- USDT GROUP -->
+                <article class="cp-card cp-coin is-group" data-hover id="coin-USDT">
+                    <div class="cp-coin__row">
+                        <span class="cp-ico cp-ico-usdt" aria-hidden="true"></span>
+                        <div class="cp-coin__txt">
+                            <div class="cp-coin__code">USDT</div>
+                            <div class="cp-coin__name">Tether</div>
+                        </div>
+                        <button class="cp-chip cp-chip--toggle" type="button"
+                            aria-expanded="false">Networks</button>
+                    </div>
+                    <div class="cp-nets" hidden>
+                        <button class="cp-chip" data-symbol="USDT"
+                            data-network="TRC20">TRC20</button>
+                        <button class="cp-chip" data-symbol="USDT"
+                            data-network="BEP20">BEP20</button>
+                        <button class="cp-chip" data-symbol="USDT"
+                            data-network="TON">TON</button>
+                    </div>
+                </article>
+
+                <article class="cp-card cp-coin" data-hover data-symbol="BTC">
+                    <span class="cp-ico cp-ico-btc" aria-hidden="true"></span>
+                    <div class="cp-coin__txt">
+                        <div class="cp-coin__code">BTC</div>
+                        <div
+                            class="cp-coin__name">Bitcoin</div>
+                    </div>
+                </article>
+
+                <article class="cp-card cp-coin" data-hover data-symbol="ETH">
+                    <span class="cp-ico cp-ico-eth" aria-hidden="true"></span>
+                    <div class="cp-coin__txt">
+                        <div class="cp-coin__code">ETH</div>
+                        <div
+                            class="cp-coin__name">Ethereum</div>
+                    </div>
+                </article>
+
+                <article class="cp-card cp-coin" data-hover data-symbol="DOGE">
+                    <span class="cp-ico cp-ico-doge" aria-hidden="true"></span>
+                    <div class="cp-coin__txt">
+                        <div
+                            class="cp-coin__code">DOGE</div>
+                        <div
+                            class="cp-coin__name">Dogecoin</div>
+                    </div>
+                </article>
+
+                <article class="cp-card cp-coin" data-hover data-symbol="XRP">
+                    <span class="cp-ico cp-ico-xrp" aria-hidden="true"></span>
+                    <div class="cp-coin__txt">
+                        <div class="cp-coin__code">XRP</div>
+                        <div
+                            class="cp-coin__name">Ripple</div>
+                    </div>
+                </article>
+
+                <article class="cp-card cp-coin" data-hover data-symbol="TON">
+                    <span class="cp-ico cp-ico-ton" aria-hidden="true"></span>
+                    <div class="cp-coin__txt">
+                        <div class="cp-coin__code">TON</div>
+                        <div
+                            class="cp-coin__name">TON</div>
+                    </div>
+                </article>
+
+                <article class="cp-card cp-coin" data-hover data-symbol="LTC">
+                    <span class="cp-ico cp-ico-ltc" aria-hidden="true"></span>
+                    <div class="cp-coin__txt">
+                        <div class="cp-coin__code">LTC</div>
+                        <div
+                            class="cp-coin__name">Litecoin</div>
+                    </div>
+                </article>
+
+                <article class="cp-card cp-coin" data-hover data-symbol="BNB">
+                    <span class="cp-ico cp-ico-bnb" aria-hidden="true"></span>
+                    <div class="cp-coin__txt">
+                        <div class="cp-coin__code">BNB</div>
+                        <div
+                            class="cp-coin__name">BinanceCoin</div>
+                    </div>
+                </article>
+
+                <article class="cp-card cp-coin" data-hover data-symbol="TRX">
+                    <span class="cp-ico cp-ico-trx" aria-hidden="true"></span>
+                    <div class="cp-coin__txt">
+                        <div class="cp-coin__code">TRX</div>
+                        <div
+                            class="cp-coin__name">Tron</div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- RIGHT: DETAILS = CALCULATOR -->
+            <aside class="cp-details cp-card" data-appear aria-live="polite">
+                <div class="cp-details__head">
+                    <div class="cp-selected">
+                        <span class="cp-ico cp-ico-usdt" id="cp-sel-ico"
+                            aria-hidden="true"></span>
+                        <div>
+                            <div class="cp-selected__code" id="cp-sel-code">USDT</div>
+                            <div class="cp-selected__net" id="cp-sel-net">TRC20</div>
+                        </div>
+                    </div>
+
+                    <div class="cp-base">
+                        Base:
+                        <select class="cp-select" id="cp-base">
+                            <option value="USD" selected>USD</option>
+
+                            <option value="GBP">GBP</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="cp-rate">
+                    <div class="cp-rate__num" id="cp-rate">—</div>
+                    <div class="cp-rate__per">for 1 <span
+                            id="cp-base-label">USD</span></div>
+                </div>
+
+                <div class="cp-calc">
+                    <div class="cp-field">
+                        <label class="cp-label" for="cp-amount">Amount in <span
+                                id="cp-amount-sym">USDT</span></label>
+                        <input id="cp-amount" type="number" min="0" step="any"
+                            placeholder="100">
+                    </div>
+
+                    <div class="cp-field">
+                        <label class="cp-label" for="cp-plan">Plan</label>
+                        <select id="cp-plan" class="cp-select">
+                            <option value="H108">108% in 24 hours (hourly)</option>
+                            <option value="D114">114% in 1 day (1 accrual)</option>
+                            <option value="W300">300% in 7 days (end)</option>
+                            <option value="X1200">1200% in 12 days (daily)</option>
+                        </select>
+                    </div>
+
+                    <div class="cp-summary">
+                        <div class="cp-row"><span>Deposit ≈</span><strong
+                                id="cp-dep-base">—</strong></div>
+                        <div class="cp-row"><span>Profit</span><strong
+                                id="cp-profit">—</strong></div>
+                        <div class="cp-row"><span>Profit in <span
+                                    id="cp-sym1">USDT</span></span><strong
+                                id="cp-profit-coin">—</strong></div>
+                        <div class="cp-row"><span>Total in <span
+                                    id="cp-sym2">USDT</span></span><strong
+                                id="cp-total-coin">—</strong></div>
+                    </div>
+                    <div class="cp-progress" aria-hidden="true">
+                        <div class="cp-progress__bar" id="cp-progress"></div>
+
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+<section class="transactions-section">
+    <h2 class="transactions-heading">Latest operations</h2>
+    <div class="transactions-container">
+        <div class="tabs-nav">
+            <button class="tab-link active"
+                data-tab="deposits">Replenishment</button>
+            <button class="tab-link" data-tab="withdrawals">Payments</button>
+        </div>
+
+        <div class="tabs-content">
+            <div class="tab-pane active" id="deposits">
+                <div class="transaction-table">
+                    <div class="table-header">
+                        <div class="th">Login</div>
+                        <div class="th">Amount</div>
+                        <div class="th">Date</div>
+                        <div class="th">Currency</div>
+                    </div>
+                    <div class="table-body">
+                        <div class="table-row">
+
+                            <div class="td" data-label="Login">landock3**</div>
+                            <div class="td deposit" data-label="Amount">+ 20.00 USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">12.10.2025</time></div>
+                            <div class="td" data-label="Currency"><img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="td" data-label="Login">alexandr**</div>
+                            <div class="td deposit" data-label="Amount">+ 30.00 TRX</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">12.10.2025</time></div>
+                            <div class="td" data-label="Currency"><img
+                                    src="{{asset('')}}assets/icons/tron.png" alt="tron logo" width="20"
+                                    height="20" loading="lazy"> tron</div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="td" data-label="Login">sae**</div>
+                            <div class="td deposit" data-label="Amount">+ 30.30 USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">11.10.2025</time></div>
+                            <div class="td" data-label="Currency"><img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="td" data-label="Login">Leti**</div>
+                            <div class="td deposit" data-label="Amount">+ 50.00 USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"><img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="td" data-label="Login">ABDERHIMABDERRHMA**</div>
+                            <div class="td deposit" data-label="Amount">+ 50.00 USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"><img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="td" data-label="Login">Marac**</div>
+                            <div class="td deposit" data-label="Amount">+ 10.00 USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"><img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+
+                            <div class="td" data-label="Login">Jmalyma**</div>
+                            <div class="td deposit" data-label="Amount">+ 10.00 USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"><img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-arrow prev" aria-label="Previous slide">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6" />
+                            </svg>
+                        </button>
+                        <button class="slider-arrow next" aria-label="Next slide">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 18l6-6-6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane" id="withdrawals">
+                <div class="transaction-table">
+                    <div class="table-header">
+                        <div class="th">Login</div>
+                        <div class="th">Amount</div>
+                        <div class="th">Date</div>
+                        <div class="th">Currency</div>
+                    </div>
+
+                    <div class="table-body">
+                        <div class="table-row">
+                            <div class="td" data-label="Login">ch**</div>
+                            <div class="td withdrawal" data-label="Amount">- 6.00
+                                USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"> <img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="td" data-label="Login">virus**</div>
+                            <div class="td withdrawal" data-label="Amount">- 3.30
+                                USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"> <img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="td" data-label="Login">a**</div>
+                            <div class="td withdrawal" data-label="Amount">- 7.00
+                                USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"> <img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="td" data-label="Login">VIKHY**</div>
+                            <div class="td withdrawal" data-label="Amount">- 4.50
+                                USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"> <img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="td" data-label="Login">Galina73**</div>
+                            <div class="td withdrawal" data-label="Amount">- 11.40
+                                USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"> <img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="td" data-label="Login">k**</div>
+                            <div class="td withdrawal" data-label="Amount">- 4.50
+                                USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"> <img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="td" data-label="Login">anasa**</div>
+                            <div class="td withdrawal" data-label="Amount">- 3.60
+                                USDT</div>
+                            <div class="td" data-label="Date"> <time
+                                    class="feed-item__time"
+                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
+                            <div class="td" data-label="Currency"> <img
+                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
+                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
+                        </div>
+
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-arrow prev" aria-label="Previous slide">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15 18l-6-6 6-6" />
+                            </svg>
+                        </button>
+                        <button class="slider-arrow next" aria-label="Next slide">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 18l6-6-6-6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="contacts-section">
+    <div class="container-5">
+        <div class="contacts-block-all">
+            <div class="our-team-block">
+                <h2 class="heading-5 dop-cont">HAVE QUESTIONS? <span
+                        class="text-span-6">WE </span> CAN HELP</h2>
+                <div class="text-block-12">Our team of experts is ready to advise
+                    you on any questions you may have about our platform and
+                    investment plans. Contact us via the feedback form or simply
+                    register to start your journey into the world of crypto investing
+                    right now.</div>
+                <img src="{{asset('')}}assets/64063f17fd11c7b10286181f_Frame%202775.png"
+                    loading="lazy" alt class="image-3">
+            </div>
+            <div class="your-contacts-block">
+                <h3 class="heading-10">YOUR CONTACTS</h3>
+                <div class="w-form">
+                    <form method="post" action="index.html">
+                        <input type="hidden" name="csrf"
+                            value="0b79d92eb288ceca23b6f072b5f81fcd">
+                        <input type="hidden" name="from" value="/">
+                        <div class="div-block-36" bis_skin_checked="1">
+                            <div class="div-block-38" bis_skin_checked="1">
+
+                                <div data-w-id="8c499318-9a98-aeed-9626-485836dca325"
+                                    class="form-div-block" bis_skin_checked="1">
+                                    <input class="text-field w-input" maxlength="256"
+                                        type="text" id="login"
+                                        name="login"
+                                        placeholder="Enter your login"
+                                        value
+                                        required>
+                                    <div style="width: 0%;" class="div-block-61"
+                                        bis_skin_checked="1"></div>
+                                </div>
+
+                                <div data-w-id="ea7eb5fd-da8b-83b6-588e-fc16682b884c"
+                                    class="form-div-block" bis_skin_checked="1">
+                                    <input class="text-field w-input" maxlength="256"
+                                        type="email" id="email-2"
+                                        name="email"
+                                        placeholder="Enter your email address"
+                                        value
+                                        required>
+                                    <div style="width: 0%;" class="div-block-61"
+                                        bis_skin_checked="1"></div>
+                                </div>
+
+                            </div>
+
+                            <div data-w-id="20d84740-dc06-0dfa-1b81-58164a9b1540"
+                                class="div-block-37" bis_skin_checked="1">
+                                <p class="result">0/600</p>
+                                <textarea id="message" class="textarea w-input"
+                                    maxlength="5000"
+                                    name="message"
+                                    placeholder="Your message..."
+                                    required></textarea>
+                                <div style="width: 0%;" class="div-block-65"
+                                    bis_skin_checked="1"></div>
+                            </div>
+                        </div>
+
+                        <div
+                            style="padding: 15px 0; display: flex; justify-content: center;">
+                            <div id="captcha_support"></div>
+                        </div>
+
+                        <div class="div-block-39">
+                            <button type="submit" class="submit-button">
+                                <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
+                                    alt="Submit" class="image-4">
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lottie-animation">
+        <img src="{{asset('')}}assets/labirint.png" loading="lazy"
+            class="lottie-animation-img" alt sizes="100vw">
+    </div>
+    <img src="{{asset('')}}assets/640b4de465cb725b0f543003_BG%201%20(6).png" loading="lazy"
+        alt class="image-17">
+</section>
+
+<footer class="footer-section">
+    <div class="container-6">
+        <div class="all-contacts-block">
+            <div>
+                <h4 class="heading-h4">Menu</h4>
+                <div bis_skin_checked="1" class="footer-link-block">
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="about/index.html" class="footer-link">About</a>
+                    <a href="faq/index.html" class="footer-link">FAQ</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                    <a href="#plans" class="footer-link">Plans</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="heading-h4">Contact</h4>
+                <div bis_skin_checked="1">
+                    <a href="mailto:support@temining.cc"
+                        class="footer-link">support@temining.cc</a>
+                </div>
+            </div>
+            <div>
+                <h4 class="heading-h4">Office hours</h4>
+                <div class="text-block-16">Mon-Fri: 9:00 - 18:00</div>
+            </div>
+        </div>
+        <div class="all-rights-block-footer">
+            <div class="text-block-18">© 2025 TeMining. All rights reserved.</div>
+            <div class="contacts-block">
+                <a href="#" class="link-block-5">
+                    <img
+                        src="https://temining.cc/imagen/63fa371e72b3531b656e1069_Telegram.svg"
+                        loading="lazy" alt>
+                </a>
+                <a href="#" class="link-block-5">
+                    <img
+                        src="https://temining.cc/imagen/63fa371b2851829e0108035e_Viber.svg"
+                        loading="lazy" alt>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    defer></script>
+<script>
+    // Smooth scrolling for anchor links
+    $(document).ready(function() {
+        $("a").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function() {
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+</script>
+
+<script defer>
+    (() => {
+        const DUR = 420;
+        const EASE = 'cubic-bezier(.2,.7,.2,1)';
+        const readVar = (el, name, fb) => (getComputedStyle(el).getPropertyValue(name).trim() || fb);
+
+        const baseTf = (el) => (getComputedStyle(el).transform === 'none' ? '' : getComputedStyle(el).transform);
+        const tfAdd = (base, extra) => (base ? base + ' ' : '') + extra;
+
+        document.querySelectorAll('.get-button').forEach((btn) => {
+            const label = btn.querySelector('.text-block-3');
+            const box = btn.querySelector('.div-block-8');
+            const main = box?.querySelector('.image-7:not(.dops)');
+            const dops = box?.querySelector('.image-7.dops');
+            if (!label || !box || !main || !dops) return;
+
+            const BTN_BG = readVar(btn, '--btn-bg');
+            const BTN_BG_HOV = readVar(btn, '--btn-bg-hover');
+            const BOX_BG = readVar(btn, '--box-bg');
+            const BOX_BG_HOV = readVar(btn, '--box-bg-hover');
+            const TEXT_IDLE = readVar(btn, '--text-idle');
+            const TEXT_HOVER = readVar(btn, '--text-hover');
+            const SHIFT_TEXT = parseInt(readVar(btn, '--shift-text', '59'), 10);
+            const SHIFT_BOX = parseInt(readVar(btn, '--shift-box', '-138'), 10);
+            const ROTATE = readVar(btn, '--dops-rotate', '45deg');
+
+            const baseLbl = baseTf(label);
+            const baseBox = baseTf(box);
+            const baseDops = baseTf(dops);
+
+            [btn, label, box, main, dops].forEach(el => {
+                el.style.transition = 'none';
+                el.style.willChange = 'transform, color, background-color, opacity';
+            });
+
+            btn.style.backgroundColor = BTN_BG;
+            box.style.backgroundColor = BOX_BG;
+            label.style.color = TEXT_IDLE;
+            main.style.opacity = '1';
+            dops.style.opacity = '0';
+            dops.style.transform = tfAdd(baseDops, 'rotate(0deg)');
+
+            requestAnimationFrame(() => {
+                btn.style.transition = `background-color ${DUR}ms ${EASE}, border-color ${DUR}ms ${EASE}, box-shadow ${DUR}ms ${EASE}`;
+                label.style.transition = `transform ${DUR}ms ${EASE}, color ${DUR}ms ${EASE}`;
+                box.style.transition = `transform ${DUR}ms ${EASE}, background-color ${DUR}ms ${EASE}`;
+                main.style.transition = `opacity ${DUR}ms ${EASE}`;
+                dops.style.transition = `transform ${DUR}ms ${EASE}, opacity ${DUR}ms ${EASE}`;
+
+                const enter = () => {
+                    btn.style.backgroundColor = BTN_BG_HOV;
+                    label.style.color = TEXT_HOVER;
+                    box.style.backgroundColor = BOX_BG_HOV;
+                    label.style.transform = tfAdd(baseLbl, `translateX(${SHIFT_TEXT}px)`);
+                    box.style.transform = tfAdd(baseBox, `translateX(${SHIFT_BOX}px)`);
+                    main.style.opacity = '0';
+                    dops.style.opacity = '1';
+                    dops.style.transform = tfAdd(baseDops, `rotate(${ROTATE})`);
+                };
+
+                const leave = () => {
+                    btn.style.backgroundColor = BTN_BG;
+                    label.style.color = TEXT_IDLE;
+                    box.style.backgroundColor = BOX_BG;
+                    label.style.transform = baseLbl;
+                    box.style.transform = baseBox;
+                    main.style.opacity = '1';
+                    dops.style.opacity = '0';
+                    dops.style.transform = tfAdd(baseDops, 'rotate(0deg)');
+                };
+
+                btn.addEventListener('pointerenter', enter, {
+                    passive: true
+                });
+                btn.addEventListener('pointerleave', leave, {
+                    passive: true
+                });
+                btn.addEventListener('focus', enter, true);
+                btn.addEventListener('blur', leave, true);
+            });
+        });
+    })();
+</script>
+<script defer>
+    (() => {
+        const DUR = 420;
+        const EASE = 'cubic-bezier(.2,.7,.2,1)';
+
+        const link = document.querySelector('.services-link');
+        if (!link) return;
+
+        const wrap = link.querySelector('.arrow-wrapper');
+        const arrow = wrap?.querySelector('.image-8');
+        if (!wrap || !arrow) return;
+
+        const prevVis = wrap.style.visibility;
+        wrap.style.visibility = 'hidden';
+
+        const base = getComputedStyle(arrow).transform;
+        const baseStr = base === 'none' ? '' : base;
+
+        arrow.style.transition = 'none';
+        arrow.style.transformOrigin = '50% 50%';
+        arrow.style.willChange = 'transform';
+        arrow.style.transform = baseStr;
+
+        requestAnimationFrame(() => {
+            arrow.style.transition = `transform ${DUR}ms ${EASE}`;
+            wrap.style.visibility = prevVis || 'visible';
+
+            const enter = () => {
+                arrow.style.transform = (baseStr ? baseStr + ' ' : '') + 'translateY(-20px) rotate(45deg)';
+            };
+            const leave = () => {
+                arrow.style.transform = baseStr;
+            };
+
+            link.addEventListener('pointerenter', enter, {
+                passive: true
+            });
+            link.addEventListener('pointerleave', leave, {
+                passive: true
+            });
+            link.addEventListener('focus', enter, true);
+            link.addEventListener('blur', leave, true);
+        });
+    })();
+</script>
+<script>
+    (() => {
+        const SMOOTHING = 0.10;
+        const DEFAULT_START = 30;
+        const DEFAULT_END = -30;
+        const MQ = window.matchMedia('(min-width: 768px)');
+
+        const nodes = [...document.querySelectorAll('.services-block-back, .about-block-dop, .news-block, .contacts-block-all')]
+            .map(el => {
+                const start = parseFloat(el.dataset.parallaxStart ?? DEFAULT_START);
+                const end = parseFloat(el.dataset.parallaxEnd ?? DEFAULT_END);
+                return {
+                    el,
+                    start,
+                    end,
+                    current: start,
+                    target: start
+                };
+            });
+
+        if (!nodes.length) return;
+
+        let enabled = MQ.matches;
+        let rafId = null;
+
+        const prime = () => nodes.forEach(n => {
+            n.el.style.willChange = 'transform';
+            n.el.style.transformStyle = 'preserve-3d';
+        });
+
+        const unprime = () => nodes.forEach(n => {
+            n.el.style.willChange = '';
+            n.el.style.transformStyle = '';
+            n.el.style.transform = '';
+        });
+
+        const clamp01 = v => v < 0 ? 0 : (v > 1 ? 1 : v);
+
+        const computeTargets = () => {
+            const doc = document.documentElement;
+            const max = Math.max(1, doc.scrollHeight - window.innerHeight);
+            const p = clamp01(window.scrollY / max);
+            nodes.forEach(n => {
+                n.target = n.start + (n.end - n.start) * p;
+            });
+        };
+
+        const tick = () => {
+            if (!enabled) return;
+            nodes.forEach(n => {
+                n.current += (n.target - n.current) * SMOOTHING;
+                if (Math.abs(n.target - n.current) < 0.02) n.current = n.target;
+                n.el.style.transform =
+                    `translate3d(0px, ${n.current}%, 0px) scale3d(1,1,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg,0deg)`;
+            });
+            rafId = requestAnimationFrame(tick);
+        };
+
+        const start = () => {
+            if (!enabled) return;
+            prime();
+            computeTargets();
+            cancelAnimationFrame(rafId);
+            rafId = requestAnimationFrame(tick);
+        };
+
+        const stop = () => {
+            enabled = false;
+            cancelAnimationFrame(rafId);
+            unprime();
+        };
+
+        const onScroll = () => {
+            if (enabled) computeTargets();
+        };
+        const onResize = () => {
+            enabled = MQ.matches;
+            enabled ? start() : stop();
+        };
+
+        enabled ? start() : stop();
+        window.addEventListener('scroll', onScroll, {
+            passive: true
+        });
+        window.addEventListener('resize', onResize, {
+            passive: true
+        });
+        MQ.addEventListener?.('change', onResize);
+    })();
+</script>
+
+<script defer>
+    (() => {
+
+        const MQ_DESKTOP = window.matchMedia(
+            '(min-width: 1024px) and (hover: hover) and (pointer: fine)'
+        );
+
+
+        const CARD_H_IDLE = 475;
+        const CARD_H_HOVER = 557;
+        const GLOW_STEP2 = '0 12px 48px rgba(244,161,89,0.35)';
+        const GLOW_FINAL = '0 10px 40px rgba(244,161,89,0.30)';
+
+
+        const FILL_MS = 1000;
+        const FILL_EASE = 'cubic-bezier(.2,.75,.2,1)';
+        const ORANGE = '#f4a159';
+        const SHADOW_ON = 'drop-shadow(0 0 12px rgba(244,161,89,.55))';
+        const SHADOW_OFF = 'drop-shadow(0 0 0 rgba(0,0,0,0))';
+
+        const spring = (dur = 520) => ({
+            duration: dur,
+            easing: 'linear',
+            fill: 'forwards'
+        });
+        const ease = (dur = 380) => ({
+            duration: dur,
+            easing: 'ease-out',
+            fill: 'forwards'
+        });
+
+
+        document.querySelectorAll('.serv-application').forEach(card => {
+            if (MQ_DESKTOP.matches) {
+                card.style.height = CARD_H_IDLE + 'px';
+                card.style.willChange = 'height, box-shadow';
+            }
+
+            let aH = null,
+                aGlow = null;
+
+            const enter = () => {
+                if (!MQ_DESKTOP.matches) return;
+                aH?.cancel();
+                aGlow?.cancel();
+
+                aH = card.animate([{
+                        height: CARD_H_IDLE + 'px'
+                    },
+                    {
+                        height: (CARD_H_HOVER + 8) + 'px',
+                        offset: 0.70
+                    },
+                    {
+                        height: (CARD_H_HOVER - 6) + 'px',
+                        offset: 0.88
+                    },
+                    {
+                        height: CARD_H_HOVER + 'px'
+                    }
+                ], spring(520));
+
+                aGlow = card.animate([{
+                        boxShadow: '0 0 0 rgba(0,0,0,0)'
+                    },
+                    {
+                        boxShadow: GLOW_STEP2,
+                        offset: 0.70
+                    },
+                    {
+                        boxShadow: GLOW_FINAL
+                    }
+                ], spring(520));
+            };
+
+            const leave = () => {
+                if (!MQ_DESKTOP.matches) return;
+                aH?.cancel();
+                aGlow?.cancel();
+
+                aH = card.animate([{
+                        height: CARD_H_HOVER + 'px'
+                    },
+                    {
+                        height: (CARD_H_IDLE - 6) + 'px',
+                        offset: 0.82
+                    },
+                    {
+                        height: CARD_H_IDLE + 'px'
+                    }
+                ], spring(480));
+
+                aGlow = card.animate([{
+                        boxShadow: GLOW_FINAL
+                    },
+                    {
+                        boxShadow: '0 0 0 rgba(0,0,0,0)'
+                    }
+                ], ease(420));
+            };
+
+            card.addEventListener('pointerenter', enter, {
+                passive: true
+            });
+            card.addEventListener('pointerleave', leave, {
+                passive: true
+            });
+
+            const sync = () => {
+                if (MQ_DESKTOP.matches) {
+                    card.style.height = CARD_H_IDLE + 'px';
+                    card.style.willChange = 'height, box-shadow';
+                } else {
+                    aH?.cancel();
+                    aGlow?.cancel();
+                    card.style.removeProperty('height');
+                    card.style.removeProperty('box-shadow');
+                    card.style.removeProperty('will-change');
+                }
+            };
+            MQ_DESKTOP.addEventListener('change', sync);
+        });
+
+
+        function ensureLayer(box, cls, zIndex) {
+            let el = box.querySelector('.' + cls);
+            if (el) return el;
+
+            const cs = getComputedStyle(box);
+            if (cs.position === 'static') box.style.position = 'relative';
+            box.style.overflow = 'hidden';
+
+            el = document.createElement('div');
+            el.className = cls;
+            Object.assign(el.style, {
+                position: 'absolute',
+                left: '0',
+                top: '0',
+                right: '0',
+                bottom: '0',
+                pointerEvents: 'none',
+                zIndex: String(zIndex),
+                willChange: 'transform, filter, clip-path'
+            });
+            if (zIndex < 0) box.prepend(el);
+            else box.append(el);
+            return el;
+        }
+
+        function ensureOrangeFill(box) {
+            const fill = ensureLayer(box, 'dop-serv-fill', -1);
+            Object.assign(fill.style, {
+                background: ORANGE,
+                left: '50%',
+                top: '50%',
+                right: 'auto',
+                bottom: 'auto',
+                width: '0px',
+                height: '0px',
+                borderRadius: '50%',
+                transform: 'translate(-50%,-50%) scale(0)',
+                filter: SHADOW_OFF
+            });
+            recomputeFillSize(fill);
+            return fill;
+        }
+
+        function recomputeFillSize(fill) {
+            const box = fill.parentElement;
+            const r = box.getBoundingClientRect();
+            const d = Math.ceil(Math.hypot(r.width, r.height));
+            fill.style.width = d + 'px';
+            fill.style.height = d + 'px';
+        }
+
+        function ensureEdgeOverlay(box) {
+            const edge = ensureLayer(box, 'dop-serv-edge', 0);
+            const baseBg = getComputedStyle(box).backgroundColor;
+            const br = getComputedStyle(box).borderRadius || '0';
+            Object.assign(edge.style, {
+                backgroundColor: baseBg,
+                clipPath: `inset(0% round ${br})`,
+                filter: SHADOW_OFF
+            });
+            return edge;
+        }
+
+        document.querySelectorAll('.div-block-15.w-inline-block').forEach(link => {
+            const text = link.querySelector('.text-block-6');
+            const box = link.querySelector('.dop-serv');
+            const ring = link.querySelector('.div-block-59');
+            const imgA = link.querySelector('.image-11');
+            const imgB = link.querySelector('.image-dop');
+            if (!text || !box || !ring || !imgA || !imgB) return;
+
+            const FILL = ensureOrangeFill(box);
+            const EDGE = ensureEdgeOverlay(box);
+
+            const baseBoxBg = getComputedStyle(box).backgroundColor;
+            text.style.opacity = '1';
+            text.style.transform = 'translate3d(0%,0,0)';
+            box.style.backgroundColor = baseBoxBg;
+            ring.style.transform = 'scale(0)';
+            ring.style.filter = SHADOW_OFF;
+            imgA.style.opacity = '1';
+            imgA.style.transform = 'rotate(0deg)';
+            imgB.style.opacity = '0';
+            imgB.style.transform = 'rotate(0deg)';
+            [text, box, ring, imgA, imgB].forEach(el => el.style.willChange = 'transform,opacity,background-color,filter');
+
+            let aText, aRing, aGlow, aA, aB, aFill, aEdge;
+
+            const enter = () => {
+                aText?.cancel();
+                aText = text.animate([{
+                        transform: 'translateX(0%)',
+                        opacity: 1
+                    },
+                    {
+                        transform: 'translateX(85%)',
+                        opacity: 0.05,
+                        offset: .70
+                    },
+                    {
+                        transform: 'translateX(80%)',
+                        opacity: 0
+                    }
+                ], spring(520));
+
+                aRing?.cancel();
+                aRing = ring.animate([{
+                        transform: 'scale(0)'
+                    },
+                    {
+                        transform: 'scale(1.08)',
+                        offset: .70
+                    },
+                    {
+                        transform: 'scale(1)'
+                    }
+                ], spring(520));
+
+                aGlow?.cancel();
+                aGlow = ring.animate([{
+                        filter: SHADOW_OFF
+                    },
+                    {
+                        filter: SHADOW_ON,
+                        offset: .70
+                    },
+                    {
+                        filter: 'drop-shadow(0 0 9px rgba(244,161,89,.35))'
+                    }
+                ], spring(520));
+
+                aA?.cancel();
+                aA = imgA.animate([{
+                        transform: 'rotate(0deg)',
+                        opacity: 1
+                    },
+                    {
+                        transform: 'rotate(45deg)',
+                        opacity: 0
+                    }
+                ], spring(480));
+
+                aB?.cancel();
+                aB = imgB.animate([{
+                        transform: 'rotate(0deg)',
+                        opacity: 0
+                    },
+                    {
+                        transform: 'rotate(52deg)',
+                        opacity: 1,
+                        offset: .70
+                    },
+                    {
+                        transform: 'rotate(45deg)',
+                        opacity: 1
+                    }
+                ], spring(520));
+
+
+                recomputeFillSize(FILL);
+                aFill?.cancel();
+                aFill = FILL.animate([{
+                        transform: 'translate(-50%,-50%) scale(0)'
+                    },
+                    {
+                        transform: 'translate(-50%,-50%) scale(1.06)',
+                        offset: .72
+                    },
+                    {
+                        transform: 'translate(-50%,-50%) scale(1)'
+                    }
+                ], {
+                    duration: FILL_MS,
+                    easing: FILL_EASE,
+                    fill: 'forwards'
+                });
+
+                const br = getComputedStyle(box).borderRadius || '0';
+                aEdge?.cancel();
+                aEdge = EDGE.animate([{
+                        clipPath: `inset(0% round ${br})`
+                    },
+                    {
+                        clipPath: `inset(50% round ${br})`
+                    }
+                ], {
+                    duration: FILL_MS,
+                    easing: FILL_EASE,
+                    fill: 'forwards'
+                });
+            };
+
+            const leave = () => {
+                aText?.cancel();
+                aText = text.animate([{
+                        transform: 'translateX(80%)',
+                        opacity: 0
+                    },
+                    {
+                        transform: 'translateX(-2%)',
+                        opacity: .1,
+                        offset: .25
+                    },
+                    {
+                        transform: 'translateX(0%)',
+                        opacity: 1
+                    }
+                ], spring(520));
+
+                aRing?.cancel();
+                aRing = ring.animate([{
+                        transform: 'scale(1)'
+                    },
+                    {
+                        transform: 'scale(0.92)',
+                        offset: .35
+                    },
+                    {
+                        transform: 'scale(0)'
+                    }
+                ], spring(520));
+
+                aGlow?.cancel();
+                aGlow = ring.animate([{
+                        filter: 'drop-shadow(0 0 9px rgba(244,161,89,.35))'
+                    },
+                    {
+                        filter: SHADOW_OFF
+                    }
+                ], ease(420));
+
+                aA?.cancel();
+                aA = imgA.animate([{
+                        transform: 'rotate(45deg)',
+                        opacity: 0
+                    },
+                    {
+                        transform: 'rotate(0deg)',
+                        opacity: 1
+                    }
+                ], spring(480));
+
+                aB?.cancel();
+                aB = imgB.animate([{
+                        transform: 'rotate(45deg)',
+                        opacity: 1
+                    },
+                    {
+                        transform: 'rotate(0deg)',
+                        opacity: 0
+                    }
+                ], spring(500));
+
+                const br = getComputedStyle(box).borderRadius || '0';
+
+                aFill?.cancel();
+                aFill = FILL.animate([{
+                        transform: 'translate(-50%,-50%) scale(1)'
+                    },
+                    {
+                        transform: 'translate(-50%,-50%) scale(0.94)',
+                        offset: .35
+                    },
+                    {
+                        transform: 'translate(-50%,-50%) scale(0)'
+                    }
+                ], {
+                    duration: Math.max(460, FILL_MS - 200),
+                    easing: FILL_EASE,
+                    fill: 'forwards'
+                });
+
+                aEdge?.cancel();
+                aEdge = EDGE.animate([{
+                        clipPath: `inset(50% round ${br})`
+                    },
+                    {
+                        clipPath: `inset(0% round ${br})`
+                    }
+                ], {
+                    duration: Math.max(420, FILL_MS - 200),
+                    easing: FILL_EASE,
+                    fill: 'forwards'
+                });
+            };
+
+            link.addEventListener('pointerenter', enter, {
+                passive: true
+            });
+            link.addEventListener('pointerleave', leave, {
+                passive: true
+            });
+            link.addEventListener('focus', enter, true);
+            link.addEventListener('blur', leave, true);
+
+            window.addEventListener('resize', () => recomputeFillSize(FILL), {
+                passive: true
+            });
+        });
+    })();
+</script>
+
+<script defer>
+    (() => {
+        /* ===== helpers ===== */
+        const spring = (dur = 520) => ({
+            duration: dur,
+            easing: 'cubic-bezier(.2,.75,.2,1)',
+            fill: 'forwards'
+        });
+        const ease = (dur = 360) => ({
+            duration: dur,
+            easing: 'ease-out',
+            fill: 'forwards'
+        });
+        const MQ_DESKTOP = window.matchMedia('(hover:hover) and (pointer:fine)');
+
+        /* smooth stagger */
+        function staggerIn(nodes, baseDelay = 40) {
+            nodes.forEach((el, i) => {
+                el.animate(
+                    [{
+                            opacity: 0,
+                            transform: 'translateY(12px)'
+                        },
+                        {
+                            opacity: 1,
+                            transform: 'translateY(0)'
+                        }
+                    ], {
+                        ...spring(580),
+                        delay: i * baseDelay
+                    }
+                );
+            });
+        }
+
+        function softNumber(el, text) {
+            el && el.animate([{
+                opacity: .6,
+                transform: 'translateY(-2px)'
+            }, {
+                opacity: 1,
+                transform: 'translateY(0)'
+            }], ease(260));
+            if (el) el.textContent = text;
+        }
+
+        (function statsBlock() {
+            const root = document.getElementById('compit-stats');
+            if (!root) return;
+
+            const counters = Array.from(root.querySelectorAll('[data-countup]'));
+            const metricCards = Array.from(root.querySelectorAll('.cs-metrics > .cs-card'));
+
+            const numberStep = (from, to, t) => {
+                const v = from + (to - from) * (1 - Math.pow(1 - t, 3));
+                return String(to).includes('.') ? v.toFixed(1) : Math.round(v);
+            };
+
+            function runCounters() {
+                counters.forEach(el => {
+                    const to = parseFloat(el.getAttribute('data-value') || '0');
+                    const suf = el.getAttribute('data-suffix') || '';
+                    const start = performance.now(),
+                        DUR = 1100 + Math.random() * 500;
+                    (function frame(now) {
+                        const t = Math.min(1, (now - start) / DUR);
+                        el.textContent = numberStep(0, to, t) + suf;
+                        if (t < 1) requestAnimationFrame(frame);
+                    })(start);
+                });
+            }
+
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver(es => {
+                    es.forEach(e => {
+                        if (!e.isIntersecting) return;
+                        const head = root.querySelector('.cs-head');
+                        head && head.animate([{
+                            opacity: 0,
+                            transform: 'translateY(12px)'
+                        }, {
+                            opacity: 1,
+                            transform: 'translateY(0)'
+                        }], spring(620));
+                        staggerIn(metricCards, 70);
+                        runCounters();
+                        io.disconnect();
+                    });
+                }, {
+                    threshold: .3
+                });
+                io.observe(root);
+            } else {
+                runCounters();
+            }
+        })();
+
+        const ADMIN = {
+            BASE_DEFAULT: 'USD',
+            FX: {
+                USD: {
+                    EUR: 1,
+                    USD: 1,
+                    GBP: 0.80
+                },
+                EUR: {
+                    EUR: 1,
+                    USD: 1,
+                    GBP: 0.86
+                },
+
+                GBP: {
+                    EUR: 1.17,
+                    USD: 1.25,
+                    GBP: 1
+                }
+            },
+            COIN_EUR: {
+                USDT: 1.00,
+                BTC: 122988.20000000,
+                ETH: 4539.50000000,
+                DOGE: 0.26,
+                XRP: 3,
+                TON: 2.81,
+                LTC: 120,
+                BNB: 1168,
+                TRX: 0.34,
+            }
+        };
+        const PRICE_IN = (symbol, base) => {
+            const eur = ADMIN.COIN_EUR[symbol] ?? 0;
+            const k = (ADMIN.FX.EUR || {})[base] ?? 1;
+            return eur * k;
+        };
+
+        const PLANS = {
+            H108: {
+                label: '108% in 24h (hourly)',
+                multiplier: 1.08,
+                accruals: 24,
+                unit: 'hour',
+                days: 1
+            },
+            D114: {
+                label: '114% in 1 day',
+                multiplier: 1.14,
+                accruals: 1,
+                unit: 'day',
+                days: 1
+            },
+            W300: {
+                label: '300% in 7 days',
+                multiplier: 3.00,
+                accruals: 1,
+                unit: 'day',
+                days: 7
+            },
+            X1200: {
+                label: '1200% in 12 days',
+                multiplier: 12.00,
+                accruals: 12,
+                unit: 'day',
+                days: 12
+            }
+        };
 
 
 
+        const iconsS = {
+            USDT: `<svg width="34" height="34" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill-rule="evenodd" d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16s-7.163 16-16 16zm1.922-18.207v-2.366h5.414V7.819H8.595v3.608h5.414v2.365c-4.4.202-7.709 1.074-7.709 2.118c0 1.044 3.309 1.915 7.709 2.118v7.582h3.913v-7.584c4.393-.202 7.694-1.073 7.694-2.116c0-1.043-3.301-1.914-7.694-2.117zm0 3.59v-.002c-.11.008-.677.042-1.942.042c-1.01 0-1.721-.03-1.971-.042v.003c-3.888-.171-6.79-.848-6.79-1.658c0-.809 2.902-1.486 6.79-1.66v2.644c.254.018.982.061 1.988.061c1.207 0 1.812-.05 1.925-.06v-2.643c3.88.173 6.775.85 6.775 1.658c0 .81-2.895 1.485-6.775 1.657z" fill="currentColor"/></svg>`,
+            BTC: `<svg width="34" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill-rule="evenodd" d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16s-7.163 16-16 16zm7.189-17.98c.314-2.096-1.283-3.223-3.465-3.975l.708-2.84l-1.728-.43l-.69 2.765c-.454-.114-.92-.22-1.385-.326l.695-2.783L15.596 6l-.708 2.839c-.376-.086-.746-.17-1.104-.26l.002-.009l-2.384-.595l-.46 1.846s1.283.294 1.256.312c.7.175.826.638.805 1.006l-.806 3.235c.048.012.11.03.18.057l-.183-.045l-1.13 4.532c-.086.212-.303.531-.793.41c.018.025-1.256-.313-1.256-.313l-.858 1.978l2.25.561c.418.105.828.215 1.231.318l-.715 2.872l1.727.43l.708-2.84c.472.127.93.245 1.378.357l-.706 2.828l1.728.43l.715-2.866c2.948.558 5.164.333 6.097-2.333c.752-2.146-.037-3.385-1.588-4.192c1.13-.26 1.98-1.003 2.207-2.538zm-3.95 5.538c-.533 2.147-4.148.986-5.32.695l.95-3.805c1.172.293 4.929.872 4.37 3.11zm.535-5.569c-.487 1.953-3.495.96-4.47.717l.86-3.45c.975.243 4.118.696 3.61 2.733z" fill="currentColor"/></svg>`,
+            ETH: `<svg width="34" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g fill-rule="evenodd"><path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16s-7.163 16-16 16zm7.994-15.781L16.498 4L9 16.22l7.498 4.353l7.496-4.354zM24 17.616l-7.502 4.351L9 17.617l7.498 10.378L24 17.616z" fill="currentColor"/><g fill-rule="nonzero"><path fill-opacity=".298" d="M16.498 4v8.87l7.497 3.35zm0 17.968v6.027L24 17.616z" fill="currentColor"/><path fill-opacity=".801" d="M16.498 20.573l7.497-4.353l-7.497-3.348z" fill="currentColor"/><path fill-opacity=".298" d="M9 16.22l7.498 4.353v-7.701z" fill="currentColor"/></g></g></svg>`,
+            DOGE: `<svg width="34" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill-rule="evenodd" d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16s-7.163 16-16 16zm-5.518-15.104V24h6.549c1.21 0 2.257-.21 3.142-.627c.885-.419 1.607-.99 2.168-1.715c.56-.724.977-1.572 1.25-2.543c.273-.971.409-2.01.409-3.115a11.47 11.47 0 0 0-.41-3.115c-.272-.97-.689-1.819-1.25-2.543c-.56-.725-1.282-1.296-2.167-1.715C19.288 8.21 18.24 8 17.03 8h-6.549v6.61H9v2.286h1.482zm2.766-2.285v-4.325h2.721c1.077 0 1.958.145 2.644.437c.686.291 1.224.694 1.615 1.21a4.4 4.4 0 0 1 .796 1.815c.14.695.21 1.445.21 2.252a11.4 11.4 0 0 1-.21 2.252c-.14.695-.405 1.3-.796 1.815c-.391.516-.93.919-1.615 1.21c-.686.292-1.567.437-2.644.437h-2.721v-4.818h4.314v-2.285h-4.314z" fill="currentColor"/></svg>`,
+            XRP: `<svg width="34" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16s-7.163 16-16 16zm7.07-24l-4.574 4.523a3.556 3.556 0 0 1-4.996 0L8.93 8H6.035l6.02 5.957a5.621 5.621 0 0 0 7.89 0L25.961 8h-2.89zM8.895 24.563L13.504 20a3.556 3.556 0 0 1 4.996 0l4.605 4.563H26l-6.055-5.993a5.621 5.621 0 0 0-7.89 0L6 24.562h2.895z" fill="currentColor"/></svg>`,
+            TON: `<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="34" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M7.08 8.43c-.1.17-.1.38 0 .53s4.27 7.56 4.27 7.56V8.15H7.56c-.21 0-.38.1-.48.28zM16.44 8.15h-3.79v8.37l4.27-7.56c.1-.15.1-.36 0-.54a.538.538 0 0 0-.48-.27z" fill="#000000" opacity="1" data-original="#000000" class=""></path><path d="M12 1C5.92 1 1 5.92 1 12s4.92 11 11 11 11-4.92 11-11S18.08 1 12 1zm6.05 8.61-5.31 9.4c-.16.27-.44.44-.74.44s-.58-.17-.74-.43L5.95 9.61c-.33-.58-.32-1.28.01-1.85.34-.57.94-.91 1.6-.91h8.88c.66 0 1.26.34 1.6.91a1.877 1.877 0 0 1 .01 1.85z" fill="#000000" opacity="1" data-original="#000000" class=""></path></g></svg>`,
+            LTC: `<svg width="34" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill-rule="evenodd" d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16s-7.163 16-16 16zm-5.573-12.786L9.252 24h12.875L23 20.429h-7.722l.848-3.483l1.427-.571l.68-2.75l-1.41.571L18.342 8h-5.129l-2.081 8.429l-1.444.58L9 19.768l1.427-.554z" fill="currentColor"/></svg>`,
+            BNB: `<svg width="34" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M16 32C7.163 32 0 24.837 0 16S7.163 0 16 0s16 7.163 16 16s-7.163 16-16 16zm-3.884-17.596L16 10.52l3.886 3.886l2.26-2.26L16 6l-6.144 6.144l2.26 2.26zM6 16l2.26 2.26L10.52 16l-2.26-2.26L6 16zm6.116 1.596l-2.263 2.257l.003.003L16 26l6.146-6.146v-.001l-2.26-2.26L16 21.48l-3.884-3.884zM21.48 16l2.26 2.26L26 16l-2.26-2.26L21.48 16zm-3.188-.002h.001L16 13.706L14.305 15.4l-.195.195l-.401.402l-.004.003l.004.003l2.29 2.291l2.294-2.293l.001-.001l-.002-.001z" fill="currentColor"/></svg>`,
+            TRX: `<svg width="34" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16S7.163 0 16 0zM7.5 7.257l7.595 19.112l10.583-12.894l-3.746-3.562L7.5 7.257zm16.252 6.977l-7.67 9.344l.983-8.133l6.687-1.21zM9.472 9.488l6.633 5.502l-1.038 8.58L9.472 9.487zM21.7 11.083l2.208 2.099l-6.038 1.093l3.83-3.192zM10.194 8.778l10.402 1.914l-4.038 3.364l-6.364-5.278z" fill="currentColor"/></svg>`,
 
-</body></html>
+        };
+
+
+        function seticons(el, symbol) {
+            if (!el) return;
+            const svg = iconsS[symbol] || fallbackicons(symbol);
+            el.innerHTML = svg;
+            el.setAttribute('data-symbol', symbol);
+        }
+
+        function initiconss(scope) {
+            scope.querySelectorAll('.cp-coin').forEach(card => {
+                const sym = card.getAttribute('data-symbol') || 'USDT';
+                const ico = card.querySelector('.cp-ico');
+                seticons(ico, sym);
+            });
+            seticons(scope.querySelector('#cp-sel-ico'), 'USDT');
+            const usdtIco = scope.querySelector('#coin-USDT .cp-ico');
+            seticons(usdtIco, 'USDT');
+        }
+
+        (function payBlock() {
+            const root = document.getElementById('compit-pay');
+            if (!root) return;
+
+            initiconss(root);
+
+            const $ = sel => root.querySelector(sel);
+            const baseSel = $('#cp-base');
+            const baseLabel = $('#cp-base-label');
+            const rateOut = $('#cp-rate');
+            const amountIn = $('#cp-amount');
+            const amountSym = $('#cp-amount-sym');
+            const planSel = $('#cp-plan');
+
+            const depBase = $('#cp-dep-base');
+            const profitOut = $('#cp-profit');
+            const totalOut = $('#cp-total');
+
+            const profitCoinOut = $('#cp-profit-coin');
+            const totalCoinOut = $('#cp-total-coin');
+            const sym1 = $('#cp-sym1');
+            const sym2 = $('#cp-sym2');
+
+            const accrRow = $('#cp-accruals-row');
+            const accrOut = $('#cp-accruals');
+
+            const selIco = $('#cp-sel-ico');
+            const selCode = $('#cp-sel-code');
+            const selNet = $('#cp-sel-net');
+
+            if (!baseSel || !rateOut || !amountIn || !planSel) return;
+
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver(es => {
+                    es.forEach(e => {
+                        if (!e.isIntersecting) return;
+                        const head = root.querySelector('.cp-head');
+                        const coins = Array.from(root.querySelectorAll('.cp-coins > .cp-card'));
+                        const details = root.querySelector('.cp-details');
+                        head && head.animate([{
+                            opacity: 0,
+                            transform: 'translateY(12px)'
+                        }, {
+                            opacity: 1,
+                            transform: 'translateY(0)'
+                        }], spring(620));
+                        staggerIn(coins, 60);
+                        details && details.animate([{
+                            opacity: 0,
+                            transform: 'translateY(16px)'
+                        }, {
+                            opacity: 1,
+                            transform: 'translateY(0)'
+                        }], spring(700));
+                        io.disconnect();
+                    });
+                }, {
+                    threshold: .25
+                });
+                io.observe(root);
+            }
+
+            let state = {
+                symbol: 'USDT',
+                network: 'TRC20',
+                base: ADMIN.BASE_DEFAULT
+            };
+
+            const usdtCard = $('#coin-USDT');
+            const toggleBtn = usdtCard?.querySelector('.cp-chip--toggle');
+            const nets = usdtCard?.querySelector('.cp-nets');
+            if (toggleBtn && nets) {
+                toggleBtn.addEventListener('click', () => {
+                    const open = nets.hidden;
+                    nets.hidden = !open;
+                    toggleBtn.setAttribute('aria-expanded', String(open));
+                    nets.animate([{
+                        opacity: 0,
+                        transform: 'translateY(-6px)'
+                    }, {
+                        opacity: 1,
+                        transform: 'translateY(0)'
+                    }], ease(220));
+                });
+                nets.querySelectorAll('.cp-chip').forEach(chip => {
+                    chip.addEventListener('click', () => {
+                        nets.querySelectorAll('.cp-chip').forEach(c => c.removeAttribute('aria-current'));
+                        chip.setAttribute('aria-current', 'true');
+                        selectCoin('USDT', chip.dataset.network || 'TRC20');
+                    });
+                });
+            }
+
+            root.querySelectorAll('.cp-coin[data-symbol]').forEach(card => {
+                card.addEventListener('click', () => selectCoin(card.dataset.symbol, ''));
+            });
+
+            baseSel.value = state.base;
+            baseLabel && (baseLabel.textContent = state.base);
+            baseSel.addEventListener('change', () => {
+                state.base = baseSel.value;
+                baseLabel && (baseLabel.textContent = state.base);
+                updateRate();
+                recalc();
+            });
+
+            planSel.addEventListener('change', recalc);
+            amountIn.addEventListener('input', recalc);
+
+            const DEC = {
+                USDT: 2,
+                BTC: 8,
+                ETH: 6,
+                DOGE: 2,
+                XRP: 2,
+                TON: 2,
+                LTC: 4,
+                BNB: 4,
+                TRX: 4
+            };
+
+            function selectCoin(symbol, network) {
+                state.symbol = symbol;
+                state.network = network || '';
+
+                selCode && (selCode.textContent = symbol);
+                selNet && (selNet.textContent = state.network || '—');
+                seticons(selIco, symbol);
+
+                amountSym && (amountSym.textContent = symbol);
+                sym1 && (sym1.textContent = symbol);
+                sym2 && (sym2.textContent = symbol);
+
+                root.querySelectorAll('.cp-coin, .cp-chip').forEach(n => n.removeAttribute('aria-current'));
+                const q = network ? `.cp-chip[data-symbol="USDT"][data-network="${network}"]` : `.cp-coin[data-symbol="${symbol}"]`;
+                (root.querySelector(q) || root.querySelector('#coin-USDT'))?.setAttribute('aria-current', 'true');
+
+                updateRate();
+                recalc();
+
+                if (MQ_DESKTOP.matches) {
+                    root.querySelector('.cp-details')?.animate(
+                        [{
+                            transform: 'translateY(0)'
+                        }, {
+                            transform: 'translateY(-2px)'
+                        }, {
+                            transform: 'translateY(0)'
+                        }],
+                        ease(420)
+                    );
+                }
+            }
+
+            function updateRate() {
+                const price = PRICE_IN(state.symbol, state.base);
+                const decs = DEC[state.symbol] ?? 6;
+                softNumber(rateOut, isFinite(price) ? price.toLocaleString(undefined, {
+                    maximumFractionDigits: decs
+                }) : '—');
+            }
+
+            function recalc() {
+                const plan = PLANS[planSel.value] || PLANS.H108;
+                const amountCoin = Math.max(0, parseFloat(amountIn.value || '0'));
+                const priceBase = PRICE_IN(state.symbol, state.base);
+
+                const depositBase = amountCoin * priceBase;
+                const totalBase = depositBase * plan.multiplier;
+                const profitBase = totalBase - depositBase;
+
+                const totalCoin = amountCoin * plan.multiplier;
+                const profitCoin = amountCoin * (plan.multiplier - 1);
+
+                softNumber(depBase, isFinite(depositBase) ? `${depositBase.toLocaleString(undefined,{maximumFractionDigits:2})} ${state.base}` : '—');
+                softNumber(profitOut, isFinite(profitBase) ? `${profitBase.toLocaleString(undefined,{maximumFractionDigits:2})} ${state.base}` : '—');
+                softNumber(totalOut, isFinite(totalBase) ? `${totalBase.toLocaleString(undefined,{maximumFractionDigits:2})} ${state.base}` : '—');
+
+                const decs = DEC[state.symbol] ?? 6;
+                softNumber(profitCoinOut, isFinite(profitCoin) ? `${profitCoin.toLocaleString(undefined,{maximumFractionDigits:decs})} ${state.symbol}` : '—');
+                softNumber(totalCoinOut, isFinite(totalCoin) ? `${totalCoin.toLocaleString(undefined,{maximumFractionDigits:decs})} ${state.symbol}` : '—');
+
+                if (accrRow && accrOut) {
+                    if (plan.accruals > 1) {
+                        const totalPer = totalBase / plan.accruals;
+                        const unit = plan.unit === 'hour' ? 'h' : 'd';
+                        accrRow.hidden = false;
+                        accrOut.textContent = `${plan.accruals} × ${isFinite(totalPer)?totalPer.toLocaleString(undefined,{maximumFractionDigits:2}):'—'} ${state.base} / ${unit}`;
+                    } else {
+                        accrRow.hidden = true;
+                    }
+                }
+            }
+
+            amountIn.value = amountIn.value || 100;
+            selectCoin('USDT', 'TRC20');
+        })();
+    })();
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tabsNav = document.querySelector('.tabs-nav');
+        const tabLinks = document.querySelectorAll('.tab-link');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabsNav.addEventListener('click', function(event) {
+            const clickedTab = event.target.closest('.tab-link');
+            if (!clickedTab) return;
+
+            tabLinks.forEach(link => link.classList.remove('active'));
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+
+            clickedTab.classList.add('active');
+            const activeTabId = clickedTab.dataset.tab;
+            document.getElementById(activeTabId).classList.add('active');
+        });
+    });
+</script>
+<script>
+    (() => {
+        const root = document.getElementById('compit-pay');
+        if (!root) return;
+
+        const iconsMap = {
+            USDT: 'cp-ico-usdt',
+            BTC: 'cp-ico-btc',
+            ETH: 'cp-ico-eth',
+            DOGE: 'cp-ico-doge',
+            XRP: 'cp-ico-xrp',
+            TON: 'cp-ico-ton',
+            LTC: 'cp-ico-ltc',
+            BNB: 'cp-ico-bnb',
+            TRX: 'cp-ico-trx'
+        };
+
+        const selIco = document.getElementById('cp-sel-ico');
+        const selCode = document.getElementById('cp-sel-code');
+        const selNet = document.getElementById('cp-sel-net');
+        const sym1 = document.getElementById('cp-sym1');
+        const sym2 = document.getElementById('cp-sym2');
+        const amountSym = document.getElementById('cp-amount-sym');
+
+        const clearCoinSelection = () => {
+            root.querySelectorAll('.cp-coin[aria-current="true"]').forEach(el => {
+                el.removeAttribute('aria-current');
+            });
+        };
+        const clearUSDTNetworks = () => {
+            root.querySelectorAll('#coin-USDT .cp-chip[data-network]').forEach(b => b.removeAttribute('aria-current'));
+        };
+        const setHeader = (symbol, networkText) => {
+            selIco.className = 'cp-ico ' + (iconsMap[symbol] || '');
+            selCode.textContent = symbol;
+            selNet.textContent = networkText || (symbol === 'USDT' ? 'TRC20' : '—');
+            [sym1, sym2, amountSym].forEach(n => n && (n.textContent = symbol));
+        };
+
+        const selectCoin = (symbol, network) => {
+            clearCoinSelection();
+            const coinEl = (symbol === 'USDT') ?
+                document.getElementById('coin-USDT') :
+                root.querySelector(`.cp-coin[data-symbol="${symbol}"]`);
+            if (!coinEl) return;
+
+            coinEl.setAttribute('aria-current', 'true');
+            setHeader(symbol, network);
+
+            if (symbol === 'USDT') {
+                clearUSDTNetworks();
+                const netBtn = root.querySelector(`#coin-USDT .cp-chip[data-network="${network || 'TRC20'}"]`);
+                if (netBtn) netBtn.setAttribute('aria-current', 'true');
+            }
+        };
+
+        root.addEventListener('click', (e) => {
+            const t = e.target;
+
+            if (t.classList.contains('cp-chip--toggle')) {
+                const nets = t.closest('.cp-coin')?.querySelector('.cp-nets');
+                if (nets) {
+                    const expanded = t.getAttribute('aria-expanded') === 'true';
+                    t.setAttribute('aria-expanded', String(!expanded));
+                    nets.hidden = expanded;
+                }
+            }
+
+            const coin = t.closest('.cp-coin[data-symbol]');
+            if (coin) {
+                selectCoin(coin.dataset.symbol);
+                return;
+            }
+
+            const chip = t.closest('.cp-chip[data-symbol="USDT"][data-network]');
+            if (chip) {
+                selectCoin('USDT', chip.dataset.network);
+            }
+        });
+
+        selectCoin('USDT', 'TRC20');
+    })();
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        function initSlider(sliderContainer) {
+            const tableBody = sliderContainer.querySelector('.table-body');
+            const slides = tableBody.querySelectorAll('.table-row');
+            const prevButton = sliderContainer.querySelector('.slider-arrow.prev');
+            const nextButton = sliderContainer.querySelector('.slider-arrow.next');
+
+            if (slides.length <= 1) {
+                if (prevButton) prevButton.style.display = 'none';
+                if (nextButton) nextButton.style.display = 'none';
+                return;
+            }
+
+            let currentIndex = 0;
+
+            function updateSlider() {
+                tableBody.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+                prevButton.disabled = currentIndex === 0;
+                nextButton.disabled = currentIndex === slides.length - 1;
+            }
+
+            nextButton.addEventListener('click', () => {
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                    updateSlider();
+                }
+            });
+
+            prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    updateSlider();
+                }
+            });
+
+            updateSlider();
+        }
+
+        const allSliders = document.querySelectorAll('.transaction-table');
+        allSliders.forEach(slider => {
+            if (window.innerWidth <= 767) {
+                initSlider(slider);
+            }
+        });
+
+        const tabs = document.querySelectorAll('.tab-link');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                setTimeout(() => {
+                    const activePane = document.querySelector('.tab-pane.active');
+                    if (activePane) {
+                        const slider = activePane.querySelector('.transaction-table');
+                        if (slider && window.innerWidth <= 767) {
+                            initSlider(slider);
+                        }
+                    }
+                }, 50);
+            });
+        });
+    });
+</script>
+
+<script>
+    (function() {
+        const header = document.querySelector('header');
+        const toggle = document.getElementById('menuToggle');
+        const off = document.getElementById('offcanvas');
+        const offList = document.getElementById('offList');
+        const offContacts = document.getElementById('offContacts');
+        const backdrop = document.getElementById('offBackdrop');
+        const closeBtn = document.getElementById('offClose');
+        const nav = document.querySelector('.nav-menu');
+        const contacts = document.querySelector('.contacts-block');
+
+        function buildMenu() {
+            if (!offList) return;
+            offList.innerHTML = '';
+            const links = (nav ? [...nav.querySelectorAll('a')] : []).filter(a => a.href);
+            links.forEach((a, idx) => {
+                const li = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = a.getAttribute('href');
+                link.className = 'off-link';
+                link.innerHTML = '<span class="num">' + String(idx + 1).padStart(2, '0') + '.</span>' +
+                    '<span class="menu-title">' + a.textContent.trim() + '</span>';
+                li.appendChild(link);
+                offList.appendChild(li);
+            });
+            if (contacts && offContacts) {
+                offContacts.innerHTML = '';
+                // copy iconss into offcanvas
+                const iconss = contacts.querySelectorAll('.contact-block-link');
+                iconss.forEach(el => offContacts.appendChild(el.cloneNode(true)));
+            }
+        }
+        buildMenu();
+
+        function openOff() {
+            off.classList.add('open');
+            backdrop.classList.add('open');
+            off.setAttribute('aria-hidden', 'false');
+            toggle.setAttribute('aria-expanded', 'true');
+            backdrop.removeAttribute('hidden');
+            document.documentElement.style.overflow = 'hidden';
+        }
+
+        function closeOff() {
+            off.classList.remove('open');
+            backdrop.classList.remove('open');
+            off.setAttribute('aria-hidden', 'true');
+            toggle.setAttribute('aria-expanded', 'false');
+            setTimeout(() => {
+                document.documentElement.style.overflow = '';
+                backdrop.setAttribute('hidden', '');
+            }, 300);
+        }
+
+        toggle.addEventListener('click', openOff);
+        closeBtn.addEventListener('click', closeOff);
+        backdrop.addEventListener('click', closeOff);
+        off.addEventListener('click', (e) => {
+            if (e.target.closest('a')) closeOff();
+        });
+        window.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeOff();
+        });
+
+        const THRESHOLD = 120;
+        const MQ_MOBILE = window.matchMedia('(max-width: 991px)');
+
+        function onScroll() {
+            const y = window.scrollY || document.documentElement.scrollTop;
+
+            if (MQ_MOBILE.matches) {
+                header.classList.remove('collapsing');
+                toggle.classList.add('is-fixed');
+                return;
+            }
+
+            if (y > THRESHOLD) {
+                header.classList.add('collapsing');
+                toggle.classList.add('is-fixed');
+            } else {
+                header.classList.remove('collapsing');
+                toggle.classList.remove('is-fixed');
+            }
+        }
+
+        onScroll();
+        window.addEventListener('scroll', onScroll, {
+            passive: true
+        });
+        MQ_MOBILE.addEventListener?.('change', onScroll);
+    })();
+</script>
+
+<script>
+    (function() {
+        function tryPlay(v) {
+            v.muted = true;
+            const p = v.play();
+            if (p && typeof p.catch === 'function') {
+                p.catch(() => {
+
+                    v.closest ? v.closest('.main-section, .about, .news')?.classList.add('video-failed') : null;
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('video.video-bg').forEach(function(v) {
+                v.addEventListener('error', function() {
+                    v.pause();
+                    v.removeAttribute('src');
+                    v.load();
+                    v.closest?.('.main-section, .about, .news')?.classList.add('video-failed');
+                });
+                v.addEventListener('canplay', () => tryPlay(v), {
+                    once: true
+                });
+                tryPlay(v);
+            });
+        });
+    })();
+</script>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+    }
+</script>
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+    (function() {
+        var s1 = document.createElement("script"),
+            s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/68e4c527b760c0195195763c/1j6uq495h';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+</body>
+
+</html>
