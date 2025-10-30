@@ -117,7 +117,7 @@
                     <p class="text-appl">Rent the power of our equipment and earn
                         income without purchasing and setting up your own farms.</p>
                     <div class="buttton-appl" bis_skin_checked="1">
-                        <a href="about/index.html" class="div-block-15 w-inline-block">
+                        <a href="{{route('about-us')}}" class="div-block-15 w-inline-block">
                             <div class="text-block-6" bis_skin_checked="1">Learn
                                 more</div>
                             <div class="div-block-8 dop-serv" bis_skin_checked="1">
@@ -133,7 +133,7 @@
 
                 <div class="serv-application">
                     <div class="image-appl">
-                        <img src="{{asset('')}}assets/plansicons.webp" loading="lazy" alt
+                        <img src="{{asset('')}}assets/plansicon.webp" loading="lazy" alt
                             class="image">
                     </div>
                     <h4 class="h-appl">INVESMENT <br> PLANS</h4>
@@ -187,7 +187,7 @@
                     <p class="text-appl">Track your income in real time and withdraw
                         funds conveniently through our platform.</p>
                     <div class="buttton-appl" bis_skin_checked="1">
-                        <a href="login/index.html" class="div-block-15 w-inline-block">
+                        <a href="{{route('login')}}" class="div-block-15 w-inline-block">
                             <div class="text-block-6" bis_skin_checked="1">Learn
                                 more</div>
                             <div class="div-block-8 dop-serv" bis_skin_checked="1">
@@ -227,7 +227,7 @@
                         income.</p>
                 </div>
                 <div class="div-block-58">
-                    <a href="about/index.html"
+                    <a href="{{route('about-us')}}"
                         class="get-button dop-get-button w-inline-block">
                         <div class="text-block-3 tb3">Learn more</div>
                         <div class="div-block-8 db8">
@@ -296,7 +296,7 @@
         </div>
 
         <div class="plans-grid">
-            <a href="login/index.html" class="plan-card w-inline-block">
+            <a href="{{route('login')}}" class="plan-card w-inline-block">
                 <img class="plan-decor" src="{{asset('')}}assets/plan1.webp" alt />
                 <div>
                     <div class="plan-percent">4.5% Hourly</div>
@@ -316,7 +316,7 @@
                 </div>
             </a>
 
-            <a href="login/index.html" class="plan-card w-inline-block">
+            <a href="{{route('login')}}" class="plan-card w-inline-block">
                 <img class="plan-decor" src="{{asset('')}}assets/plan2.webp" alt />
                 <div>
                     <div class="plan-percent">114%</div>
@@ -335,7 +335,7 @@
                 </div>
             </a>
 
-            <a href="login/index.html" class="plan-card w-inline-block">
+            <a href="{{route('login')}}" class="plan-card w-inline-block">
                 <img class="plan-decor" src="{{asset('')}}assets/plan3.webp" alt />
                 <div>
                     <div class="plan-percent">300%</div>
@@ -354,7 +354,7 @@
                 </div>
             </a>
 
-            <a href="login/index.html" class="plan-card w-inline-block">
+            <a href="{{route('login')}}" class="plan-card w-inline-block">
                 <img class="plan-decor" src="{{asset('')}}assets/plan4.webp" alt />
                 <div>
                     <div class="plan-percent">1200%</div>
@@ -455,7 +455,7 @@
         </div>
     </div>
     <div class="referral-button-wrapper desktop-only">
-        <a href="login/index.html" class="get-button referral-button">
+        <a href="{{route('login')}}" class="get-button referral-button">
             <div class="text-block-3">Get Your Link</div>
             <div class="div-block-8">
                 <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
@@ -966,7 +966,7 @@
             <div class="your-contacts-block">
                 <h3 class="heading-10">YOUR CONTACTS</h3>
                 <div class="w-form">
-                    <form method="post" action="index.html">
+                    <form method="post" action="">
                         <input type="hidden" name="csrf"
                             value="0b79d92eb288ceca23b6f072b5f81fcd">
                         <input type="hidden" name="from" value="/">
@@ -1043,11 +1043,11 @@
             <div>
                 <h4 class="heading-h4">Menu</h4>
                 <div bis_skin_checked="1" class="footer-link-block">
-                    <a href="#" class="footer-link">Home</a>
-                    <a href="about/index.html" class="footer-link">About</a>
-                    <a href="faq/index.html" class="footer-link">FAQ</a>
-                    <a href="#contact" class="footer-link">Contact</a>
-                    <a href="#plans" class="footer-link">Plans</a>
+                    <a href="{{route('Index')}}" class="footer-link">Home</a>
+                    <a href="{{route('about-us')}}" class="footer-link">About</a>
+                    <a href="{{route('faq')}}" class="footer-link">FAQ</a>
+                    <a href="{{route('Index')}}#contact" class="footer-link">Contact</a>
+                    <a href="{{route('Index')}}#plans" class="footer-link">Plans</a>
                 </div>
             </div>
             <div>

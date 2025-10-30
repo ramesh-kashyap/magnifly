@@ -70,6 +70,18 @@ class Invest extends Controller
 
     }  
 
+  public function index1()
+    {
+     $userInfo = auth()->user(); // Get authenticated user
+
+
+        // $this->data['data'] = $data;
+        $this->data['page'] = 'user.invest.re-invest';
+
+        return $this->dashboard_layout();
+
+    }  
+
 
     public function compounding(Request $request)
     {

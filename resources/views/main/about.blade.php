@@ -84,8 +84,8 @@ ease;
     <div class="offcanvas-backdrop" id="offBackdrop" hidden></div>
     <aside class="offcanvas" id="offcanvas" aria-hidden="true">
       <div class="off-top">
-        <a href="../index.html" class="off-brand">
-          <div class="logo"><img src="../imagen/logo.png" alt="Logo"></div>
+        <a href="{{route('Index')}}" class="off-brand">
+          <div class="logo"><img src="{{asset('')}}assets/logo.png" alt="Logo"></div>
         </a>
         <button class="off-close" id="offClose" aria-label="Close menu">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -133,7 +133,7 @@ ease;
 
         @font-face {
             font-family: 'Bowler';
-            src: url(../imagen/63fa359f8bb3697d350616c4_BOWLER.otf) format('opentype');
+            src: url(../assets/63fa359f8bb3697d350616c4_BOWLER.otf) format('opentype');
             font-weight: 400;
             font-style: normal;
             font-display: swap;
@@ -705,7 +705,7 @@ ease;
                     <div class="certificate-container">
                         <h3>Official Company Certificate</h3>
                         <div class="certificate-frame">
-                            <img src="../cert.png" alt="Company Certificate">
+                            <img src="{{asset('')}}assets/cert.png" alt="Company Certificate">
                         </div>
                     </div>
                 </div>
@@ -759,7 +759,7 @@ ease;
         <div class="review-submission-wrapper">
                             <div class="login-prompt">
                     <p>Please log in to leave a Review.</p>
-                    <a href="../login/index.html" class="review-submit-btn login-btn">Log In</a>
+                    <a href="{{route('login')}}" class="review-submit-btn login-btn">Log In</a>
                 </div>
                     </div>
 
