@@ -86,7 +86,7 @@ ease;
       <div class="offcanvas-backdrop" id="offBackdrop" hidden></div>
       <aside class="offcanvas" id="offcanvas" aria-hidden="true">
         <div class="off-top">
-          <a href="index.html" class="off-brand">
+          <a href="{{route('Index')}}" class="off-brand">
             <div class="logo"><img src="{{asset('')}}assets/logo.png" alt="Logo"></div>
           </a>
           <button class="off-close" id="offClose" aria-label="Close menu">

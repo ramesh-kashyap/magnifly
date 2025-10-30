@@ -1,255 +1,712 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-<div id="main-content" class="flex-grow-1 m-3">
-    <nav class="navbar navbar-expand-lg sticky-top shadow-sm main-header">
-        <div class="container-fluid">
-            <button class="btn btn-outline-secondary d-md-none me-2" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <button id="sidebarToggle" class="btn btn-outline-secondary d-none d-md-inline-block me-3">
-                <i class="fas fa-bars"></i>
-            </button>
-
-            <span class="navbar-brand text-capitalize text-white mb-0 h1 d-none d-sm-inline-block">deposit</span>
-
-             <ul class="navbar-nav ms-auto">
-                <li class="nav-item mb-0 dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-circle fa-lg me-1"></i>
-                    </a>
-   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUser">
-                        <!--<li><a class="dropdown-item" href="{{route('user.GenerateTicket')}}"><i-->
-                        <!--            class="fas fa-headset fa-fw me-2"></i>Support</a></li>-->
-                        <li><a class="dropdown-item" href="{{route('user.profile')}}"><i
-                                    class="fas fa-user-edit fa-fw me-2"></i>Edit Account</a></li>
-                        <li><a class="dropdown-item" href="{{route('user.ChangePass')}}"><i
-                                    class="fas fa-shield-alt fa-fw me-2"></i>Security</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                            class="d-none">
-                            @csrf
-                        </form>
-                        <li><a class="dropdown-item text-danger" href="{{ route('logout') }}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
-                                    class="fas fa-sign-out-alt fa-fw me-2"></i>Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- <div class="top-video">
-            <video class="top" src="video/top.mp4" type="video/mp4" muted autoplay loop plays-inline poster="video/poster.png"></video>
-        </div> -->
-
-
-
-    <script language="javascript">
-        function openCalculator(id) {
-            w = 225;
-            h = 400;
-            t = (screen.height - h - 30) / 2;
-            l = (screen.width - w - 30) / 2;
-            window.open('?a=calendar&type=' + id, 'calculator' + id, "top=" + t + ",left=" + l + ",width=" + w +
-                ",height=" + h + ",resizable=1,scrollbars=0");
-
-
-            for (i = 0; i < document.spendform.h_id.length; i++) {
-                if (document.spendform.h_id[i].value == id) {
-                    document.spendform.h_id[i].checked = true;
-                }
-            }
-
-
+ <style>
+      
+        /* ===================================================================
+            INVESTMENT PAGE WRAPPER & LAYOUT
+            =================================================================== */
+        .investment-wrapper {
+            padding: 40px 60px 60px;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+        .page-header {
+            margin-bottom: 40px;
+        }
+        .page-header h1 {
+            font-size: 46px;
+            margin-bottom: 5px;
+        }
+        .page-header h1 span {
+            color: var(--sandy-brown);
+        }
+        .page-header p {
+            color: var(--text-muted);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0;
         }
 
-        function updateCompound() {
-            var id = 0;
-            var tt = document.spendform.h_id.type;
-            if (tt && tt.toLowerCase() == 'hidden') {
-                id = document.spendform.h_id.value;
+        .investment-layout {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .sidebar {
+            position: sticky;
+            top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .section-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(48, 54, 59, 0.05);
+            border: 1px solid var(--border-color);
+        }
+        .section-card h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+        
+        /* ===================================================================
+            1. TARIFF PLANS
+            =================================================================== */
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .plan-card {
+            background-color: var(--background);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .plan-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--sandy-brown);
+            box-shadow: 0 8px 25px rgba(244, 161, 89, 0.15);
+        }
+        .plan-card.selected {
+            border-color: var(--sandy-brown);
+            background-color: #fff;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, .18), 0 0 0 2px 
+ color-mix(in oklab, var(--cp-accent), transparent 60%), 0 0 0 6px 
+ color-mix(in oklab, var(--cp-accent), transparent 88%);
+        }
+        .plan-card .plan-percent {
+            font-family: 'Bowler', sans-serif;
+            font-size: 42px;
+            color: var(--sandy-brown);
+            line-height: 1;
+        }
+        .plan-card .plan-term {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--dark-slate-grey);
+            margin: 8px 0;
+        }
+        .plan-card .plan-details {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        .plan-limits {
+             font-size: 12px;
+             color: var(--text-muted);
+             margin-top: 10px;
+             height: 1.2em;
+        }
+
+        /* ===================================================================
+            2. PAYMENT SYSTEM
+            =================================================================== */
+        .crypto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 15px;
+        }
+        .crypto-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 10px;
+            border: 2px solid var(--border-color);
+            background-color: var(--background);
+            border-radius: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .crypto-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--sandy-brown);
+        }
+        .crypto-card.selected {
+            border-color: var(--sandy-brown);
+            background-color: #fff;
+                box-shadow: 0 18px 48px rgba(0, 0, 0, .18), 0 0 0 2px 
+ color-mix(in oklab, var(--cp-accent), transparent 60%), 0 0 0 6px 
+ color-mix(in oklab, var(--cp-accent), transparent 88%);
+        }
+        .crypto-card img {
+            width: 48px;
+            height: 48px;
+        }
+        .crypto-card .crypto-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        /* ===================================================================
+            3. SIDEBAR: CALCULATOR & SUMMARY
+            =================================================================== */
+        .calculator-card {
+            background-color: var(--card-dark-bg);
+            color: var(--text-light);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            position: relative;
+            overflow: hidden;
+        }
+        .calculator-card::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: var(--border-radius);
+            background: var(--futuristic-glow);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.7;
+        }
+        .calculator-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .calculator-card h3 {
+            color: #fff;
+            margin-bottom: 0;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .input-group label {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+        .amount-input-wrapper {
+            position: relative;
+        }
+        .amount-input {
+            width: 100%;
+            padding: 15px 20px 15px 80px;
+            border-radius: 14px;
+            border: 2px solid var(--dark-grey-lighter);
+            background-color: #30363b;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 600;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .amount-input:focus {
+            border-color: var(--sandy-brown);
+        }
+        .amount-input-currency {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--sandy-brown);
+            font-weight: 700;
+            font-size: 18px;
+        }
+        .input-limits-info {
+            font-size: 12px;
+            text-align: center;
+            min-height: 1.2em;
+            color: var(--text-muted);
+        }
+
+
+        .summary-block {
+            border-top: 1px solid var(--dark-grey-lighter);
+            padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .summary-row .label {
+            color: var(--text-muted);
+        }
+        .summary-row .value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .summary-row .value.profit {
+            color: #28a745; 
+        }
+         .summary-row .value.profit-usd {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        .summary-row .value.total {
+            color: var(--sandy-brown);
+            font-size: 22px;
+        }
+
+        .btn-invest {
+            background-color: var(--sandy-brown);
+            color: var(--dark-slate-grey);
+            padding: 18px;
+            text-align: center;
+            border-radius: 14px;
+            font-family: 'Bowler', sans-serif;
+            font-size: 18px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            width: 100%;
+        }
+        .btn-invest:hover {
+            background-color: #fff;
+            color: var(--dark-slate-grey);
+            box-shadow: var(--glow-shadow);
+        }
+
+        /* ===================================================================
+            4. STATISTICS SECTION (Updated for dynamic history)
+            =================================================================== */
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .history-table th, .history-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .history-table th {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        .history-table td {
+            font-size: 15px;
+        }
+        .history-table .amount {
+            font-weight: 700;
+        }
+        .history-table .status-success {
+            color: #28a745;
+        }
+        .history-table .status-pending {
+            color: #ffc107;
+        }
+
+        /* ===================================================================
+            RESPONSIVE STYLES
+            =================================================================== */
+        @media (max-width: 1200px) {
+            .investment-layout {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                position: static;
+            }
+        }
+        @media (max-width: 991px) {
+            .navbar, .investment-wrapper { padding: 30px 40px; }
+            .nav-menu, .contacts-block { display: none !important; }
+        }
+        @media (max-width: 767px) {
+            .navbar, .investment-wrapper { padding: 20px; }
+            .page-header h1 { font-size: 36px; }
+            .page-header p { font-size: 16px; }
+            .investment-layout, .main-content { gap: 30px; }
+            .section-card { padding: 20px; }
+            .plans-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+            .crypto-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                gap: 10px;
+            }
+            .crypto-card img { width: 40px; height: 40px; }
+            .crypto-card .crypto-name { font-size: 14px; }
+            .history-table { display: block; overflow-x: auto; }
+        }
+        .amount.pending {
+    color: orange;
+}
+
+    </style>
+
+        <main class="investment-wrapper">
+            <div class="page-header">
+                <h1>Make an <span>Investment</span></h1>
+                <p>Choose a plan, select a payment system, and enter the amount
+                    to calculate your potential profit.</p>
+            </div>
+
+            <form id="investment-form" action="/pay/index.php" method="post">
+                <input type="hidden" name="csrf"
+                    value="901a7f730969f8c29b5e1d9657bf2775">
+                <input type="hidden" name="from" value="/user/invest/"> <input
+                    type="hidden" name="from" value="/user/invest">
+
+                <div class="investment-layout">
+                    <div class="main-content">
+                        <section class="section-card">
+                            <h3>1. Select a Tariff Plan</h3>
+                            <div class="plans-grid" id="plans-container">
+
+                                <div class="plan-card selected"
+                                    data-plan-id="2">
+
+                                    <!-- Почасовой план: процент за час + общий итог -->
+                                    <div class="plan-percent">
+                                        4.5% Hourly
+                                    </div>
+                                    <div class="plan-term">
+                                        Total: 108% after 1 day </div>
+
+                                    <div class="plan-details">TeMining: Hash
+                                        Key</div>
+                                    <div class="plan-limits"
+                                        data-plan-id-limits="2"></div>
+                                </div>
+                                <div class="plan-card" data-plan-id="3">
+
+                                    <!-- Остальные планы: как было -->
+                                    <div class="plan-percent">
+                                        114%
+                                    </div>
+                                    <div class="plan-term">
+                                        after 1 day </div>
+
+                                    <div class="plan-details">TeMining: Cipher
+                                        Rig</div>
+                                    <div class="plan-limits"
+                                        data-plan-id-limits="3"></div>
+                                </div>
+                                <div class="plan-card" data-plan-id="4">
+
+                                    <!-- Остальные планы: как было -->
+                                    <div class="plan-percent">
+                                        300%
+                                    </div>
+                                    <div class="plan-term">
+                                        after 7 days </div>
+
+                                    <div class="plan-details">TeMining: Enigma
+                                        Protocol</div>
+                                    <div class="plan-limits"
+                                        data-plan-id-limits="4"></div>
+                                </div>
+                                <div class="plan-card" data-plan-id="5">
+
+                                    <!-- Остальные планы: как было -->
+                                    <div class="plan-percent">
+                                        1200%
+                                    </div>
+                                    <div class="plan-term">
+                                        after 12 days </div>
+
+                                    <div class="plan-details">TeMining: Genesis
+                                        Code</div>
+                                    <div class="plan-limits"
+                                        data-plan-id-limits="5"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section-card">
+                            <h3>2. Select Payment System</h3>
+                            <div class="crypto-grid" id="crypto-container">
+                                <div class="crypto-card" data-currency="BTC"
+                                    data-system-id="1">
+                                    <img src="{{asset('')}}assets/icons/bitcoin.png"
+                                        alt="BitCoin">
+                                    <div class="crypto-name">BitCoin</div>
+                                </div>
+                                <div class="crypto-card" data-currency="LTC"
+                                    data-system-id="2">
+                                    <img src="{{asset('')}}assets/icons/litecoin.png"
+                                        alt="LiteCoin">
+                                    <div class="crypto-name">LiteCoin</div>
+                                </div>
+                                <div class="crypto-card selected"
+                                    data-currency="DOGE" data-system-id="3">
+                                    <img src="{{asset('')}}assets/icons/dogecoin.png"
+                                        alt="DogeCoin">
+                                    <div class="crypto-name">DogeCoin</div>
+                                </div>
+                                <div class="crypto-card" data-currency="ETH"
+                                    data-system-id="4">
+                                    <img src="{{asset('')}}assets/icons/ethereum.png"
+                                        alt="Ethereum">
+                                    <div class="crypto-name">Ethereum</div>
+                                </div>
+                                <div class="crypto-card" data-currency="XRP"
+                                    data-system-id="9">
+                                    <img src="{{asset('')}}assets/icons/ripple.png"
+                                        alt="Ripple">
+                                    <div class="crypto-name">Ripple</div>
+                                </div>
+                                <div class="crypto-card" data-currency="TRX"
+                                    data-system-id="10">
+                                    <img src="{{asset('')}}assets/icons/tron.png"
+                                        alt="TRON">
+                                    <div class="crypto-name">TRON</div>
+                                </div>
+                                <div class="crypto-card" data-currency="BNB"
+                                    data-system-id="12">
+                                    <img src="{{asset('')}}assets/icons/binancecoin.png"
+                                        alt="BinanceCoin">
+                                    <div class="crypto-name">BinanceCoin</div>
+                                </div>
+                                <div class="crypto-card" data-currency="USDT"
+                                    data-system-id="13">
+                                    <img src="{{asset('')}}assets/icons/usdt_trc20.png"
+                                        alt="USDT_TRC20">
+                                    <div class="crypto-name">USDT_TRC20</div>
+                                </div>
+                                <div class="crypto-card" data-currency="USDT"
+                                    data-system-id="23">
+                                    <img src="{{asset('')}}assets/icons/usdt_bep20.png"
+                                        alt="USDT_BEP20">
+                                    <div class="crypto-name">USDT_BEP20</div>
+                                </div>
+                                <div class="crypto-card" data-currency="USDT"
+                                    data-system-id="24">
+                                    <img src="{{asset('')}}assets/icons/usdt_ton.png"
+                                        alt="USDT_TON">
+                                    <div class="crypto-name">USDT_TON</div>
+                                </div>
+                                <div class="crypto-card" data-currency="TON"
+                                    data-system-id="26">
+                                    <img src="{{asset('')}}assets/icons/ton.png"
+                                        alt="TON">
+                                    <div class="crypto-name">TON</div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="sidebar">
+                        <section class="calculator-card">
+                            <div class="calculator-content">
+                                <h3>3. Calculate Your Profit</h3>
+                                <div class="input-group">
+                                    <label for="amount">Enter Amount</label>
+                                    <div class="amount-input-wrapper">
+                                        <span class="amount-input-currency"
+                                            id="amount-currency-symbol">DOGE</span>
+                                        <input type="text" class="amount-input"
+                                            id="amount-input" name="summa"
+                                            placeholder="0.00" value="0">
+                                    </div>
+                                    <div class="input-limits-info"
+                                        id="input-limits"></div>
+                                </div>
+
+                                <div class="summary-block">
+                                    <div class="summary-row">
+                                        <span class="label">Selected Plan</span>
+                                        <span class="value"
+                                            id="summary-plan">TeMining: Hash
+                                            Key</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span class="label">Total Profit</span>
+                                        <div>
+                                            <span class="value profit"
+                                                id="summary-profit">+ 0
+                                                DOGE</span>
+                                            <div class="value profit-usd"
+                                                id="summary-profit-usd">≈
+                                                $0.00</div>
+                                        </div>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span class="label">Total Return</span>
+                                        <span class="value total"
+                                            id="summary-total">0 DOGE</span>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn-invest">Invest
+                                    Now</button>
+                            </div>
+                        </section>
+
+                        <section class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Latest Deposits</h3>
+                                <a href="/user/operations">All</a>
+                            </div>
+
+                            <ul class="transactions-list">
+                                <li class="transaction-item-empty">
+                                    <p>No deposits yet.</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <input type="hidden" name="plan" id="selected-plan-input"
+                    value="2">
+                <input type="hidden" name="system" id="selected-system-input"
+                    value="3">
+            </form>
+        </main>
+
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const plans = [{"id":2,"description":"TeMining: Hash Key","percent":4.5,"count":24,"seconds":3600,"min":[],"max":[],"return":0},{"id":3,"description":"TeMining: Cipher Rig","percent":114,"count":1,"seconds":86400,"min":[],"max":[],"return":0},{"id":4,"description":"TeMining: Enigma Protocol","percent":300,"count":1,"seconds":604800,"min":[],"max":[],"return":0},{"id":5,"description":"TeMining: Genesis Code","percent":1200,"count":1,"seconds":1036800,"min":[],"max":[],"return":0}];
+        const rates = {"USD":1,"BTC":122988.2,"LTC":120,"DOGE":0.26,"ETH":4539.5,"XRP":3,"TRX":0.34,"BNB":1168,"USDT":1,"TON":2.81};
+
+        const plansContainer = document.getElementById('plans-container');
+        const cryptoContainer = document.getElementById('crypto-container');
+        const amountInput = document.getElementById('amount-input');
+        
+        const summaryPlanEl = document.getElementById('summary-plan');
+        const summaryProfitEl = document.getElementById('summary-profit');
+        const summaryProfitUsdEl = document.getElementById('summary-profit-usd');
+        const summaryTotalEl = document.getElementById('summary-total');
+        const amountCurrencySymbolEl = document.getElementById('amount-currency-symbol');
+        const inputLimitsEl = document.getElementById('input-limits');
+        
+        const selectedPlanInput = document.getElementById('selected-plan-input');
+        const selectedSystemInput = document.getElementById('selected-system-input');
+
+        let selectedPlan = null;
+        let selectedCurrency = null;
+        let selectedSystemId = null;
+
+        function getPlanLimits(plan, currency) {
+            if (!plan || !currency) return { min: 0, max: 0 };
+            return {
+                min: plan.min[currency] || 0,
+                max: plan.max[currency] || 0
+            };
+        }
+        
+        function formatNumber(num, currency) {
+            if (currency === 'USD') return num.toFixed(2);
+            if (currency === 'BTC' || currency === 'ETH') return num.toFixed(8).replace(/\.?0+$/, "");
+            return num.toFixed(4).replace(/\.?0+$/, "");
+        }
+
+        function calculate() {
+            if (!selectedPlan || !selectedCurrency) {
+                summaryProfitEl.textContent = '...';
+                summaryTotalEl.textContent = '...';
+                summaryProfitUsdEl.textContent = '';
+                return;
+            }
+
+            const amount = parseFloat(String(amountInput.value).replace(',', '.')) || 0;
+            const rateToUsd = rates[selectedCurrency] || 0;
+            
+            const profitPerAccrual = amount * selectedPlan.percent / 100;
+            const totalProfit = profitPerAccrual * selectedPlan.count;
+            const totalReturn = totalProfit + (selectedPlan.return === 1 ? amount : 0);
+            const totalProfitInUsd = totalProfit * rateToUsd;
+            
+            summaryProfitEl.textContent = `+ ${formatNumber(totalProfit, selectedCurrency)} ${selectedCurrency}`;
+            summaryTotalEl.textContent = `${formatNumber(totalReturn, selectedCurrency)} ${selectedCurrency}`;
+            
+            if (selectedCurrency !== 'USD') {
+                 summaryProfitUsdEl.textContent = `≈ $${totalProfitInUsd.toFixed(2)}`;
             } else {
-                for (i = 0; i < document.spendform.h_id.length; i++) {
-                    if (document.spendform.h_id[i].checked) {
-                        id = document.spendform.h_id[i].value;
+                 summaryProfitUsdEl.textContent = '';
+            }
+           
+            summaryPlanEl.textContent = selectedPlan.description;
+        }
+        
+        function updateAllLimitsDisplays() {
+            if (!selectedCurrency) return;
+            
+            document.querySelectorAll('.plan-limits').forEach(el => {
+                const planId = parseInt(el.dataset.planIdLimits);
+                const plan = plans.find(p => p.id === planId);
+                if(plan) {
+                    const limits = getPlanLimits(plan, selectedCurrency);
+                    if (limits.min > 0) {
+                        el.textContent = `Min: ${limits.min} ${selectedCurrency}`;
+                    } else {
+                        el.textContent = '';
                     }
                 }
-            }
-
-            var cpObj = document.getElementById('compound_percents');
-            if (cpObj) {
-                while (cpObj.options.length != 0) {
-                    cpObj.options[0] = null;
-                }
-            }
-
-            if (cps[id] && cps[id].length > 0) {
-                document.getElementById('compound_block').style.display = '';
-                for (i in cps[id]) {
-                    cpObj.options[cpObj.options.length] = new Option(cps[id][i]);
-                }
+            });
+            
+            const currentPlanLimits = getPlanLimits(selectedPlan, selectedCurrency);
+            if(currentPlanLimits.min > 0) {
+                inputLimitsEl.textContent = `Min: ${currentPlanLimits.min}, Max: ${currentPlanLimits.max > 0 ? currentPlanLimits.max : '∞'}`;
             } else {
-                document.getElementById('compound_block').style.display = 'none';
+                inputLimitsEl.textContent = '';
             }
         }
 
-        var cps = {};
+        // Event Listener for Plans
+        plansContainer.addEventListener('click', (e) => {
+            const planCard = e.target.closest('.plan-card');
+            if (!planCard) return;
 
-        function validateForm() {
-            var amount = document.spendform.amount.value;
-            if (isNaN(amount) || amount <= 0) {
-                alert('Please enter a valid amount to deposit');
-                return false;
-            }
-            return true;
-        }
-
-    </script>
-<form method="POST" action="">
-    @csrf
-
-    <div class="row mt-3">
-        <div class="col-md-6 mb-3">
-            <div class="card">
-                <div class="card-header">
-                    <h3>Deposit </h3>
-                </div>
-                <div class="card-body text-center">
-
-                    <!-- QR Code -->
-                    <div class="mb-4">
- <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={{ urlencode($data['address_in']) }}" alt="QR Code" style="max-width: 200px;">                    </div>
-
-                    <!-- Wallet Address + Copy Icon -->
-                    <div class="d-flex justify-content-center align-items-center mb-3">
-    <div class="form-control d-flex align-items-center" id="walletAddressText" style="overflow-x: auto; white-space: nowrap;">
-        <span style="flex: 1; overflow-x: auto;">{{ $data['address_in'] ?? 'Address not found' }}</span>
-        <span onclick="copyWalletAddress()" style="cursor: pointer; font-size: 1.5rem; color:rgb(212, 220, 230); margin-left: 10px;">
-            <i class="fas fa-copy"></i>
-        </span>
-    </div>
-</div>
-
-
-                    <!-- Minimum Investment Text -->
-                   <!-- Deposit Rules Box -->
-<div class="card mt-4" style="background-color: #06080b; ">
-    <div class="card-body text-start p-3">
-        <h5 style="background: linear-gradient(to right, #ffffff, #c979ff, #d6c507, #c1ff28, #b47606, #ff8e01, #ffffff);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;" class=" mb-2">Deposit Rules</h5>
-        <ul class="mb-0 ps-3" style="font-size: 0.9rem; color: #ffff;">
-            <li><strong>Minimum Deposit:</strong> $10</li>
-            <li><strong>Payment Method:</strong> USDT (BEP20) only</li>
-            <li><strong>Important:</strong> Please select the <strong>BEP20</strong> network when sending USDT.</li>
-            <li class="text-danger">Sending funds via any other network may result in permanent loss of your funds.</li>
-        </ul>
-    </div>
-</div>
-
-
-                    <!-- Get Wallet Address Button -->
-                   
-
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
-
-<!-- Copy JS -->
-<script>
-    function copyWalletAddress() {
-        const text = document.getElementById("walletAddressText").innerText.trim();
-        navigator.clipboard.writeText(text).then(() => {
-            alert("Wallet address copied!");
-        }).catch(() => {
-            alert("Failed to copy.");
-        });
-    }
-</script>
-
-<!-- JS for Copy Button -->
-
-
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            updateCompound();
+            plansContainer.querySelectorAll('.plan-card').forEach(card => card.classList.remove('selected'));
+            planCard.classList.add('selected');
+            
+            const planId = parseInt(planCard.dataset.planId);
+            selectedPlan = plans.find(p => p.id === planId);
+            selectedPlanInput.value = planId;
+            
+            updateAllLimitsDisplays();
+            calculate();
         });
 
-    </script>
+        // Event Listener for Crypto Selection
+        cryptoContainer.addEventListener('click', (e) => {
+            const cryptoCard = e.target.closest('.crypto-card');
+            if (!cryptoCard) return;
 
+            cryptoContainer.querySelectorAll('.crypto-card').forEach(card => card.classList.remove('selected'));
+            cryptoCard.classList.add('selected');
+            
+            selectedCurrency = cryptoCard.dataset.currency;
+            selectedSystemId = cryptoCard.dataset.systemId;
+            
+            amountCurrencySymbolEl.textContent = selectedCurrency;
+            selectedSystemInput.value = selectedSystemId;
 
-</div>
-@include('layouts.upnl.sidebar')
+            updateAllLimitsDisplays();
+            calculate();
+        });
 
+        // Event Listener for Amount Input
+        amountInput.addEventListener('input', calculate);
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-</script>
-<script src="{{asset('')}}assets/js/dash.js"></script>
-
-
-<script>
-    window.addEventListener('load', function () {
-        // All resources (images, scripts, stylesheets, etc.) are loaded
-        const preloaderContainer = document.querySelector('.preloader-container');
-        const content = document.querySelector('.content');
-
-        if (preloaderContainer) {
-            // Add the 'hidden' class to trigger the fade-out animation
-            preloaderContainer.classList.add('hidden');
-
-            // Optional: If you want to completely remove the preloader from the DOM
-            // after the transition, you can listen for the 'transitionend' event.
-            preloaderContainer.addEventListener('transitionend', function () {
-                if (preloaderContainer.style.opacity === '0' || getComputedStyle(preloaderContainer)
-                    .opacity === '0') {
-                    preloaderContainer.style.display = 'none'; // Or preloaderContainer.remove();
-                }
-            }, {
-                once: true
-            }); // {once: true} ensures the event listener is removed after it fires
+        // Initial Selection and Calculation
+        const firstPlan = plansContainer.querySelector('.plan-card');
+        if (firstPlan) {
+            firstPlan.click();
+        }
+        
+        const firstCrypto = cryptoContainer.querySelector('.crypto-card');
+        if (firstCrypto) {
+            firstCrypto.click();
         }
 
-        if (content) {
-            content.style.display = 'block'; // Or any other display type you need, e.g., 'flex'
-            // If you used opacity for content:
-            // content.style.opacity = '1';
-            // content.style.visibility = 'visible';
-        }
+        calculate();
     });
+    </script>
 
-    // Fallback in case 'load' event doesn't fire or takes too long (e.g., for broken images)
-    // You might want to adjust the timeout duration
-    setTimeout(function () {
-        const preloaderContainer = document.querySelector('.preloader-container');
-        const content = document.querySelector('.content');
-
-        if (preloaderContainer && !preloaderContainer.classList.contains('hidden')) {
-            console.warn("Preloader timeout reached. Forcing hide.");
-            preloaderContainer.classList.add('hidden');
-            if (preloaderContainer.style.opacity === '0' || getComputedStyle(preloaderContainer).opacity ===
-                '0') {
-                preloaderContainer.style.display = 'none';
-            }
-            if (content) {
-                content.style.display = 'block';
-            }
-        }
-    }, 10000); // 10 seconds timeout as an example
-
-</script>
-
-</body>
-
-</html>
+    </body></html>

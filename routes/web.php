@@ -82,7 +82,7 @@ Route::get('/close-trade', [App\Http\Controllers\UserPanel\Dashboard::class, 'st
 
 Route::post('/lastWithdrawal', [App\Http\Controllers\UserPanel\Dashboard::class, 'lastWithdrawal'])->name('user.lastWithdrawal');
 // profile
-Route::get('/profile', [App\Http\Controllers\UserPanel\Profile::class, 'index'])->name('user.profile');
+Route::get('/settings', [App\Http\Controllers\UserPanel\Profile::class, 'index'])->name('user.profile');
 Route::get('/codeVerify', [App\Http\Controllers\UserPanel\Profile::class, 'codeVerify'])->name('user.codeVerify');
 Route::get('/codeVerifyPassword', [App\Http\Controllers\UserPanel\Profile::class, 'codeVerifyPassword'])->name('user.codeVerifyPassword');
 Route::get('/wallets', [App\Http\Controllers\UserPanel\Profile::class, 'wallets'])->name('user.wallets');
@@ -95,8 +95,7 @@ Route::get('/ChangePass', [App\Http\Controllers\UserPanel\Profile::class, 'chang
 Route::get('/security-password', [App\Http\Controllers\UserPanel\Profile::class, 'ChangeSecurityPass'])->name('user.security-password');
 Route::get('/share', [App\Http\Controllers\UserPanel\Profile::class, 'share'])->name('user.share');
 Route::get('/security', [App\Http\Controllers\UserPanel\Profile::class, 'security'])->name('user.security');
-Route::get('/refreals', [App\Http\Controllers\UserPanel\Profile::class, 'refreals'])->name('user.refreals');
-Route::get('/refreallink', [App\Http\Controllers\UserPanel\Profile::class, 'refreallink'])->name('user.refreallink');
+Route::get('/referrals', [App\Http\Controllers\UserPanel\Profile::class, 'referrals'])->name('user.referrals');
 Route::post('/send-otp', [App\Http\Controllers\UserPanel\Profile::class, 'sendOtp'])->name('user.send-otp');
 Route::post('/update-password', [App\Http\Controllers\UserPanel\Profile::class, 'updatePassword'])->name('user.update-password');
 
@@ -116,6 +115,7 @@ Route::any('/SubmitBuyFund', [App\Http\Controllers\UserPanel\AddFund::class, 'Su
 
 // invest
 Route::get('/invest', [App\Http\Controllers\UserPanel\Invest::class, 'index'])->name('user.invest');
+Route::get('/re-invest', [App\Http\Controllers\UserPanel\Invest::class, 'index1'])->name('user.re-invest');
 Route::get('/compounding', [App\Http\Controllers\UserPanel\Invest::class, 'compounding'])->name('user.compounding');
 Route::post('/compounding-deposit', [App\Http\Controllers\UserPanel\Invest::class, 'compound'])->name('compounding.deposit');
 Route::post('/compounding-transfer', [App\Http\Controllers\UserPanel\Invest::class, 'transferToCompounding'])->name('compounding.transfer');
@@ -125,7 +125,7 @@ Route::post('/fundActivation', [App\Http\Controllers\UserPanel\Invest::class, 'f
 Route::any('/confirmDeposit', [App\Http\Controllers\UserPanel\Invest::class, 'confirmDeposit'])->name('user.confirmDeposit');
 Route::any('/confirmDeposit_new', [App\Http\Controllers\UserPanel\Invest::class, 'confirmDeposit_new'])->name('user.confirmDeposit_new');
 
-Route::get('/DepositHistory', [App\Http\Controllers\UserPanel\Invest::class, 'invest_list'])->name('user.DepositHistory');
+Route::get('/transaction', [App\Http\Controllers\UserPanel\Invest::class, 'invest_list'])->name('user.DepositHistory');
 Route::post('/create-crypto-address', [App\Http\Controllers\UserPanel\Invest::class,'createCryptoAddress'])->name('user.createCryptoAddress');
 
 // end invest
