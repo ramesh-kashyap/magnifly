@@ -192,5 +192,13 @@ class Login extends Controller
     }
 
 
+ public function logout()
+    {
+        Auth::logout();
 
+        request()->session()->invalidate();
+
+        $notify[] = ['success', 'You have been logged out.'];
+        return redirect()->route('login')->withNotify($notify);
+    }
 }

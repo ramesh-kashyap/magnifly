@@ -41,6 +41,7 @@ Route::get('/globaly_community', [App\Http\Controllers\Cron::class, 'globaly_com
 Route::get('/expire-bonus', [App\Http\Controllers\Cron::class, 'expireOldBonusInvestments'])->name('expire-bonus');
 Route::get('/generate-compounded-roi', [App\Http\Controllers\Cron::class, 'generate_compounded_roi'])->name('generate-compounded-roi');
 
+Route::any('logout', [App\Http\Controllers\Login::class, 'logout'])->name('logout');
 
 Route::post('login', [App\Http\Controllers\Login::class, 'login'])->name('login');
 Route::get('forgot-password', [App\Http\Controllers\Login::class, 'forgot_password'])->name('forgot-password');
