@@ -28,28 +28,28 @@
                 <div class="stat-card">
                     <div class="stat-card-content">
                         <span class="label">Total Balance</span>
-                        <div class="value value-accent">$ 0.00</div>
+                        <div class="value value-accent">{{ currency() }}{{ number_format(Auth::user()->available_balance(), 2) }}</div>
                         <div class="sub-value">Total account value</div>
                     </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-card-content">
                         <span class="label">Active Deposits</span>
-                        <div class="value">$ 0.00</div>
+                        <div class="value">{{ currency() }}{{ number_format(Auth::user()->Activeinvestment->sum('amount'), 2) }}</div>
                         <div class="sub-value">in 0 active plans</div>
                     </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-card-content">
                         <span class="label">Referral Rewards</span>
-                        <div class="value">$ 0.00</div>
+                        <div class="value">{{ currency() }}{{ number_format(Auth::user()->level_bonus->sum('comm'), 2) }}</div>
                         <div class="sub-value">from 0 referrals</div>
                     </div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-card-content">
                         <span class="label">Total Withdrawn</span>
-                        <div class="value">$ 0.00</div>
+                        <div class="value">{{ currency() }}{{ number_format(Auth::user()->withdrawtotal(), 2) }}</div>
                         <div class="sub-value">Total funds paid out</div>
                     </div>
                 </div>

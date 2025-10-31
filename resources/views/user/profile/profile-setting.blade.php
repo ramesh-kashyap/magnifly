@@ -405,12 +405,10 @@
           <div class="main-content">
               <section class="section-card">
                   <h3>Change Password</h3>
-                  <form action="/handlers/user/change-password.php"
+                  <form action="{{route('user.edit-password')}}"
                       method="post" class="form-grid">
-                      <input type="hidden" name="csrf"
-                          value="901a7f730969f8c29b5e1d9657bf2775">
-                      <input type="hidden" name="from"
-                          value="/user/settings/">
+                      @csrf
+                     
                       <div class="input-group">
                           <label for="field-old_password">Old
                               Password</label>
@@ -422,7 +420,7 @@
                           <label for="field-new_password">New
                               Password</label>
                           <input type="password" id="field-new_password"
-                              name="new_password" class="input-field"
+                              name="password" class="input-field"
                               placeholder="..." required>
                       </div>
                       <div class="input-group">
@@ -430,7 +428,7 @@
                               the New Password</label>
                           <input type="password"
                               id="field-repeat_new_password"
-                              name="repeat_new_password"
+                              name="password_confirmation"
                               class="input-field" placeholder="..."
                               required>
                       </div>
@@ -442,6 +440,7 @@
                       </div>
                   </form>
               </section>
+                      @include('partials.notify')
 
               <section class="section-card">
                   <h3>Payment Details</h3>

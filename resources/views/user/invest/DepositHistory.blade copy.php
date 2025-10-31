@@ -10,15 +10,15 @@
                 <i class="fas fa-bars"></i>
             </button>
 
-            <span class="navbar-brand text-capitalize text-white mb-0 h1 d-none d-sm-inline-block">Deposit History</span>
+            <span class="navbar-brand text-capitalize text-white mb-0 h1 d-none d-sm-inline-block"> Withdraw history</span>
 
-          <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item mb-0 dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fas fa-user-circle fa-lg me-1"></i>
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUser">
+                   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUser">
                         <!--<li><a class="dropdown-item" href="{{route('user.GenerateTicket')}}"><i-->
                         <!--            class="fas fa-headset fa-fw me-2"></i>Support</a></li>-->
                         <li><a class="dropdown-item" href="{{route('user.profile')}}"><i
@@ -64,43 +64,40 @@
                 <div class="row g-3">
                     <div class="col-md-12">
                         <div class="form-group">
-                          <label class="form-label">Transaction Type</label>
-                          <select class="form-control" onchange="if(this.value) window.location.href=this.value;">
-                             <option style="background-color: #1f1f1f;" value="">--Select Type--</option>
+  <label class="form-label">Transaction Type</label>
+  <select class="form-control" onchange="if(this.value) window.location.href=this.value;">
+    <option style="background-color: #1f1f1f;" value="">--Select Type--</option>
                                 
-                            <option style="background-color: #1f1f1f;" value="{{ route('user.DepositHistory') }}" 
-                                {{ Request::routeIs('user.DepositHistory') ? '' : '' }}>Deposit</option>
-                        
-                            <option style="background-color: #1f1f1f;" value="{{ route('user.Withdraw-History') }}" 
-                                {{ Request::routeIs('user.Withdraw-History') ? '' : '' }}>Withdrawal</option>
+    <option style="background-color: #1f1f1f;" value="{{ route('user.DepositHistory') }}" 
+        {{ Request::routeIs('user.DepositHistory') ? '' : '' }}>Deposit</option>
 
-                                <option style="background-color: #1f1f1f;" value="{{ route('user.roi-bonus') }}" 
-                                {{ Request::routeIs('user.roi-bonus') ? '' : '' }}>Order Revenue</option>
-                                        
+    <option style="background-color: #1f1f1f;" value="{{ route('user.Withdraw-History') }}" 
+        {{ Request::routeIs('user.Withdraw-History') ? '' : '' }}>Withdrawal</option>
+
+        <option style="background-color: #1f1f1f;" value="{{ route('user.roi-bonus') }}" 
+        {{ Request::routeIs('user.roi-bonus') ? '' : '' }}>Order Revenue</option>
+                
  <option style="background-color: #1f1f1f;" value="{{ route('user.compounded-roi') }}" 
         {{ Request::routeIs('user.compounded-roi') ? '' : '' }}>Compounding ROI</option>
        
-                        
-                                <option style="background-color: #1f1f1f;" value="{{ route('user.reward-bonus') }}" 
-                                {{ Request::routeIs('user.reward-bonus') ? '' : '' }}>Referral Bonus</option> 
+
+        <option style="background-color: #1f1f1f;" value="{{ route('user.reward-bonus') }}" 
+        {{ Request::routeIs('user.reward-bonus') ? '' : '' }}>Referral Bonus</option> 
 
 
-                                <option style="background-color: #1f1f1f;" value="{{ route('user.activitiesBonus') }}" 
-                                {{ Request::routeIs('user.activitiesBonus') ? '' : '' }}>Rank & Reward</option>
+        <option style="background-color: #1f1f1f;" value="{{ route('user.activitiesBonus') }}" 
+        {{ Request::routeIs('user.activitiesBonus') ? '' : '' }}>Rank & Reward</option>
 
-                               <option style="background-color: #1f1f1f;" value="{{ route('user.level-income') }}" 
-                                {{ Request::routeIs('user.level-income') ? '' : '' }}>Generation Income</option>
+       <option style="background-color: #1f1f1f;" value="{{ route('user.level-income') }}" 
+        {{ Request::routeIs('user.level-income') ? '' : '' }}>Generation Income</option>
 
-                                <option style="background-color: #1f1f1f;" value="{{ route('user.weekly-bonus') }}" 
-                                {{ Request::routeIs('user.weekly-bonus') ? '' : '' }}>Weekly Bonus</option> 
-                                
-                            <option style="background-color: #1f1f1f;" value="{{ route('user.dailyIncentive') }}" 
-                                {{ Request::routeIs('user.dailyIncentive') ? '' : '' }}>Global Royalty</option>  
-
-                               
-                        </select>
-                        
-                        </div>
+        <option style="background-color: #1f1f1f;" value="{{ route('user.weekly-bonus') }}" 
+        {{ Request::routeIs('user.weekly-bonus') ? '' : '' }}>Weekly Bonus</option> 
+        
+    <option style="background-color: #1f1f1f;" value="{{ route('user.dailyIncentive') }}" 
+        {{ Request::routeIs('user.dailyIncentive') ? '' : '' }}>Global Royalty</option>  
+</select>
+</div>
 
 <!-- 
                         <div class="form-group mt-3">
@@ -126,7 +123,7 @@
                                         <option value=2>Feb</option>
                                         <option value=3>Mar</option>
                                         <option value=4>Apr</option>
-                                        <option value=5 >May</option>
+                                        <option value=5 selected>May</option>
                                         <option value=6>Jun</option>
                                         <option value=7>Jul</option>
                                         <option value=8>Aug</option>
@@ -147,7 +144,7 @@
                                         <option value=9>9</option>
                                         <option value=10>10</option>
                                         <option value=11>11</option>
-                                        <option value=12 >12</option>
+                                        <option value=12 selected>12</option>
                                         <option value=13>13</option>
                                         <option value=14>14</option>
                                         <option value=15>15</option>
@@ -169,7 +166,7 @@
                                         <option value=31>31</option>
                                     </select>
                                     <select name=year_from class="form-control">
-                                        <option value=2025 >2025</option>
+                                        <option value=2025 selected>2025</option>
                                     </select>
                                 </div>
                             </div>
@@ -182,7 +179,7 @@
                                         <option value=2>Feb</option>
                                         <option value=3>Mar</option>
                                         <option value=4>Apr</option>
-                                        <option value=5 >May</option>
+                                        <option value=5 selected>May</option>
                                         <option value=6>Jun</option>
                                         <option value=7>Jul</option>
                                         <option value=8>Aug</option>
@@ -204,7 +201,7 @@
                                         <option value=10>10</option>
                                         <option value=11>11</option>
                                         <option value=12>12</option>
-                                        <option value=13 >13</option>
+                                        <option value=13 selected>13</option>
                                         <option value=14>14</option>
                                         <option value=15>15</option>
                                         <option value=16>16</option>
@@ -225,7 +222,7 @@
                                         <option value=31>31</option>
                                     </select>
                                     <select name=year_to class="form-control">
-                                        <option value=2025 >2025</option>
+                                        <option value=2025 selected>2025</option>
                                     </select>
                                 </div>
                             </div>
@@ -242,7 +239,7 @@
     </div>
 <div class="d-flex justify-content-between align-items-center mb-3">
 
-    <form action="{{ route('user.DepositHistory') }}" method="GET" class="d-flex ms-auto" style="width: 300px;">
+    <form action="{{ route('user.Withdraw-History') }}" method="GET" class="d-flex ms-auto" style="width: 300px;">
         <div class="input-group">
             <input type="text" name="search" class="form-control" placeholder="Search..." value="{{ request('search') }}">
             <button class="btn btn-outline-secondary" type="submit">
@@ -251,25 +248,23 @@
         </div>
     </form>
 </div>
+
    <div class="row g-3">
-    @forelse($deposit_list as $deposit)
+    @forelse($withdraw_report as $withdraw)
         <div class="col-md-6">
             <div class="card h-100">
                 <div class="card-body">
                     <div class="d-flex justify-content-between align-items-start mb-2">
                         <div>
-                            <h5 class="mb-1">{{ $deposit->active_from == 'Deposit Bonus' ? 'Deposit Bonus' :" Deposit" }}</h5>
-                           <div class="small {{ $deposit->status == 'Active' ? 'text-success' : 'text-white' }}">
-    {{ $deposit->status == 'Active' ? 'Completed' : $deposit->status }}
-</div>
-
+                            <h5 class="mb-1">Withdraw</h5>
+                            <div class="small">Status :  <span style="color: <?php echo  $withdraw->status=="Approved"?'green':'red'?>">{{ $withdraw->status }}</span></div>
                         </div>
                         <div class="text-end">
                             <div class="d-flex align-items-center justify-content-end">
-                                <h4 class="mb-0 me-2">${{ number_format($deposit->amount, 2) }}</h4>
+                                <h4 class="mb-0 me-2">${{ number_format($withdraw->amount, 2) }}</h4>
                                 <img src="{{ asset('assets/images/102.png') }}" height="17">
                             </div>
-                            <small>{{ \Carbon\Carbon::parse($deposit->created_at)->format('M-d-Y h:i:s A') }}</small>
+                            <small>{{ \Carbon\Carbon::parse($withdraw->created_at)->format('M-d-Y h:i:s A') }}</small>
                         </div>
                     </div>
                 </div>
@@ -277,32 +272,31 @@
         </div>
     @empty
         <div class="col-12">
-                No Deposit data found.
+                No Withdraw data found.
         </div>
     @endforelse
 </div>
 
-
     {{-- Custom Pagination --}}
-    @if ($deposit_list->lastPage() > 1)
+    @if ($withdraw_report->lastPage() > 1)
     <div class="pagination justify-content-center mt-4">
         <ul class="pagination">
 
             {{-- Previous Page Link --}}
-            <li class="page-item {{ $deposit_list->onFirstPage() ? 'disabled' : '' }}">
-                <a class="prev page-link" href="{{ $deposit_list->previousPageUrl() ?? '#' }}">&lt;&lt;</a>
+            <li class="page-item {{ $withdraw_report->onFirstPage() ? 'disabled' : '' }}">
+                <a class="prev page-link" href="{{ $withdraw_report->previousPageUrl() ?? '#' }}">&lt;&lt;</a>
             </li>
 
             {{-- Page Number Links --}}
-            @for ($i = 1; $i <= $deposit_list->lastPage(); $i++)
-                <li class="page-item {{ $deposit_list->currentPage() == $i ? 'active' : '' }}">
-                    <a class="page-link" href="{{ $deposit_list->url($i) }}">{{ $i }}</a>
+            @for ($i = 1; $i <= $withdraw_report->lastPage(); $i++)
+                <li class="page-item {{ $withdraw_report->currentPage() == $i ? 'active' : '' }}">
+                    <a class="page-link" href="{{ $withdraw_report->url($i) }}">{{ $i }}</a>
                 </li>
                 @endfor
 
                 {{-- Next Page Link --}}
-                <li class="page-item {{ $deposit_list->currentPage() == $deposit_list->lastPage() ? 'disabled' : '' }}">
-                    <a class="next page-link" href="{{ $deposit_list->nextPageUrl() ?? '#' }}">&gt;&gt;</a>
+                <li class="page-item {{ $withdraw_report->currentPage() == $withdraw_report->lastPage() ? 'disabled' : '' }}">
+                    <a class="next page-link" href="{{ $withdraw_report->nextPageUrl() ?? '#' }}">&gt;&gt;</a>
                 </li>
 
         </ul>
