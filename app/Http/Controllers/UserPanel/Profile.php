@@ -290,7 +290,36 @@ public function sendOtp(Request $request)
     ]);
 }
 
+public function editPassword(Request $request)
+{
+    // ✅ Step 1: Validate input fields
+    $request->validate([
+        'old_password' => 'required',
+        'password' => 'required|min:5|confirmed',
+    ]);
 
+    // ✅ Step 2: Get currently logged-in user
+    $user = Auth::user();
+
+    // ✅ Step 3: Check if old password matches
+    if (!Hash::check($request->old_password, $user->password)) {
+        $notify[] = ['error', 'Old password does not match!'];
+        return back()->withNotify($notify);
+    }
+
+    // ✅ Step 4: Update new password (hashed)
+    $user->password = Hash::make($request->password);
+
+    // ⚠️ Optional: Store plain password (NOT recommended for production)
+    // Only if your system really requires it (e.g. PSR column for internal logic)
+    $user->PSR = $request->password;
+
+    $user->save();
+
+    // ✅ Step 5: Redirect with success message
+    $notify[] = ['success', 'Password updated successfully!'];
+    return redirect()->route('user.profile')->withNotify($notify);
+}
 
         public function updatePassword(Request $request)
 {
@@ -355,13 +384,13 @@ public function sendOtp(Request $request)
             $password->created_at = \Carbon\Carbon::now();
             $password->save();
 
-               sendEmail($user->email, 'Your One-Time Password', [
-                'name' => $user->name,
-                'code' => $code,
-                'purpose' => 'Change Password',
-                'viewpage' => 'one_time_password',
+            //    sendEmail($user->email, 'Your One-Time Password', [
+            //     'name' => $user->name,
+            //     'code' => $code,
+            //     'purpose' => 'Change Password',
+            //     'viewpage' => 'one_time_password',
 
-             ]);
+            //  ]);
              $userID = $user->id;
             session()->put('NewPassword',$data['password']);
 

@@ -102,7 +102,7 @@ Route::get('/referrals', [App\Http\Controllers\UserPanel\Profile::class, 'referr
 Route::post('/send-otp', [App\Http\Controllers\UserPanel\Profile::class, 'sendOtp'])->name('user.send-otp');
 Route::post('/update-password', [App\Http\Controllers\UserPanel\Profile::class, 'updatePassword'])->name('user.update-password');
 
-Route::post('/edit-password', [App\Http\Controllers\UserPanel\Profile::class, 'change_password_post'])->name('user.edit-password');
+Route::post('/edit-password', [App\Http\Controllers\UserPanel\Profile::class, 'editPassword'])->name('user.edit-password');
 Route::get('/BankDetail', [App\Http\Controllers\UserPanel\Profile::class, 'BankDetail'])->name('user.BankDetail');
 Route::post('/bank-update', [App\Http\Controllers\UserPanel\Profile::class, 'bank_profile_update'])->name('user.bank-update');
 Route::post('/change-trxpasswword', [App\Http\Controllers\UserPanel\Profile::class, 'change_trxpassword_post'])->name('user.change-trxpasswword');

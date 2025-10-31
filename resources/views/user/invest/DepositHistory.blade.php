@@ -103,12 +103,46 @@
     <div class="card-header"><h3>All Operations</h3></div>
 
     <div class="ops-filter">
-      <a class="active" href="?type=all">All</a><a class="" href="?type=deposits">Deposits</a><a class="" href="?type=withdrawals">Withdrawals</a><a class="" href="?type=accruals">Accruals</a><a class="" href="?type=referrals">Referrals</a>    </div>
+      <a class="" href="{{route('user.DepositHistory')}}">Deposits</a><a class="" href="{{route('user.Withdraw-History')}}">Withdrawals</a><a class="" href="{{route('user.roi-bonus')}}">Incomes</a>    </div>
 
-    <ul class="ops-list">
-
-        <li class="tx-empty">No operations yet.</li>
-          </ul>
+   <table class="deposits-table">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Amount</th>
+        <th>Start Date</th>
+        <th>Status</th>
+        <th>Payment Mode</th>
+      </tr>
+    </thead>
+    <tbody>
+      @forelse($deposit_list as $key => $deposit)
+        <tr>
+          <td>{{ $key + 1 }}</td>
+          <td>${{ number_format($deposit->amount, 2) }}</td>
+          <td>{{ \Carbon\Carbon::parse($deposit->created_at)->format('d M Y') }}</td>
+          <td>
+            @if($deposit->status == 'pending')
+              <span style="color:orange;">Pending</span>
+            @elseif($deposit->status == 'approved')
+              <span style="color:green;">Approved</span>
+            @else
+              <span style="color:red;">Declined</span>
+            @endif
+          </td>
+          <td>{{ ucfirst($deposit->payment_mode) }}</td>
+        </tr>
+      @empty
+        <tr>
+          <td colspan="5" class="text-center">No deposit history found.</td>
+        </tr>
+      @endforelse
+    </tbody>
+  </table>
+  {{-- Pagination --}}
+  <div class="ops-pager">
+    {{ $deposit_list->links() }}
+  </div>
 
       </section>
 </main>
