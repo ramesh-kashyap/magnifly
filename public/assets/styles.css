@@ -68,7 +68,7 @@ body {
 
 :root {
     --dark-slate-grey: #30363b;
-    --sandy-brown: #f4a159
+    --sandy-brown: #9d7bff
 }
 
 html {
@@ -525,7 +525,7 @@ img {
 }
 
 .text-span-11 {
-    color: #f4a159
+    color: #9d7bff
 }
 
 .maiin-sec-buttons {
@@ -562,7 +562,7 @@ img {
 }
 
 .get-button {
-    background-color: #f4a159;
+    background-color: #9d7bff;
     border-radius: 14px;
     justify-content: center;
     align-items: center;
@@ -813,7 +813,7 @@ img {
 }
 
 .text-span-2 {
-    color: #f4a159
+    color: #9d7bff
 }
 
 .div-block-18 {
@@ -982,7 +982,7 @@ img {
 }
 
 .text-span-6 {
-    color: #f4a159
+    color: #9d7bff
 }
 
 .your-contacts-block {
@@ -1725,7 +1725,7 @@ img {
 }
 
 .about-section .text-span-2 {
-    color: #f4a159
+    color: #9d7bff
 }
 
 .div-block-19 {
@@ -2870,7 +2870,7 @@ header.collapsing .contacts-block {
 }
 
 .stat-value .stat-number {
-    color: #f4a159
+    color: #9d7bff
 }
 
 .stat-label {
@@ -2979,7 +2979,7 @@ header.collapsing .contacts-block {
 }
 
 #compit-pay {
-    --cp-accent: #f4a159;
+    --cp-accent: #9d7bff;
     --cp-text: #30363b;
     --cp-muted: #7c8087;
     --cp-card: #fff;
@@ -3597,7 +3597,7 @@ header.collapsing .contacts-block {
 
 .referral-percentage {
     font-family: 'Anta', sans-serif;
-    color: #f4a159;
+    color: #9d7bff;
     font-size: 52px;
     line-height: 1;
     margin-bottom: 15px
@@ -3710,7 +3710,7 @@ header.collapsing .contacts-block {
 }
 
 .tab-link.active {
-    background: #f4a159;
+    background: #9d7bff;
     color: #22272a;
     box-shadow: 0 5px 15px rgba(244, 161, 89, 0.3)
 }
@@ -3949,7 +3949,7 @@ header.collapsing .contacts-block {
     font-size: 42px;
     line-height: .9;
     letter-spacing: .5px;
-    background: linear-gradient(180deg, #f7ba7a 0, var(--sandy-brown, #f4a159) 100%);
+    background: linear-gradient(180deg, #f7ba7a 0, var(--sandy-brown, #9d7bff) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent
@@ -4067,13 +4067,13 @@ header.collapsing .contacts-block {
     .slider-arrow svg {
         width: 20px;
         height: 20px;
-        stroke: #f4a159;
+        stroke: #9d7bff;
         stroke-width: 2;
         fill: none
     }
 
     .slider-arrow:hover {
-        background-color: #f4a159;
+        background-color: #9d7bff;
         box-shadow: 0 0 15px rgba(244, 161, 89, 0.5)
     }
 
@@ -4197,7 +4197,7 @@ header.collapsing .contacts-block {
 }
 
 :root {
-    --btn-orange: #f4a159;
+    --btn-orange: #9d7bff;
     --btn-dark: #30363b;
     --btn-text: #22272a
 }
@@ -4229,12 +4229,12 @@ header.collapsing .contacts-block {
 }
 
 .get-button {
-    --btn-bg: #f4a159;
+    --btn-bg: #9d7bff;
     --btn-bg-hover: #30363b;
     --box-bg: #30363b;
-    --box-bg-hover: #f4a159;
+    --box-bg-hover: #9d7bff;
     --text-idle: #22272a;
-    --text-hover: #f4a159;
+    --text-hover: #9d7bff;
     --shift-text: 59;
     --shift-box: -138;
     --dops-rotate: 45deg;
@@ -4249,7 +4249,7 @@ header.collapsing .contacts-block {
 
 .get-button.get-button--alt {
     --btn-bg: #3b4146;
-    --btn-bg-hover: #f4a159;
+    --btn-bg-hover: #9d7bff;
     --box-bg: #3b4146;
     --box-bg-hover: #3b4146;
     --text-idle: #fff;
@@ -4358,7 +4358,7 @@ header.collapsing .contacts-block {
 }
 
 .social-link:hover .social-icon {
-    color: var(--sandy-brown, #f4a159)
+    color: var(--sandy-brown, #9d7bff)
 }
 
 .social-icon svg {

@@ -1335,7 +1335,7 @@
 
         const FILL_MS = 1000;
         const FILL_EASE = 'cubic-bezier(.2,.75,.2,1)';
-        const ORANGE = '#f4a159';
+        const ORANGE = '#9d7bff';
         const SHADOW_ON = 'drop-shadow(0 0 12px rgba(244,161,89,.55))';
         const SHADOW_OFF = 'drop-shadow(0 0 0 rgba(0,0,0,0))';
 

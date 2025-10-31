@@ -127,7 +127,7 @@
                 --dark-slate-grey: #30363b;
                 --black: #000;
                 --dark-grey-lighter: #3d4348;
-                --sandy-brown: #f4a159;
+                --sandy-brown: #9d7bff;
                 --text-muted: #a2a5ad;
                 --text-light: #f7f7f9;
                 --background: #f7f7f9;
