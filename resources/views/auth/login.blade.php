@@ -549,14 +549,29 @@
             </div>
             <div class="modal-body">
                 <p>Please enter your email address to receive a password reset link.</p>
-                <form method="post" action="../handlers/forgot.php.html" class="form-grid">
-                    <input type="hidden" name="csrf" value="0b79d92eb288ceca23b6f072b5f81fcd">
-                    <input type="hidden" name="from" value="/login/">
+                <form method="post" action="{{route('password-recovery-send')}}" class="form-grid">
+                    @csrf
+                    {{-- Error Message --}}
+                    @if ($errors->any())
+                    <div style="background: #ffe6e6; color: #cc0000; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                        @foreach ($errors->all() as $error)
+                        <div>⚠️ {{ $error }}</div>
+                        @endforeach
+                    </div>
+                    @endif
+
+                    {{-- Success Message --}}
+                    @if (session('status'))
+                    <div style="background: #e6ffed; color: #008000; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                        ✅ {{ session('status') }}
+                    </div>
+                    @endif
+
                     <div class="input-group" style="text-align: left;">
                         <label for="forgot-email">Your E-mail</label>
-                        <input name="email" type="email" value="" class="input-field" placeholder="Enter your e-mail" required autofocus>
+                        <input name="email" type="email" value="" class="input-field" placeholder="Enter your e-mail" required>
                     </div>
-                    <div id="captcha_forgot" style="transform: scale(0.9); margin: 10px auto;"></div>
+                    <!-- <div id="captcha_forgot" style="transform: scale(0.9); margin: 10px auto;"></div> -->
                     <button type="submit" class="btn-submit">Continue</button>
                 </form>
             </div>

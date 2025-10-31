@@ -83,9 +83,9 @@
                                             style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; vertical-align: top; margin: 0; padding: 0 0 20px;"
                                             valign="top">
                                             <br>
-                                            <a href="#" class="btn-primary"
+                                            <a href="{{ $view_message['reset_link'] }}" class="btn-primary"
                                                 style="font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; box-sizing: border-box; font-size: 14px; color: #FFF; text-decoration: none; line-height: 2em; font-weight: bold; text-align: center; cursor: pointer; display: inline-block; border-radius: 5px; text-transform: capitalize; background-color: #ed8e7b; margin: 0; border-color: #ed8e7b; border-style: solid; border-width: 8px 16px;">Recovery
-                                                code: {{ $view_message['code'] }} </a>
+                                                🔐 Reset Your Password </a>
                                         </td>
                                     </tr>
                                     

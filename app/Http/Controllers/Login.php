@@ -9,8 +9,11 @@ use Redirect;
 use App\Models\PasswordReset;
 use App\Models\User;
 use App\Models\UserLogin;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;        
 
-use DB;
 class Login extends Controller
 {
 
@@ -151,46 +154,133 @@ class Login extends Controller
         session()->put('resetMail',$request->userID);
         return redirect()->route('resetPassword', $code)->withNotify($notify);
     }
-
-
-    public function resetPassword()
+  public function sendRecoveryEmail(Request $request)
     {
-        $page_title = "Forgot Password";
-    //   dd("hi");
-        return view('auth.passwords.resetPassword', compact('page_title'));
+        $request->validate([
+            'email' => 'required|email|exists:users,email',
+            // 'email' => 'required|email|unique:users,email',
+
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+
+        session()->put('resetMail', $user->email);
+        $token = Str::random(64);
+
+        DB::table('password_resets')->updateOrInsert(
+            ['email' => $user->email],
+            ['token' => Hash::make($token), 'created_at' => now()]
+        );
+
+        $resetUrl = route('resetPassword', ['token' => $token, 'email' => $user->email]);
+
+        $view_message = [
+            'name' => $user->name,
+            'reset_link' => $resetUrl,
+            'time' => now()->format('d M Y h:i A'),
+            'ip' => $request->ip(),
+            'browser' => $request->header('User-Agent'),
+            'operating_system' => php_uname('s'),
+            'code' => $token,
+        ];
+
+        Mail::send('mail.forgot_sucess', ['view_message' => $view_message], function ($message) use ($user) {
+            $message->to($user->email);
+            $message->subject('Recover Your Password');
+        });
+
+        return back()->with('status', 'Recovery email sent to your inbox.');
+    }
+
+    // public function resetPassword()
+    // {
+    //     $page_title = "Forgot Password";
+    // //   dd("hi");
+    //     return view('auth.passwords.resetPassword', compact('page_title'));
+    // }
+    public function resetPassword(Request $request)
+    {
+        $token = $request->query('token');
+        $email = $request->query('email');
+
+        if (!$token || !$email) {
+            return redirect()->route('login')->with('error', 'Invalid password reset link.');
+        }
+        return view('auth.passwords.resetPassword', compact('token', 'email'));
     }
 
 
 
-    public function submitResetPassword(Request $request)
+    // public function submitResetPassword(Request $request)
+    // {
+
+    // $request->validate(['password' => 'required|confirmed|min:5']);
+
+    //    $userID = session()->get('resetMail');
+
+    // //    dd($userID);
+    // //    die;
+
+    //    $user_name = session()->get('username');
+
+    //    $user = User::where('id',$userID)->orderBy('id', 'DESC')->first();
+
+
+    //    if (!$user) {
+    //     $notify[] = ['error','Opps! session expired'];
+    //     return redirect()->route('login')->withNotify($notify);
+    //    }
+    //    $password = password_hash($request->password, PASSWORD_DEFAULT);
+
+    //    $user->password=$password;
+    //    $user->PSR=$request->password;
+    //    $user->save();
+    //    $notify[] = ['success', 'Your Password change Successfully.'];
+    //    return redirect()->route('login')->withNotify($notify);
+
+    // }
+   public function submitResetPassword(Request $request)
     {
+        $request->validate([
+            'email' => 'required|email|exists:users,email',
+            'password' => 'required|confirmed|min:5',
+            'token' => 'required',
+        ]);
 
-    $request->validate(['password' => 'required|confirmed|min:5']);
+        try {
+            $record = DB::table('password_resets')->where('email', $request->email)->first();
 
-       $userID = session()->get('resetMail');
+            if (!$record) {
+                $notify[] = ['error', 'Invalid or expired reset link.'];
+                return redirect()->route('forgot-password')->withNotify($notify);
+            }
 
-    //    dd($userID);
-    //    die;
+            if (!Hash::check($request->token, $record->token)) {
+                $notify[] = ['error', 'Invalid token!'];
+                return redirect()->route('forgot-password')->withNotify($notify);
+            }
 
-       $user_name = session()->get('username');
+            $user = User::where('email', $request->email)->first();
+            if (!$user) {
+                $notify[] = ['error', 'User not found!'];
+                return redirect()->route('forgot-password')->withNotify($notify);
+            }
 
-       $user = User::where('id',$userID)->orderBy('id', 'DESC')->first();
+            // Update password
+            $user->password = Hash::make($request->password);
+            $user->PSR = $request->password; // (if you really need to store plain password — not recommended)
+            $user->save();
 
+            DB::table('password_resets')->where('email', $request->email)->delete();
 
-       if (!$user) {
-        $notify[] = ['error','Opps! session expired'];
-        return redirect()->route('forgot-password')->withNotify($notify);
-       }
-       $password = password_hash($request->password, PASSWORD_DEFAULT);
-
-       $user->password=$password;
-       $user->PSR=$request->password;
-       $user->save();
-       $notify[] = ['success', 'Your Password change Successfully.'];
-       return redirect()->route('login')->withNotify($notify);
-
+            $notify[] = ['success', 'Your password has been reset successfully.'];
+            return redirect()->route('login')->withNotify($notify);
+        } catch (\Exception $e) {
+            \Log::error('Reset Password Error: ' . $e->getMessage());
+            $notify[] = ['error', 'Something went wrong while resetting your password. Please try again.'];
+            return back()->withNotify($notify);
+        }
     }
-
 
  public function logout()
     {
