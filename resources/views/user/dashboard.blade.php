@@ -150,35 +150,59 @@
                         </div>
                     </section>
 
-                    <section class="dashboard-card">
-                        <div class="card-header">
-                            <h3>Active &amp; Closed Deposits</h3>
-                            <a href="/user/invest">Investment History</a>
-                        </div>
+                  <section class="dashboard-card">
+    <div class="card-header">
+        <h3>Active &amp; Closed Deposits</h3>
+        <a href="/user/invest">Investment History</a>
+    </div>
 
-                        <div style="overflow-x:auto;">
-                            <table class="deposits-table">
-                                <thead>
-                                    <tr>
-                                        <th>Amount</th>
-                                        <th>Accrual</th>
-                                        <th>Ends</th>
-                                        <th>Profit (now)</th>
-                                        <th>Progress</th>
-                                        <th>Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td colspan="6"
-                                            style="text-align:center;color:var(--text-muted);">
-                                            No deposits found.
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+    <div style="overflow-x:auto;">
+        <table class="deposits-table">
+            <thead>
+                <tr>
+                    <th>Amount</th>
+                    <th>Created At</th>
+                    <th>Profit (now)</th>
+                    <th>Progress</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse($investments as $investment)
+                    <tr>
+                        <td>${{ number_format($investment->amount, 2) }}</td>
+                        <td>{{ \Carbon\Carbon::parse($investment->sdate)->format('d M Y') }}</td>
+                        <td>${{ number_format($investment->profit ?? 0, 2) }}</td>
+                         <td>
+                    <div class="progress-bar-container" style="width:100%; background:#e0e0e0; border-radius:10px; height:8px;">
+                        <div class="progress-bar"
+                             style="width: {{ $investment->progress ?? 0 }}%; background: #00b2c8; height:8px; border-radius:10px;">
                         </div>
-                    </section>
+                    </div>
+                    <small>{{ $investment->progress ?? 0 }}%</small>
+                </td>
+                        <td>
+                            @if($investment->status == 'active')
+                                <span style="color:green;font-weight:600;">Active</span>
+                            @elseif($investment->status == 'decline')
+                                <span style="color:red;font-weight:600;">Declined</span>
+                            @else
+                                <span style="color:gray;">{{ ucfirst($investment->status) }}</span>
+                            @endif
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="6" style="text-align:center;color:var(--text-muted);">
+                            No deposits found.
+                        </td>
+                    </tr>
+                @endforelse
+            </tbody>
+        </table>
+    </div>
+</section>
+
 
                 </div>
                 <div class="sidebar-column">
@@ -209,16 +233,46 @@
                     </section>
 
                     <section class="dashboard-card">
-                        <div class="card-header">
-                            <h3>Latest Activity</h3>
-                            <a href="/user/operations">All</a>
-                        </div>
+    <div class="card-header" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+        <h3 style="font-size:16px; font-weight:600; color:#333;">Latest Activity</h3>
+        <a href="{{route('user.DepositHistory')}}" style="text-decoration:none; color:#007bff;">All</a>
+    </div>
 
-                        <ul class="transactions-list">
-                            <li class="transaction-item-empty"><p>No
-                                    transactions yet.</p></li>
-                        </ul>
-                    </section>
+    <ul class="transactions-list" style="list-style:none; margin:0; padding:0;">
+        @forelse($latestInvestments as $investment)
+            <li class="transaction-item" 
+                style="display:flex; align-items:center; justify-content:space-between; border:1px solid #e0e1e2; border-radius:10px; padding:10px 14px; margin-bottom:10px; background:#fff;">
+                
+                <!-- Left side -->
+                <div class="left" style="display:flex; flex-direction:column;">
+                    <span style="font-weight:600; color:#111;">₹{{ number_format($investment->amount, 2) }}</span>
+                    <span style="font-size:12px; color:#777;">{{ $investment->created_at->format('d M Y, h:i A') }}</span>
+                </div>
+
+                <!-- Right side -->
+                <div class="right">
+                    @php
+                        $color = match($investment->status) {
+                            'active' => '#16a34a',
+                            'pending' => '#ca8a04',
+                            'declined' => '#dc2626',
+                            default => '#6b7280'
+                        };
+                    @endphp
+                    <span style="font-weight:600; font-size:14px; color:{{ $color }};">
+                        {{ ucfirst($investment->status) }}
+                    </span>
+                </div>
+            </li>
+        @empty
+            <li class="transaction-item-empty" 
+                style="text-align:center; color:#999; border:1px dashed #ddd; border-radius:10px; padding:12px;">
+                No transactions yet.
+            </li>
+        @endforelse
+    </ul>
+</section>
+
 
                 </div>
             </div>
