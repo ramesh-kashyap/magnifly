@@ -5,28 +5,28 @@
     <link rel="stylesheet" href="{{asset('')}}assets/styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeMining: Your Gateway to Digital Asset Investment</title>
+    <title>Magnifly: Your Gateway to Digital Asset Investment</title>
     <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
     <link rel="shortcut icon" href="../favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="TeMining" />
+    <meta name="apple-mobile-web-app-title" content="Magnifly" />
     <link rel="manifest" href="../site.webmanifest.txt" />
 
 
-    <meta name="description" content="TeMining offers stable passive income through advanced cloud mining and profitable crypto investment plans. Power your daily crypto returns with us.">
-    <meta name="keywords" content="cloud mining, crypto investment, passive income, TeMining, digital assets, daily returns, cryptocurrency">
-    <meta property="og:title" content="TeMining | Powering Your Daily Crypto Returns">
+    <meta name="description" content="Magnifly offers stable passive income through advanced cloud mining and profitable crypto investment plans. Power your daily crypto returns with us.">
+    <meta name="keywords" content="cloud mining, crypto investment, passive income, Magnifly, digital assets, daily returns, cryptocurrency">
+    <meta property="og:title" content="Magnifly | Powering Your Daily Crypto Returns">
     <meta property="og:description" content="A secure platform for cloud mining to help you generate daily returns on your digital assets.">
-    <meta property="og:image" content="https://temining.cc/promo.png">
-    <meta property="og:url" content="https://temining.cc/">
+    <meta property="og:image" content="https://Magnifly.cc/promo.png">
+    <meta property="og:url" content="https://Magnifly.cc/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="TeMining">
+    <meta property="og:site_name" content="Magnifly">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TeMining | Powering Your Daily Crypto Returns">
+    <meta name="twitter:title" content="Magnifly | Powering Your Daily Crypto Returns">
     <meta name="twitter:description" content="A secure platform for cloud mining to help you generate daily returns on your digital assets.">
-    <meta name="twitter:image" content="https://temining.cc/promo.png">
+    <meta name="twitter:image" content="https://Magnifly.cc/promo.png">
 
 
     <style>
@@ -70,7 +70,7 @@
                             <a href="{{route('about-us')}}" class="nav-link">About</a>
                             <a href="{{route('faq')}}" class="nav-link">FAQ</a>
                             <a href="{{route('Index')}}#contact" class="nav-link">Contact</a>
-                            <a href="{{route('Index')}}#plans" class="nav-link">Plans</a>
+                            <a href="{{route('Index')}}#features" class="nav-link">Features</a>
                             <a href="{{route('about-us')}}#reviews" class="nav-link">Reviews</a>
                         </nav>
                     </div>
@@ -101,7 +101,7 @@
                 <div class="off-contacts" id="offContacts"></div>
 
                 <div class="off-socials">
-                    <a href="https://t.me/temining_channel" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://t.me/Magnifly_channel" target="_blank" rel="noopener noreferrer" class="social-link">
                         <div class="social-icon">
                             <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.08l11.96-4.4c.79-.29 1.45.12 1.23.93l-1.93 9.04c-.23.94-.84 1.15-1.59.71L12.6 15.3l-2.25 2.15c-.23.24-.43.43-.81.43z" />
@@ -109,7 +109,7 @@
                         </div>
                         <span class="social-title">Telegram Channel</span>
                     </a>
-                    <a href="https://t.me/temining_group" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://t.me/Magnifly_group" target="_blank" rel="noopener noreferrer" class="social-link">
                         <div class="social-icon">
                             <svg viewBox="0 0 24 24" width="36px" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.08l11.96-4.4c.79-.29 1.45.12 1.23.93l-1.93 9.04c-.23.94-.84 1.15-1.59.71L12.6 15.3l-2.25 2.15c-.23.24-.43.43-.81.43z" />
@@ -491,15 +491,15 @@
                     <h2>General Questions</h2>
 
                     <div class="accordion">
-                        <!-- What is TEMining? -->
+                        <!-- What is Magnifly? -->
                         <div class="accordion-item">
                             <div class="accordion-header">
-                                <h3>What is TEMining?</h3>
+                                <h3>What is Magnifly?</h3>
                                 <div class="accordion-icon">+</div>
                             </div>
                             <div class="accordion-body">
                                 <div class="accordion-body-content">
-                                    <p>TEMining is a platform focused on digital-asset investments and cloud mining. Users can allocate funds into our plans and receive returns according to the selected plan’s terms without running their own hardware.</p>
+                                    <p>Magnifly is a platform focused on digital-asset investments and cloud mining. Users can allocate funds into our plans and receive returns according to the selected plan’s terms without running their own hardware.</p>
                                 </div>
                             </div>
                         </div>

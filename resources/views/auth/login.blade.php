@@ -463,8 +463,8 @@
 
 
     <div class="login-card">
-        <a href="{{route('Index')}}" class="brand">
-            <div class="logo"><img src="{{asset('')}}assets/logo.png" alt="Logo" style="height: 100px;"></div>
+        <a href="{{asset('')}}" class="brand">
+          <div class="logo"><img src="{{asset('')}}assets/logo.png" style="    width: 100%;" alt="Logo"></div>
         </a>
 
         <div class="tabs-nav">
@@ -476,37 +476,9 @@
         <div class="tab-pane active" id="login">
             <h1>Welcome Back</h1>
             <p>Enter your credentials to access your account.</p>
-            <form class="form-grid" method="post" action="{{route('login')}}">
-                <!-- <input type="hidden" name="csrf" value="0b79d92eb288ceca23b6f072b5f81fcd"> -->
-                <!-- <input type="hidden" name="from" value="/login/">   -->
-
-                @csrf
-
-                {{-- Error Message --}}
-
-                @if ($errors->any())
-                <div style="background: #ffe6e6; color: #cc0000; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
-
-                    @foreach ($errors->all() as $error)
-                    <div>⚠️ {{ $error }}</div>
-
-                    @endforeach
-                </div>
-
-                @endif
-
-                {{-- Success Message --}}
-
-                @if (session('status'))
-                <div style="background: #e6ffed; color: #008000; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
-
-                    ✅ {{ session('status') }}
-                </div>
-
-                @endif
-
-
-                <div class="input-group">
+            <form class="form-grid"  method="post" action="{{asset('')}}">
+                        <input type="hidden" name="csrf" value="0b79d92eb288ceca23b6f072b5f81fcd">
+        <input type="hidden" name="from" value="/login/">                                                     <div class="input-group">
                     <label for="username">Username</label>
                     <input type="text" class="input-field" name="username" value="" required autocomplete="" placeholder="Your Login" required>
 

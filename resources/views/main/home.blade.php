@@ -8,29 +8,28 @@
                     <h1 class="h1">POWERING<br>YOUR DAILY</h1>
                     <div class="div-block-7">
                         <h2 class="heading-2"><span class="text-span-9">
-                            </span>CRYPTO<span class="text-span-10"> </span><span
-                                class="text-span-11">RETURNS</span></h2>
+                            </span>CRYPTO<span class="text-span-10"> </span><span class="text-span-11">RETURNS</span>
+                        </h2>
                     </div>
                 </div>
                 <div class="maiin-sec-buttons">
 
-                    <a href="{{route('login')}}"
-                        class="get-button get-button--alt">
+                    <a href="{{ route('login') }}" class="get-button get-button--alt">
                         <div class="text-block-3">SIGN UP</div>
                         <div class="div-block-8">
-                            <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
-                                loading="lazy" alt class="image-7">
-                            <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                            <img src="{{ asset('') }}assets/63fa372776d6a3687f5597e7_Application.svg" loading="lazy"
+                                alt class="image-7">
+                            <img src="{{ asset('') }}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
                                 loading="lazy" alt class="image-7 dops">
                         </div>
                     </a>
 
-                    <a href="{{route('login')}}" class="get-button" style>
+                    <a href="{{ route('login') }}" class="get-button" style>
                         <div class="text-block-3" style>SIGN IN</div>
                         <div class="div-block-8">
-                            <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
-                                loading="lazy" alt class="image-7" style>
-                            <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                            <img src="{{ asset('') }}assets/63fa372776d6a3687f5597e7_Application.svg" loading="lazy"
+                                alt class="image-7" style>
+                            <img src="{{ asset('') }}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
                                 loading="lazy" alt class="image-7 dops" style>
                         </div>
                     </a>
@@ -40,26 +39,19 @@
     </div>
     <div class="div-block-66">
         <div class="html-embed">
-            <video
-                class="BackMainSec video-bg"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-                poster="{{asset('')}}assets/Model_1.webp">
+            <video class="BackMainSec video-bg" autoplay muted loop playsinline preload="auto"
+                poster="{{ asset('') }}assets/Model_1.webp">
 
-                <source src="{{asset('')}}assets/Model_1.mp4" type="video/mp4">
+                <source src="{{ asset('') }}assets/Model_1.mp4" type="video/mp4">
 
-                <source src="{{asset('')}}assets/Model_1.webm" type="video/webm">
+                <source src="{{ asset('') }}assets/Model_1.webm" type="video/webm">
             </video>
-            <noscript><img src="{{asset('')}}assets/Model_1.webp"
-                    alt="Temining video"></noscript>
+            <noscript><img src="{{ asset('') }}assets/Model_1.webp" alt="Magnifly video"></noscript>
 
         </div>
     </div>
     <div class="div-block-68">
-        <a href="https://t.me/temining_group" class="link-block">
+        <a href="https://t.me/Magnifly_group" class="link-block">
             <div class="text-block-17">Chat Telegram</div>
         </a>
     </div>
@@ -110,21 +102,20 @@
             <div class="div-block-87" bis_skin_checked="1">
                 <div class="serv-application" style>
                     <div class="image-appl">
-                        <img src="{{asset('')}}assets/cloudminng.webp" loading="lazy" alt
-                            class="image">
+                        <img src="{{ asset('') }}assets/bots.png" loading="lazy" alt class="image">
                     </div>
-                    <h4 class="h-appl">CLOUD <br> MINING</h4>
+                    <h4 class="h-appl">Start <br> Trading</h4>
                     <p class="text-appl">Rent the power of our equipment and earn
                         income without purchasing and setting up your own farms.</p>
                     <div class="buttton-appl" bis_skin_checked="1">
-                        <a href="{{route('about-us')}}" class="div-block-15 w-inline-block">
+                        <a href="{{ route('about-us') }}" class="div-block-15 w-inline-block">
                             <div class="text-block-6" bis_skin_checked="1">Learn
                                 more</div>
                             <div class="div-block-8 dop-serv" bis_skin_checked="1">
                                 <div class="div-block-59" style bis_skin_checked="1"></div>
-                                <img src="{{asset('')}}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
+                                <img src="{{ asset('') }}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
                                     loading="lazy" alt class="image-11">
-                                <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                <img src="{{ asset('') }}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
                                     loading="lazy" alt class="image-dop">
                             </div>
                         </a>
@@ -133,8 +124,7 @@
 
                 <div class="serv-application">
                     <div class="image-appl">
-                        <img src="{{asset('')}}assets/plansicon.webp" loading="lazy" alt
-                            class="image">
+                        <img src="{{ asset('') }}assets/plan.png" loading="lazy" alt class="image">
                     </div>
                     <h4 class="h-appl">INVESMENT <br> PLANS</h4>
                     <p class="text-appl"> Flexible rates for any budget. Choose the
@@ -145,9 +135,9 @@
                                 more</div>
                             <div class="div-block-8 dop-serv" bis_skin_checked="1">
                                 <div class="div-block-59" style bis_skin_checked="1"></div>
-                                <img src="{{asset('')}}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
+                                <img src="{{ asset('') }}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
                                     loading="lazy" alt class="image-11">
-                                <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                <img src="{{ asset('') }}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
                                     loading="lazy" alt class="image-dop">
                             </div>
                         </a>
@@ -157,7 +147,7 @@
             <div class="div-block-87" bis_skin_checked="1">
                 <div class="serv-application">
                     <div class="image-appl">
-                        <img src="{{asset('')}}assets/63fb03c555817f411e0a6c6a_Tech%20Support.webp"
+                        <img src="{{ asset('') }}assets/customer.png"
                             loading="lazy" alt class="image">
                     </div>
                     <h4 class="h-appl">SECURITY & <br> SUPPORT</h4>
@@ -170,9 +160,9 @@
                                 more</div>
                             <div class="div-block-8 dop-serv" bis_skin_checked="1">
                                 <div class="div-block-59" style bis_skin_checked="1"></div>
-                                <img src="{{asset('')}}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
+                                <img src="{{ asset('') }}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
                                     loading="lazy" alt class="image-11">
-                                <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                <img src="{{ asset('') }}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
                                     loading="lazy" alt class="image-dop">
                             </div>
                         </a>
@@ -180,21 +170,21 @@
                 </div>
                 <div class="serv-application">
                     <div class="image-appl">
-                        <img src="{{asset('')}}assets/63fb03c5284d872b691b47d9_Consulting.webp"
-                            loading="lazy" alt class="image">
+                        <img src="{{ asset('') }}assets/settings.png" loading="lazy"
+                            alt class="image">
                     </div>
                     <h4 class="h-appl">DASHBOARD & PAYOUTS</h4>
                     <p class="text-appl">Track your income in real time and withdraw
                         funds conveniently through our platform.</p>
                     <div class="buttton-appl" bis_skin_checked="1">
-                        <a href="{{route('login')}}" class="div-block-15 w-inline-block">
+                        <a href="{{ route('login') }}" class="div-block-15 w-inline-block">
                             <div class="text-block-6" bis_skin_checked="1">Learn
                                 more</div>
                             <div class="div-block-8 dop-serv" bis_skin_checked="1">
                                 <div class="div-block-59" style bis_skin_checked="1"></div>
-                                <img src="{{asset('')}}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
+                                <img src="{{ asset('') }}assets/640067e20bf3aaaba54a3da1_Frame%20(20).svg"
                                     loading="lazy" alt class="image-11">
-                                <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                <img src="{{ asset('') }}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
                                     loading="lazy" alt class="image-dop">
                             </div>
                         </a>
@@ -212,11 +202,10 @@
                 <h3 class="heading-4">ABOUT</h3>
                 <div class="div-block-20">
                     <h2 class="heading-5">EXPERTS IN </h2>
-                    <h2 class="heading-6">PROFIT <span
-                            class="text-span-2">GENERATION</span></h2>
+                    <h2 class="heading-6">PROFIT <span class="text-span-2">GENERATION</span></h2>
                 </div>
                 <div class="div-block-19">
-                    <p class="paragraph-2">TeMining was founded by a team of
+                    <p class="paragraph-2">Magnifly was founded by a team of
                         blockchain veterans and financial analysts with one goal in
                         mind: to maximize your profits in the digital asset market. We
                         combine powerful and energy-efficient equipment with
@@ -227,17 +216,13 @@
                         income.</p>
                 </div>
                 <div class="div-block-58">
-                    <a href="{{route('about-us')}}"
-                        class="get-button dop-get-button w-inline-block">
+                    <a href="{{ route('about-us') }}" class="get-button dop-get-button w-inline-block">
                         <div class="text-block-3 tb3">Learn more</div>
                         <div class="div-block-8 db8">
-                            <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
-                                loading="lazy"
-                                data-w-id="70ea1f66-2daa-d3dd-db2a-33322b23b5a2" alt
-                                class="image-7">
-                            <img src="{{asset('')}}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
-                                loading="lazy"
-                                data-w-id="70ea1f66-2daa-d3dd-db2a-33322b23b5a3" alt
+                            <img src="{{ asset('') }}assets/63fa372776d6a3687f5597e7_Application.svg"
+                                loading="lazy" data-w-id="70ea1f66-2daa-d3dd-db2a-33322b23b5a2" alt class="image-7">
+                            <img src="{{ asset('') }}assets/64043aae19731c29ecbd7bb2_Frame%20(21).svg"
+                                loading="lazy" data-w-id="70ea1f66-2daa-d3dd-db2a-33322b23b5a3" alt
                                 class="image-7 dops">
                         </div>
                     </a>
@@ -248,152 +233,115 @@
     <div class="div-block-66-copy">
         <div class="w-embed">
 
-            <video
-                class="BackAboutSec"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-                poster="{{asset('')}}assets/Model_2.webp">
+            <video class="BackAboutSec" autoplay muted loop playsinline preload="auto"
+                poster="{{ asset('') }}assets/Model_2.webp">
 
-                <source src="{{asset('')}}assets/Model_2.mp4" type="video/mp4">
+                <source src="{{ asset('') }}assets/Model_2.mp4" type="video/mp4">
 
-                <source src="{{asset('')}}assets/Model_2.webm" type="video/webm">
+                <source src="{{ asset('') }}assets/Model_2.webm" type="video/webm">
             </video>
-            <noscript><img src="{{asset('')}}assets/Model_2.webp"
-                    alt="Temining video"></noscript>
+            <noscript><img src="{{ asset('') }}assets/Model_2.webp" alt="Magnifly video"></noscript>
 
         </div>
     </div>
     <div class="div-block-75">
-        <div class="lottie-animation-5"
-            data-w-id="9e693724-b351-43fc-33d5-91147a7006fa"
-            data-animation-type="lottie"
-            data-src="https://temining.cc/imagen/640a0cdc3c34ed31367ec789_3_section_4_fly_window%20(1).json"
-            data-loop="1" data-direction="1" data-autoplay="1"
-            data-is-ix2-target="0" data-renderer="svg" data-default-duration="6"
-            data-duration="0"></div>
+        <div class="lottie-animation-5" data-w-id="9e693724-b351-43fc-33d5-91147a7006fa" data-animation-type="lottie"
+            data-src="https://Magnifly.cc/imagen/640a0cdc3c34ed31367ec789_3_section_4_fly_window%20(1).json"
+            data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg"
+            data-default-duration="6" data-duration="0"></div>
     </div>
     <div class="div-block-78">
         <div class="div-block-79">
-            <div class="lottie-animation-6"
-                data-w-id="49c1f7d6-7cc6-5a1f-f7e7-2062c40e8a86"
+            <div class="lottie-animation-6" data-w-id="49c1f7d6-7cc6-5a1f-f7e7-2062c40e8a86"
                 data-animation-type="lottie"
-                data-src="https://temining.cc/imagen/640a0ce0a873b651b9b19855_3_section_3_fly_window%20(2).json"
-                data-loop="1" data-direction="1" data-autoplay="1"
-                data-is-ix2-target="0" data-renderer="svg" data-default-duration="4"
-                data-duration="0"></div>
+                data-src="https://Magnifly.cc/imagen/640a0ce0a873b651b9b19855_3_section_3_fly_window%20(2).json"
+                data-loop="1" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg"
+                data-default-duration="4" data-duration="0"></div>
         </div>
     </div>
 </div>
 
 <div id="news" class="news-section">
 
-    <div class="container-block plans-cont" id="plans">
+    <div class="container-block plans-cont" id="features">
         <div class="plans-head">
-            <h2 class="heading-5">Tariff Plans</h2>
+            <h2 class="heading-5">Crypto Trading Features</h2>
+            <p class="sub-heading">
+                Experience the future of automated cryptocurrency trading. Our advanced bot technology combines AI
+                precision, real-time analytics, and seamless automation to maximize your profits with minimal effort.
+            </p>
         </div>
 
         <div class="plans-grid">
-            <a href="{{route('login')}}" class="plan-card w-inline-block">
-                <img class="plan-decor" src="{{asset('')}}assets/plan1.webp" alt />
+            <div class="plan-card w-inline-block">
+                {{-- <img class="plan-decor" src="{{asset('')}}assets/feature1.webp" alt /> --}}
                 <div>
-                    <div class="plan-percent">4.5% Hourly</div>
-                    <div class="plan-term">108% Total return after 24 hours</div>
-                    <div class="plan-accrual">Investment amount: $10 - $100000</div>
-                    <div class="plan-accrual">Accruals: 4.5% every hour</div>
-                    <div class="plan-accrual">Net profit: 8%</div>
-                    <div class="plan-accrual">Principal return: Included in
-                        payments</div>
-                    <div class="plan-accrual">Withdrawal: Instant</div>
-                </div>
-
-                <div class="plan-cta">
-                    <div class="get-button">
-                        <div class="text-block-3">INVEST NOW</div>
+                    <div class="plan-percent">AI-Powered Trading Intelligence</div>
+                    <div class="plan-accrual">
+                        Our bots leverage advanced Artificial Intelligence and machine learning models trained on years
+                        of market data.
+                        They continuously monitor market trends, detect high-probability setups, and execute trades
+                        within milliseconds — faster than any human could react.
+                        Whether it's arbitrage, scalping, or swing trading, the system adapts automatically to changing
+                        conditions to deliver consistent results.
                     </div>
                 </div>
-            </a>
+            </div>
 
-            <a href="{{route('login')}}" class="plan-card w-inline-block">
-                <img class="plan-decor" src="{{asset('')}}assets/plan2.webp" alt />
+            <div class="plan-card w-inline-block">
+                {{-- <img class="plan-decor" src="{{asset('')}}assets/feature2.webp" alt /> --}}
                 <div>
-                    <div class="plan-percent">114%</div>
-                    <div class="plan-term">After 1 day</div>
-                    <div class="plan-accrual">Investment amount: $10 - $100000</div>
-                    <div class="plan-accrual">Accruals: 114% after 1 day</div>
-                    <div class="plan-accrual">Net profit: 14%</div>
-                    <div class="plan-accrual">Principal return: Included in
-                        payments</div>
-                    <div class="plan-accrual">Withdrawal: Instant</div>
-                </div>
-                <div class="plan-cta">
-                    <div class="get-button">
-                        <div class="text-block-3">INVEST NOW</div>
+                    <div class="plan-percent">24/7 Automated Operation</div>
+                    <div class="plan-accrual">
+                        Cryptocurrency markets never sleep — and neither do our trading bots.
+                        Operate around the clock across major exchanges like Binance, KuCoin, and Bybit, ensuring that
+                        every opportunity is captured.
+                        You set the strategy and risk level, and the bot handles the rest — even while you sleep.
                     </div>
                 </div>
-            </a>
+            </div>
 
-            <a href="{{route('login')}}" class="plan-card w-inline-block">
-                <img class="plan-decor" src="{{asset('')}}assets/plan3.webp" alt />
+            <div class="plan-card w-inline-block">
+                {{-- <img class="plan-decor" src="{{asset('')}}assets/feature3.webp" alt /> --}}
                 <div>
-                    <div class="plan-percent">300%</div>
-                    <div class="plan-term">After 7 days</div>
-                    <div class="plan-accrual">Investment amount: $10 - $100000</div>
-                    <div class="plan-accrual">Accruals: once every 7 days</div>
-                    <div class="plan-accrual">Net profit: 200%</div>
-                    <div class="plan-accrual">Principal return: Included in
-                        payments</div>
-                    <div class="plan-accrual">Withdrawal: Instant</div>
-                </div>
-                <div class="plan-cta">
-                    <div class="get-button">
-                        <div class="text-block-3">INVEST NOW</div>
+                    <div class="plan-percent">Smart Risk Management</div>
+                    <div class="plan-accrual">
+                        Protect your capital with professional-grade tools such as dynamic stop-loss, trailing stop,
+                        take-profit triggers, and position scaling.
+                        The system continuously recalculates exposure based on volatility and market depth, ensuring
+                        safety during both bull and bear markets.
+                        You stay in control with customizable parameters to fit your trading style.
                     </div>
                 </div>
-            </a>
+            </div>
 
-            <a href="{{route('login')}}" class="plan-card w-inline-block">
-                <img class="plan-decor" src="{{asset('')}}assets/plan4.webp" alt />
+            <div class="plan-card w-inline-block">
+                {{-- <img class="plan-decor" src="{{asset('')}}assets/feature4.webp" alt /> --}}
                 <div>
-                    <div class="plan-percent">1200%</div>
-                    <div class="plan-term">After 12 days</div>
-                    <div class="plan-accrual">Investment amount: $10 - $100000</div>
-                    <div class="plan-accrual">Accruals: once every 12 days</div>
-                    <div class="plan-accrual">Net profit: 1100%</div>
-                    <div class="plan-accrual">Principal return: Included in
-                        payments</div>
-                    <div class="plan-accrual">Withdrawal: Instant</div>
-                </div>
-                <div class="plan-cta">
-                    <div class="get-button">
-                        <div class="text-block-3">INVEST NOW</div>
+                    <div class="plan-percent">Real-Time Insights & Reporting</div>
+                    <div class="plan-accrual">
+                        Monitor every trade with a comprehensive live dashboard.
+                        Get detailed performance analytics, daily profit summaries, and strategy breakdowns across all
+                        trading pairs.
+                        You can also connect via mobile or desktop to view instant updates, helping you make informed
+                        decisions anytime, anywhere.
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 
     <div class="div-block-67" bis_skin_checked="1">
-        <div class="w-embed"
-            bis_skin_checked="1">
+        <div class="w-embed" bis_skin_checked="1">
 
-            <video
-                class="BackNews video-bg"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-                poster="{{asset('')}}assets/Model_3.webp">
+            <video class="BackNews video-bg" autoplay muted loop playsinline preload="auto"
+                poster="{{ asset('') }}assets/Model_3.webp">
 
-                <source src="{{asset('')}}assets/Model_3.mp4" type="video/mp4">
+                <source src="{{ asset('') }}assets/Model_3.mp4" type="video/mp4">
 
-                <source src="{{asset('')}}assets/Model_3.webm" type="video/webm">
+                <source src="{{ asset('') }}assets/Model_3.webm" type="video/webm">
             </video>
-            <noscript><img src="{{asset('')}}assets/Model_3.webp"
-                    alt="Temining video"></noscript>
+            <noscript><img src="{{ asset('') }}assets/Model_3.webp" alt="Magnifly video"></noscript>
 
             <style>
                 .BackNews {
@@ -426,8 +374,8 @@
                 <a href="#contact" class="get-button referral-button">
                     <div class="text-block-3">Get Your Link</div>
                     <div class="div-block-8">
-                        <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
-                            loading="lazy" alt class="image-7">
+                        <img src="{{ asset('') }}assets/63fa372776d6a3687f5597e7_Application.svg" loading="lazy"
+                            alt class="image-7">
                     </div>
                 </a>
             </div>
@@ -455,11 +403,11 @@
         </div>
     </div>
     <div class="referral-button-wrapper desktop-only">
-        <a href="{{route('login')}}" class="get-button referral-button">
+        <a href="{{ route('login') }}" class="get-button referral-button">
             <div class="text-block-3">Get Your Link</div>
             <div class="div-block-8">
-                <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
-                    loading="lazy" alt class="image-7">
+                <img src="{{ asset('') }}assets/63fa372776d6a3687f5597e7_Application.svg" loading="lazy" alt
+                    class="image-7">
             </div>
         </a>
     </div>
@@ -510,11 +458,14 @@
             dops.style.filter = 'none';
 
             requestAnimationFrame(() => {
-                btn.style.transition = `background-color ${DUR}ms ${EASE}, border-color ${DUR}ms ${EASE}, box-shadow ${DUR}ms ${EASE}`;
+                btn.style.transition =
+                    `background-color ${DUR}ms ${EASE}, border-color ${DUR}ms ${EASE}, box-shadow ${DUR}ms ${EASE}`;
                 label.style.transition = `transform ${DUR}ms ${EASE}, color ${DUR}ms ${EASE}`;
-                box.style.transition = `transform ${DUR}ms ${EASE}, background-color ${DUR}ms ${EASE}`;
+                box.style.transition =
+                    `transform ${DUR}ms ${EASE}, background-color ${DUR}ms ${EASE}`;
                 main.style.transition = `opacity ${DUR}ms ${EASE}`;
-                dops.style.transition = `transform ${DUR}ms ${EASE}, opacity ${DUR}ms ${EASE}, filter ${DUR}ms ${EASE}`;
+                dops.style.transition =
+                    `transform ${DUR}ms ${EASE}, opacity ${DUR}ms ${EASE}, filter ${DUR}ms ${EASE}`;
 
                 const enter = () => {
                     btn.style.backgroundColor = BTN_BG_HOV;
@@ -561,465 +512,364 @@
 
 <section id="compit-pay">
     <div class="container-3 cp-wrap">
-        <header class="cp-head" data-appear>
-            <h2 class="cp-title">ACCEPTED <span>PAYMENTS</span></h2>
-            <p class="cp-sub">Choose a network and calculate your returns</p>
-        </header>
 
-        <div class="cp-layout">
-            <!-- LEFT: COINS -->
-            <div class="cp-coins" data-appear>
-                <!-- USDT GROUP -->
-                <article class="cp-card cp-coin is-group" data-hover id="coin-USDT">
-                    <div class="cp-coin__row">
-                        <span class="cp-ico cp-ico-usdt" aria-hidden="true"></span>
-                        <div class="cp-coin__txt">
-                            <div class="cp-coin__code">USDT</div>
-                            <div class="cp-coin__name">Tether</div>
-                        </div>
-                        <button class="cp-chip cp-chip--toggle" type="button"
-                            aria-expanded="false">Networks</button>
-                    </div>
-                    <div class="cp-nets" hidden>
-                        <button class="cp-chip" data-symbol="USDT"
-                            data-network="TRC20">TRC20</button>
-                        <button class="cp-chip" data-symbol="USDT"
-                            data-network="BEP20">BEP20</button>
-                        <button class="cp-chip" data-symbol="USDT"
-                            data-network="TON">TON</button>
-                    </div>
-                </article>
 
-                <article class="cp-card cp-coin" data-hover data-symbol="BTC">
-                    <span class="cp-ico cp-ico-btc" aria-hidden="true"></span>
-                    <div class="cp-coin__txt">
-                        <div class="cp-coin__code">BTC</div>
-                        <div
-                            class="cp-coin__name">Bitcoin</div>
-                    </div>
-                </article>
 
-                <article class="cp-card cp-coin" data-hover data-symbol="ETH">
-                    <span class="cp-ico cp-ico-eth" aria-hidden="true"></span>
-                    <div class="cp-coin__txt">
-                        <div class="cp-coin__code">ETH</div>
-                        <div
-                            class="cp-coin__name">Ethereum</div>
-                    </div>
-                </article>
-
-                <article class="cp-card cp-coin" data-hover data-symbol="DOGE">
-                    <span class="cp-ico cp-ico-doge" aria-hidden="true"></span>
-                    <div class="cp-coin__txt">
-                        <div
-                            class="cp-coin__code">DOGE</div>
-                        <div
-                            class="cp-coin__name">Dogecoin</div>
-                    </div>
-                </article>
-
-                <article class="cp-card cp-coin" data-hover data-symbol="XRP">
-                    <span class="cp-ico cp-ico-xrp" aria-hidden="true"></span>
-                    <div class="cp-coin__txt">
-                        <div class="cp-coin__code">XRP</div>
-                        <div
-                            class="cp-coin__name">Ripple</div>
-                    </div>
-                </article>
-
-                <article class="cp-card cp-coin" data-hover data-symbol="TON">
-                    <span class="cp-ico cp-ico-ton" aria-hidden="true"></span>
-                    <div class="cp-coin__txt">
-                        <div class="cp-coin__code">TON</div>
-                        <div
-                            class="cp-coin__name">TON</div>
-                    </div>
-                </article>
-
-                <article class="cp-card cp-coin" data-hover data-symbol="LTC">
-                    <span class="cp-ico cp-ico-ltc" aria-hidden="true"></span>
-                    <div class="cp-coin__txt">
-                        <div class="cp-coin__code">LTC</div>
-                        <div
-                            class="cp-coin__name">Litecoin</div>
-                    </div>
-                </article>
-
-                <article class="cp-card cp-coin" data-hover data-symbol="BNB">
-                    <span class="cp-ico cp-ico-bnb" aria-hidden="true"></span>
-                    <div class="cp-coin__txt">
-                        <div class="cp-coin__code">BNB</div>
-                        <div
-                            class="cp-coin__name">BinanceCoin</div>
-                    </div>
-                </article>
-
-                <article class="cp-card cp-coin" data-hover data-symbol="TRX">
-                    <span class="cp-ico cp-ico-trx" aria-hidden="true"></span>
-                    <div class="cp-coin__txt">
-                        <div class="cp-coin__code">TRX</div>
-                        <div
-                            class="cp-coin__name">Tron</div>
-                    </div>
-                </article>
+        <div class="cp-layout cp-hero">
+            <!-- LEFT: VISUAL -->
+            <div class="cp-visual" data-appear>
+                <img src="{{ asset('') }}assets/robot.png" style="width: 600px" alt="BitcapitalX coin"
+                    class="cp-visual__img">
+                <div class="cp-visual__net"></div>
             </div>
 
-            <!-- RIGHT: DETAILS = CALCULATOR -->
-            <aside class="cp-details cp-card" data-appear aria-live="polite">
-                <div class="cp-details__head">
-                    <div class="cp-selected">
-                        <span class="cp-ico cp-ico-usdt" id="cp-sel-ico"
-                            aria-hidden="true"></span>
-                        <div>
-                            <div class="cp-selected__code" id="cp-sel-code">USDT</div>
-                            <div class="cp-selected__net" id="cp-sel-net">TRC20</div>
-                        </div>
-                    </div>
+            <!-- RIGHT: CONTENT -->
+            <aside class="cp-details cp-card cp-feature" data-appear aria-live="polite">
+                <h2 class="cp-feature__title">
+                    <span class="grad">Why choose Magnifly</span>
+                </h2>
 
-                    <div class="cp-base">
-                        Base:
-                        <select class="cp-select" id="cp-base">
-                            <option value="USD" selected>USD</option>
+                <ul class="cp-feature__list">
+                    <li class="cp-feature__item">
+                        <span class="cp-bullet cp-bullet--chart" aria-hidden="true"></span>
+                        <p><strong>Strengthen profit price stability</strong>, reducing slippage and volatility.</p>
+                    </li>
+                    <li class="cp-feature__item">
+                        <span class="cp-bullet cp-bullet--clock" aria-hidden="true"></span>
+                        <p><strong>Maintain optimal liquidity levels</strong> on centralized and decentralized
+                            exchanges.</p>
+                    </li>
+                    <li class="cp-feature__item">
+                        <span class="cp-bullet cp-bullet--star" aria-hidden="true"></span>
+                        <p><strong>Build lasting confidence</strong> among traders, investors, and strategic partners.
+                        </p>
+                    </li>
+                    <li class="cp-feature__item">
+                        <span class="cp-bullet cp-bullet--stack" aria-hidden="true"></span>
+                        <p><strong>Support long-term value creation</strong> through organic market growth strategies.
+                        </p>
+                    </li>
 
-                            <option value="GBP">GBP</option>
-                        </select>
-                    </div>
-                </div>
+                    <!-- NEW CONTENT BELOW -->
+                    <li class="cp-feature__item">
+                        <span class="cp-bullet cp-bullet--trend" aria-hidden="true"></span>
+                        <p><strong>AI-powered trading algorithms</strong> that adapt to real-time market sentiment and
+                            volume shifts.</p>
+                    </li>
+                    <li class="cp-feature__item">
+                        <span class="cp-bullet cp-bullet--shield" aria-hidden="true"></span>
+                        <p><strong>Multi-layer security architecture</strong> with cold-storage protection and
+                            continuous threat monitoring.</p>
+                    </li>
+                    <li class="cp-feature__item">
+                        <span class="cp-bullet cp-bullet--signal" aria-hidden="true"></span>
+                        <p><strong>Advanced analytics dashboard</strong> offering live order-book depth, historical
+                            charts, and AI trade signals.</p>
+                    </li>
 
-                <div class="cp-rate">
-                    <div class="cp-rate__num" id="cp-rate">—</div>
-                    <div class="cp-rate__per">for 1 <span
-                            id="cp-base-label">USD</span></div>
-                </div>
-
-                <div class="cp-calc">
-                    <div class="cp-field">
-                        <label class="cp-label" for="cp-amount">Amount in <span
-                                id="cp-amount-sym">USDT</span></label>
-                        <input id="cp-amount" type="number" min="0" step="any"
-                            placeholder="100">
-                    </div>
-
-                    <div class="cp-field">
-                        <label class="cp-label" for="cp-plan">Plan</label>
-                        <select id="cp-plan" class="cp-select">
-                            <option value="H108">108% in 24 hours (hourly)</option>
-                            <option value="D114">114% in 1 day (1 accrual)</option>
-                            <option value="W300">300% in 7 days (end)</option>
-                            <option value="X1200">1200% in 12 days (daily)</option>
-                        </select>
-                    </div>
-
-                    <div class="cp-summary">
-                        <div class="cp-row"><span>Deposit ≈</span><strong
-                                id="cp-dep-base">—</strong></div>
-                        <div class="cp-row"><span>Profit</span><strong
-                                id="cp-profit">—</strong></div>
-                        <div class="cp-row"><span>Profit in <span
-                                    id="cp-sym1">USDT</span></span><strong
-                                id="cp-profit-coin">—</strong></div>
-                        <div class="cp-row"><span>Total in <span
-                                    id="cp-sym2">USDT</span></span><strong
-                                id="cp-total-coin">—</strong></div>
-                    </div>
-                    <div class="cp-progress" aria-hidden="true">
-                        <div class="cp-progress__bar" id="cp-progress"></div>
-
-                    </div>
-                </div>
+                </ul>
             </aside>
         </div>
+
     </div>
 </section>
+
+<style>
+    .rates-bar {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 12px 14px;
+        margin-bottom: 18px;
+    }
+
+    .rates-title {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #cfd3ff;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    .rates-title .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #00ff99;
+        box-shadow: 0 0 10px #00ff99;
+    }
+
+    .rates-strip {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 10px;
+    }
+
+    .rate-card {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .rate-card .ico {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex: 0 0 22px;
+    }
+
+    .rate-card .meta {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+    }
+
+    .rate-card .sym {
+        font-weight: 700;
+        color: #fff;
+        font-size: 13px;
+    }
+
+    .rate-card .price {
+        color: #cfd3ff;
+        font-size: 13px;
+    }
+
+    .rate-card .chg {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .chg.up {
+        color: #00d68f;
+    }
+
+    .chg.down {
+        color: #ff5e7a;
+    }
+</style>
 <section class="transactions-section">
-    <h2 class="transactions-heading">Latest operations</h2>
+    <h2 class="transactions-heading">Live Markets</h2>
     <div class="transactions-container">
-        <div class="tabs-nav">
-            <button class="tab-link active"
-                data-tab="deposits">Replenishment</button>
-            <button class="tab-link" data-tab="withdrawals">Payments</button>
-        </div>
+
 
         <div class="tabs-content">
-            <div class="tab-pane active" id="deposits">
-                <div class="transaction-table">
-                    <div class="table-header">
-                        <div class="th">Login</div>
-                        <div class="th">Amount</div>
-                        <div class="th">Date</div>
-                        <div class="th">Currency</div>
-                    </div>
-                    <div class="table-body">
-                        <div class="table-row">
-
-                            <div class="td" data-label="Login">landock3**</div>
-                            <div class="td deposit" data-label="Amount">+ 20.00 USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">12.10.2025</time></div>
-                            <div class="td" data-label="Currency"><img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-
-                            <div class="td" data-label="Login">alexandr**</div>
-                            <div class="td deposit" data-label="Amount">+ 30.00 TRX</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">12.10.2025</time></div>
-                            <div class="td" data-label="Currency"><img
-                                    src="{{asset('')}}assets/icons/tron.png" alt="tron logo" width="20"
-                                    height="20" loading="lazy"> tron</div>
-                        </div>
-                        <div class="table-row">
-
-                            <div class="td" data-label="Login">sae**</div>
-                            <div class="td deposit" data-label="Amount">+ 30.30 USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">11.10.2025</time></div>
-                            <div class="td" data-label="Currency"><img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-
-                            <div class="td" data-label="Login">Leti**</div>
-                            <div class="td deposit" data-label="Amount">+ 50.00 USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"><img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-
-                            <div class="td" data-label="Login">ABDERHIMABDERRHMA**</div>
-                            <div class="td deposit" data-label="Amount">+ 50.00 USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"><img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-
-                            <div class="td" data-label="Login">Marac**</div>
-                            <div class="td deposit" data-label="Amount">+ 10.00 USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"><img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-
-                            <div class="td" data-label="Login">Jmalyma**</div>
-                            <div class="td deposit" data-label="Amount">+ 10.00 USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"><img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                    </div>
-                    <div class="slider-controls">
-                        <button class="slider-arrow prev" aria-label="Previous slide">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M15 18l-6-6 6-6" />
-                            </svg>
-                        </button>
-                        <button class="slider-arrow next" aria-label="Next slide">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M9 18l6-6-6-6" />
-                            </svg>
-                        </button>
-                    </div>
+            <!-- RATES BAR -->
+            <div class="rates-bar" id="rates-bar">
+                <div class="rates-title">
+                    <span class="dot"></span> Live Rates
+                    <small id="rates-updated">syncing…</small>
                 </div>
-            </div>
-
-            <div class="tab-pane" id="withdrawals">
-                <div class="transaction-table">
-                    <div class="table-header">
-                        <div class="th">Login</div>
-                        <div class="th">Amount</div>
-                        <div class="th">Date</div>
-                        <div class="th">Currency</div>
-                    </div>
-
-                    <div class="table-body">
-                        <div class="table-row">
-                            <div class="td" data-label="Login">ch**</div>
-                            <div class="td withdrawal" data-label="Amount">- 6.00
-                                USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"> <img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-                            <div class="td" data-label="Login">virus**</div>
-                            <div class="td withdrawal" data-label="Amount">- 3.30
-                                USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"> <img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-                            <div class="td" data-label="Login">a**</div>
-                            <div class="td withdrawal" data-label="Amount">- 7.00
-                                USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"> <img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-                            <div class="td" data-label="Login">VIKHY**</div>
-                            <div class="td withdrawal" data-label="Amount">- 4.50
-                                USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"> <img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-                            <div class="td" data-label="Login">Galina73**</div>
-                            <div class="td withdrawal" data-label="Amount">- 11.40
-                                USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"> <img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-                            <div class="td" data-label="Login">k**</div>
-                            <div class="td withdrawal" data-label="Amount">- 4.50
-                                USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"> <img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-                        <div class="table-row">
-                            <div class="td" data-label="Login">anasa**</div>
-                            <div class="td withdrawal" data-label="Amount">- 3.60
-                                USDT</div>
-                            <div class="td" data-label="Date"> <time
-                                    class="feed-item__time"
-                                    datetime="2025-09-20T13:04:04.912Z">10.10.2025</time></div>
-                            <div class="td" data-label="Currency"> <img
-                                    src="{{asset('')}}assets/icons/usdt_bep20.png" alt="usdt_bep20 logo"
-                                    width="20" height="20" loading="lazy"> usdt_bep20</div>
-                        </div>
-
-                    </div>
-                    <div class="slider-controls">
-                        <button class="slider-arrow prev" aria-label="Previous slide">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M15 18l-6-6 6-6" />
-                            </svg>
-                        </button>
-                        <button class="slider-arrow next" aria-label="Next slide">
-                            <svg viewBox="0 0 24 24">
-                                <path d="M9 18l6-6-6-6" />
-                            </svg>
-                        </button>
-                    </div>
+                <div class="rates-strip" id="rates-strip" aria-live="polite">
+                    <!-- JS will render cards here -->
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    (function() {
+        // Map CoinGecko ids to your symbols, pretty names, and optional local icons
+        const COINS = [{
+                id: 'bitcoin',
+                sym: 'BTC',
+                name: 'Bitcoin',
+                icon: '{{ asset('') }}assets/icons/btc.png'
+            },
+            {
+                id: 'ethereum',
+                sym: 'ETH',
+                name: 'Ethereum',
+                icon: '{{ asset('') }}assets/icons/eth.png'
+            },
+            {
+                id: 'tether',
+                sym: 'USDT',
+                name: 'Tether',
+                icon: '{{ asset('') }}assets/icons/usdt.png'
+            },
+            {
+                id: 'binancecoin',
+                sym: 'BNB',
+                name: 'BNB',
+                icon: '{{ asset('') }}assets/icons/bnb.png'
+            },
+            {
+                id: 'tron',
+                sym: 'TRX',
+                name: 'Tron',
+                icon: '{{ asset('') }}assets/icons/tron.png'
+            },
+            {
+                id: 'ripple',
+                sym: 'XRP',
+                name: 'XRP',
+                icon: '{{ asset('') }}assets/icons/xrp.png'
+            },
+            {
+                id: 'cardano',
+                sym: 'ADA',
+                name: 'Cardano',
+                icon: '{{ asset('') }}assets/icons/ada.png'
+            },
+            {
+                id: 'solana',
+                sym: 'SOL',
+                name: 'Solana',
+                icon: '{{ asset('') }}assets/icons/sol.png'
+            },
+            {
+                id: 'toncoin',
+                sym: 'TON',
+                name: 'TON',
+                icon: '{{ asset('') }}assets/icons/ton.png'
+            },
+            {
+                id: 'litecoin',
+                sym: 'LTC',
+                name: 'Litecoin',
+                icon: '{{ asset('') }}assets/icons/ltc.png'
+            },
+            {
+                id: 'dogecoin',
+                sym: 'DOGE',
+                name: 'Dogecoin',
+                icon: '{{ asset('') }}assets/icons/doge.png'
+            },
+        ];
+
+        const ids = COINS.map(c => c.id).join(',');
+        const API =
+            `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd&include_24hr_change=true`;
+
+        const strip = document.getElementById('rates-strip');
+        const updated = document.getElementById('rates-updated');
+
+        function fmt(n) {
+            if (n >= 1000) return '$' + n.toLocaleString(undefined, {
+                maximumFractionDigits: 0
+            });
+            if (n >= 1) return '$' + n.toLocaleString(undefined, {
+                maximumFractionDigits: 2
+            });
+            return '$' + n.toLocaleString(undefined, {
+                maximumFractionDigits: 6
+            });
+        }
+
+        function chgClass(v) {
+            return v >= 0 ? 'chg up' : 'chg down';
+        }
+
+        function chgText(v) {
+            const s = (v >= 0 ? '+' : '') + v.toFixed(2) + '%';
+            return s;
+        }
+
+        function render(data) {
+            strip.innerHTML = '';
+            COINS.forEach(coin => {
+                const row = data[coin.id];
+                if (!row) return;
+                const price = row.usd ?? 0;
+                const change = row.usd_24h_change ?? 0;
+
+                const card = document.createElement('div');
+                card.className = 'rate-card';
+                card.innerHTML = `
+        <img class="ico" src="${coin.icon}" alt="${coin.sym} logo" loading="lazy">
+        <div class="meta">
+          <span class="sym">${coin.sym}</span>
+          <span class="price">${fmt(price)}</span>
+        </div>
+        <span class="${chgClass(change)}">${chgText(change)}</span>
+      `;
+                strip.appendChild(card);
+            });
+            const t = new Date();
+            updated.textContent = `• updated ${t.toLocaleTimeString()}`;
+        }
+
+        async function load() {
+            try {
+                updated.textContent = 'syncing…';
+                const res = await fetch(API, {
+                    cache: 'no-store'
+                });
+                const json = await res.json();
+                render(json);
+            } catch (e) {
+                updated.textContent = 'failed to sync';
+                console.error('Rates error', e);
+            }
+        }
+
+        load();
+        // refresh every 60 seconds (adjust if needed)
+        setInterval(load, 60000);
+    })();
+</script>
 <section id="contact" class="contacts-section">
     <div class="container-5">
         <div class="contacts-block-all">
             <div class="our-team-block">
-                <h2 class="heading-5 dop-cont">HAVE QUESTIONS? <span
-                        class="text-span-6">WE </span> CAN HELP</h2>
+                <h2 class="heading-5 dop-cont">HAVE QUESTIONS? <span class="text-span-6">WE </span> CAN HELP</h2>
                 <div class="text-block-12">Our team of experts is ready to advise
                     you on any questions you may have about our platform and
                     investment plans. Contact us via the feedback form or simply
                     register to start your journey into the world of crypto investing
                     right now.</div>
-                <img src="{{asset('')}}assets/64063f17fd11c7b10286181f_Frame%202775.png"
-                    loading="lazy" alt class="image-3">
+                <img src="{{ asset('') }}assets/64063f17fd11c7b10286181f_Frame%202775.png" loading="lazy" alt
+                    class="image-3">
             </div>
             <div class="your-contacts-block">
                 <h3 class="heading-10">YOUR CONTACTS</h3>
                 <div class="w-form">
-                    <form method="post" action="">
-                        <input type="hidden" name="csrf"
-                            value="0b79d92eb288ceca23b6f072b5f81fcd">
+                    <form method="post" action="index.html">
+                        <input type="hidden" name="csrf" value="0b79d92eb288ceca23b6f072b5f81fcd">
                         <input type="hidden" name="from" value="/">
                         <div class="div-block-36" bis_skin_checked="1">
                             <div class="div-block-38" bis_skin_checked="1">
 
-                                <div data-w-id="8c499318-9a98-aeed-9626-485836dca325"
-                                    class="form-div-block" bis_skin_checked="1">
-                                    <input class="text-field w-input" maxlength="256"
-                                        type="text" id="login"
-                                        name="login"
-                                        placeholder="Enter your login"
-                                        value
-                                        required>
-                                    <div style="width: 0%;" class="div-block-61"
-                                        bis_skin_checked="1"></div>
+                                <div data-w-id="8c499318-9a98-aeed-9626-485836dca325" class="form-div-block"
+                                    bis_skin_checked="1">
+                                    <input class="text-field w-input" maxlength="256" type="text" id="login"
+                                        name="login" placeholder="Enter your login" value required>
+                                    <div style="width: 0%;" class="div-block-61" bis_skin_checked="1"></div>
                                 </div>
 
-                                <div data-w-id="ea7eb5fd-da8b-83b6-588e-fc16682b884c"
-                                    class="form-div-block" bis_skin_checked="1">
-                                    <input class="text-field w-input" maxlength="256"
-                                        type="email" id="email-2"
-                                        name="email"
-                                        placeholder="Enter your email address"
-                                        value
-                                        required>
-                                    <div style="width: 0%;" class="div-block-61"
-                                        bis_skin_checked="1"></div>
+                                <div data-w-id="ea7eb5fd-da8b-83b6-588e-fc16682b884c" class="form-div-block"
+                                    bis_skin_checked="1">
+                                    <input class="text-field w-input" maxlength="256" type="email" id="email-2"
+                                        name="email" placeholder="Enter your email address" value required>
+                                    <div style="width: 0%;" class="div-block-61" bis_skin_checked="1"></div>
                                 </div>
 
                             </div>
 
-                            <div data-w-id="20d84740-dc06-0dfa-1b81-58164a9b1540"
-                                class="div-block-37" bis_skin_checked="1">
+                            <div data-w-id="20d84740-dc06-0dfa-1b81-58164a9b1540" class="div-block-37"
+                                bis_skin_checked="1">
                                 <p class="result">0/600</p>
-                                <textarea id="message" class="textarea w-input"
-                                    maxlength="5000"
-                                    name="message"
-                                    placeholder="Your message..."
+                                <textarea id="message" class="textarea w-input" maxlength="5000" name="message" placeholder="Your message..."
                                     required></textarea>
-                                <div style="width: 0%;" class="div-block-65"
-                                    bis_skin_checked="1"></div>
+                                <div style="width: 0%;" class="div-block-65" bis_skin_checked="1"></div>
                             </div>
                         </div>
 
-                        <div
-                            style="padding: 15px 0; display: flex; justify-content: center;">
+                        <div style="padding: 15px 0; display: flex; justify-content: center;">
                             <div id="captcha_support"></div>
                         </div>
 
                         <div class="div-block-39">
                             <button type="submit" class="submit-button">
-                                <img src="{{asset('')}}assets/63fa372776d6a3687f5597e7_Application.svg"
+                                <img src="{{ asset('') }}assets/63fa372776d6a3687f5597e7_Application.svg"
                                     alt="Submit" class="image-4">
                             </button>
                         </div>
@@ -1030,11 +880,11 @@
         </div>
     </div>
     <div class="lottie-animation">
-        <img src="{{asset('')}}assets/labirint.png" loading="lazy"
-            class="lottie-animation-img" alt sizes="100vw">
+        <img src="{{ asset('') }}assets/labirint.png" loading="lazy" class="lottie-animation-img" alt
+            sizes="100vw">
     </div>
-    <img src="{{asset('')}}assets/640b4de465cb725b0f543003_BG%201%20(6).png" loading="lazy"
-        alt class="image-17">
+    <img src="{{ asset('') }}assets/640b4de465cb725b0f543003_BG%201%20(6).png" loading="lazy" alt
+        class="image-17">
 </section>
 
 <footer class="footer-section">
@@ -1043,18 +893,17 @@
             <div>
                 <h4 class="heading-h4">Menu</h4>
                 <div bis_skin_checked="1" class="footer-link-block">
-                    <a href="{{route('Index')}}" class="footer-link">Home</a>
-                    <a href="{{route('about-us')}}" class="footer-link">About</a>
-                    <a href="{{route('faq')}}" class="footer-link">FAQ</a>
-                    <a href="{{route('Index')}}#contact" class="footer-link">Contact</a>
-                    <a href="{{route('Index')}}#plans" class="footer-link">Plans</a>
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="{{ route('about-us') }}" class="footer-link">About</a>
+                    <a href="faq/index.html" class="footer-link">FAQ</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                    <a href="#plans" class="footer-link">Plans</a>
                 </div>
             </div>
             <div>
                 <h4 class="heading-h4">Contact</h4>
                 <div bis_skin_checked="1">
-                    <a href="mailto:support@temining.cc"
-                        class="footer-link">support@temining.cc</a>
+                    <a href="mailto:support@Magnifly.cc" class="footer-link">support@magnifly.com</a>
                 </div>
             </div>
             <div>
@@ -1063,26 +912,20 @@
             </div>
         </div>
         <div class="all-rights-block-footer">
-            <div class="text-block-18">© 2025 TeMining. All rights reserved.</div>
+            <div class="text-block-18">© 2025 Magnifly. All rights reserved.</div>
             <div class="contacts-block">
                 <a href="#" class="link-block-5">
-                    <img
-                        src="https://temining.cc/imagen/63fa371e72b3531b656e1069_Telegram.svg"
-                        loading="lazy" alt>
+                    <img src="https://Magnifly.cc/imagen/63fa371e72b3531b656e1069_Telegram.svg" loading="lazy" alt>
                 </a>
                 <a href="#" class="link-block-5">
-                    <img
-                        src="https://temining.cc/imagen/63fa371b2851829e0108035e_Viber.svg"
-                        loading="lazy" alt>
+                    <img src="https://Magnifly.cc/imagen/63fa371b2851829e0108035e_Viber.svg" loading="lazy" alt>
                 </a>
             </div>
         </div>
     </div>
 </footer>
 
-<script
-    src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-    defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
 <script>
     // Smooth scrolling for anchor links
     $(document).ready(function() {
@@ -1143,9 +986,11 @@
             dops.style.transform = tfAdd(baseDops, 'rotate(0deg)');
 
             requestAnimationFrame(() => {
-                btn.style.transition = `background-color ${DUR}ms ${EASE}, border-color ${DUR}ms ${EASE}, box-shadow ${DUR}ms ${EASE}`;
+                btn.style.transition =
+                    `background-color ${DUR}ms ${EASE}, border-color ${DUR}ms ${EASE}, box-shadow ${DUR}ms ${EASE}`;
                 label.style.transition = `transform ${DUR}ms ${EASE}, color ${DUR}ms ${EASE}`;
-                box.style.transition = `transform ${DUR}ms ${EASE}, background-color ${DUR}ms ${EASE}`;
+                box.style.transition =
+                    `transform ${DUR}ms ${EASE}, background-color ${DUR}ms ${EASE}`;
                 main.style.transition = `opacity ${DUR}ms ${EASE}`;
                 dops.style.transition = `transform ${DUR}ms ${EASE}, opacity ${DUR}ms ${EASE}`;
 
@@ -1211,7 +1056,8 @@
             wrap.style.visibility = prevVis || 'visible';
 
             const enter = () => {
-                arrow.style.transform = (baseStr ? baseStr + ' ' : '') + 'translateY(-20px) rotate(45deg)';
+                arrow.style.transform = (baseStr ? baseStr + ' ' : '') +
+                    'translateY(-20px) rotate(45deg)';
             };
             const leave = () => {
                 arrow.style.transform = baseStr;
@@ -1235,7 +1081,8 @@
         const DEFAULT_END = -30;
         const MQ = window.matchMedia('(min-width: 768px)');
 
-        const nodes = [...document.querySelectorAll('.services-block-back, .about-block-dop, .news-block, .contacts-block-all')]
+        const nodes = [...document.querySelectorAll(
+                '.services-block-back, .about-block-dop, .news-block, .contacts-block-all')]
             .map(el => {
                 const start = parseFloat(el.dataset.parallaxStart ?? DEFAULT_START);
                 const end = parseFloat(el.dataset.parallaxEnd ?? DEFAULT_END);
@@ -1527,7 +1374,8 @@
             imgA.style.transform = 'rotate(0deg)';
             imgB.style.opacity = '0';
             imgB.style.transform = 'rotate(0deg)';
-            [text, box, ring, imgA, imgB].forEach(el => el.style.willChange = 'transform,opacity,background-color,filter');
+            [text, box, ring, imgA, imgB].forEach(el => el.style.willChange =
+                'transform,opacity,background-color,filter');
 
             let aText, aRing, aGlow, aA, aB, aFill, aEdge;
 
@@ -2031,7 +1879,8 @@
                 });
                 nets.querySelectorAll('.cp-chip').forEach(chip => {
                     chip.addEventListener('click', () => {
-                        nets.querySelectorAll('.cp-chip').forEach(c => c.removeAttribute('aria-current'));
+                        nets.querySelectorAll('.cp-chip').forEach(c => c.removeAttribute(
+                            'aria-current'));
                         chip.setAttribute('aria-current', 'true');
                         selectCoin('USDT', chip.dataset.network || 'TRC20');
                     });
@@ -2079,8 +1928,10 @@
                 sym2 && (sym2.textContent = symbol);
 
                 root.querySelectorAll('.cp-coin, .cp-chip').forEach(n => n.removeAttribute('aria-current'));
-                const q = network ? `.cp-chip[data-symbol="USDT"][data-network="${network}"]` : `.cp-coin[data-symbol="${symbol}"]`;
-                (root.querySelector(q) || root.querySelector('#coin-USDT'))?.setAttribute('aria-current', 'true');
+                const q = network ? `.cp-chip[data-symbol="USDT"][data-network="${network}"]` :
+                    `.cp-coin[data-symbol="${symbol}"]`;
+                (root.querySelector(q) || root.querySelector('#coin-USDT'))?.setAttribute('aria-current',
+                    'true');
 
                 updateRate();
                 recalc();
@@ -2119,20 +1970,29 @@
                 const totalCoin = amountCoin * plan.multiplier;
                 const profitCoin = amountCoin * (plan.multiplier - 1);
 
-                softNumber(depBase, isFinite(depositBase) ? `${depositBase.toLocaleString(undefined,{maximumFractionDigits:2})} ${state.base}` : '—');
-                softNumber(profitOut, isFinite(profitBase) ? `${profitBase.toLocaleString(undefined,{maximumFractionDigits:2})} ${state.base}` : '—');
-                softNumber(totalOut, isFinite(totalBase) ? `${totalBase.toLocaleString(undefined,{maximumFractionDigits:2})} ${state.base}` : '—');
+                softNumber(depBase, isFinite(depositBase) ?
+                    `${depositBase.toLocaleString(undefined,{maximumFractionDigits:2})} ${state.base}` : '—'
+                );
+                softNumber(profitOut, isFinite(profitBase) ?
+                    `${profitBase.toLocaleString(undefined,{maximumFractionDigits:2})} ${state.base}` : '—');
+                softNumber(totalOut, isFinite(totalBase) ?
+                    `${totalBase.toLocaleString(undefined,{maximumFractionDigits:2})} ${state.base}` : '—');
 
                 const decs = DEC[state.symbol] ?? 6;
-                softNumber(profitCoinOut, isFinite(profitCoin) ? `${profitCoin.toLocaleString(undefined,{maximumFractionDigits:decs})} ${state.symbol}` : '—');
-                softNumber(totalCoinOut, isFinite(totalCoin) ? `${totalCoin.toLocaleString(undefined,{maximumFractionDigits:decs})} ${state.symbol}` : '—');
+                softNumber(profitCoinOut, isFinite(profitCoin) ?
+                    `${profitCoin.toLocaleString(undefined,{maximumFractionDigits:decs})} ${state.symbol}` :
+                    '—');
+                softNumber(totalCoinOut, isFinite(totalCoin) ?
+                    `${totalCoin.toLocaleString(undefined,{maximumFractionDigits:decs})} ${state.symbol}` :
+                    '—');
 
                 if (accrRow && accrOut) {
                     if (plan.accruals > 1) {
                         const totalPer = totalBase / plan.accruals;
                         const unit = plan.unit === 'hour' ? 'h' : 'd';
                         accrRow.hidden = false;
-                        accrOut.textContent = `${plan.accruals} × ${isFinite(totalPer)?totalPer.toLocaleString(undefined,{maximumFractionDigits:2}):'—'} ${state.base} / ${unit}`;
+                        accrOut.textContent =
+                            `${plan.accruals} × ${isFinite(totalPer)?totalPer.toLocaleString(undefined,{maximumFractionDigits:2}):'—'} ${state.base} / ${unit}`;
                     } else {
                         accrRow.hidden = true;
                     }
@@ -2194,7 +2054,8 @@
             });
         };
         const clearUSDTNetworks = () => {
-            root.querySelectorAll('#coin-USDT .cp-chip[data-network]').forEach(b => b.removeAttribute('aria-current'));
+            root.querySelectorAll('#coin-USDT .cp-chip[data-network]').forEach(b => b.removeAttribute(
+                'aria-current'));
         };
         const setHeader = (symbol, networkText) => {
             selIco.className = 'cp-ico ' + (iconsMap[symbol] || '');
@@ -2415,7 +2276,8 @@
             if (p && typeof p.catch === 'function') {
                 p.catch(() => {
 
-                    v.closest ? v.closest('.main-section, .about, .news')?.classList.add('video-failed') : null;
+                    v.closest ? v.closest('.main-section, .about, .news')?.classList.add('video-failed') :
+                        null;
                 });
             }
         }
@@ -2426,7 +2288,8 @@
                     v.pause();
                     v.removeAttribute('src');
                     v.load();
-                    v.closest?.('.main-section, .about, .news')?.classList.add('video-failed');
+                    v.closest?.('.main-section, .about, .news')?.classList.add(
+                        'video-failed');
                 });
                 v.addEventListener('canplay', () => tryPlay(v), {
                     once: true
@@ -2441,19 +2304,7 @@
         navigator.serviceWorker.register('/sw.js');
     }
 </script>
-<script type="text/javascript">
-    var Tawk_API = Tawk_API || {},
-        Tawk_LoadStart = new Date();
-    (function() {
-        var s1 = document.createElement("script"),
-            s0 = document.getElementsByTagName("script")[0];
-        s1.async = true;
-        s1.src = 'https://embed.tawk.to/68e4c527b760c0195195763c/1j6uq495h';
-        s1.charset = 'UTF-8';
-        s1.setAttribute('crossorigin', '*');
-        s0.parentNode.insertBefore(s1, s0);
-    })();
-</script>
+
 </body>
 
 </html>
