@@ -418,8 +418,8 @@
 
 
     <div class="login-card">
-        <a href="../index.html" class="brand">
-          <div class="logo"><img src="{{asset('')}}assets/logo.png" alt="Logo"></div>
+        <a href="{{asset('')}}" class="brand">
+          <div class="logo"><img src="{{asset('')}}assets/logo.png" style="    width: 100%;" alt="Logo"></div>
         </a>
         
         <div class="tabs-nav">
@@ -431,7 +431,7 @@
         <div class="tab-pane active" id="login">
             <h1>Welcome Back</h1>
             <p>Enter your credentials to access your account.</p>
-            <form class="form-grid"  method="post" action="../index.html">
+            <form class="form-grid"  method="post" action="{{asset('')}}">
                         <input type="hidden" name="csrf" value="0b79d92eb288ceca23b6f072b5f81fcd">
         <input type="hidden" name="from" value="/login/">                                                     <div class="input-group">
                     <label for="username">Username</label>

@@ -21,8 +21,6 @@
     <link rel="stylesheet" href="{{asset('')}}assets/css/libs.css">
     <link rel="stylesheet" href="{{asset('')}}assets/css/app54f9.css?v=1.009995">
     <link rel="stylesheet" href="{{asset('')}}assets/css/customb361.css?v=1.000099999">
-
-
 </head>
 
 <body>
