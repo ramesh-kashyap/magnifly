@@ -43,9 +43,125 @@
 .tx .amt.deposit { color:#108a55; }
 .tx .amt.withdrawal { color:#b45309; }
 .tx-empty { text-align:center; padding:18px; color:#a2a5ad; border:1px dashed #e0e1e2; border-radius:14px; background:#fafafa; }
-.ops-pager { display:flex; justify-content:center; gap:8px; margin-top:12px; }
-.ops-pager a, .ops-pager span { padding:6px 10px; border:1px solid #e0e1e2; border-radius:10px; text-decoration:none; color:#111827; background:#fff; }
-.ops-pager .active { border-color: var(--sandy-brown); font-weight:700; }
+/* Laravel pagination alignment fix */
+.pagination {
+  display: flex;
+  justify-content: center;   /* Centers horizontally */
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.pagination li {
+  display: inline-flex;
+}
+
+.pagination a,
+.pagination span {
+  padding: 6px 12px;
+  border: 1px solid #e0e1e2;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #111827;
+  background: #fff;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.pagination a:hover {
+  background: #f5f5f5;
+}
+
+.pagination .active span {
+  border-color: var(--sandy-brown);
+  background: #f7f3ef;
+  font-weight: 600;
+}
+/* 🔹 Container holding both filter and search */
+.ops-filter-bar {
+  display: flex;
+  justify-content: space-between;  /* filter left, search right */
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 10px 0 16px;
+  gap: 10px;
+}
+
+/* Existing filter style retained */
+.ops-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ops-filter a {
+  padding: 8px 12px;
+  border: 1px solid #e0e1e2;
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--dark-slate-grey);
+  background: #fff;
+}
+
+.ops-filter a.active {
+  border-color: var(--sandy-brown);
+  color: #000;
+  box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+}
+
+/* 🔍 Right-side search box + reset */
+.ops-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  border: 1px solid #e0e1e2;
+  border-radius: 8px;
+  font-size: 14px;
+  width: 220px;
+  outline: none;
+}
+
+.search-input:focus {
+  border-color: var(--sandy-brown);
+  box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+}
+
+.btn-search,
+.btn-reset {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-search {
+  background: var(--sandy-brown);
+  color: #fff;
+  border: 1px solid var(--sandy-brown);
+}
+
+.btn-search:hover {
+  background: #e09d59;
+}
+
+.btn-reset {
+  background: #fff;
+  color: #111827;
+  border: 1px solid #e0e1e2;
+}
+
+.btn-reset:hover {
+  background: #f5f5f5;
+}
+
 </style>
 
 <main class="dashboard-wrapper">
@@ -102,25 +218,48 @@
   <section class="ops-card">
     <div class="card-header"><h3>All Operations</h3></div>
 
-    <div class="ops-filter">
-      <a class="" href="{{route('user.DepositHistory')}}">Deposits</a><a class="" href="{{route('user.Withdraw-History')}}">Withdrawals</a><a class="" href="{{route('user.roi-bonus')}}">Incomes</a>    </div>
+    <div class="ops-filter-bar">
+  {{-- 🔹 Left side: Filter links --}}
+  <div class="ops-filter">
+    <a class="" href="{{route('user.DepositHistory')}}">Deposits</a>
+    <a class="" href="{{route('user.Withdraw-History')}}">Withdrawals</a>
+    <a class="" href="{{route('user.roi-bonus')}}">Incomes</a>
+  </div>
+
+  {{-- 🔹 Right side: Search + Reset --}}
+  <form action="{{ route('user.roi-bonus') }}" method="GET" class="ops-search-bar">
+    <input type="text" name="search" value="{{ request('search') }}" placeholder="Search ..." class="search-input">
+    <button type="submit" class="btn-search">Search</button>
+    <a href="{{ route('user.roi-bonus') }}" class="btn-reset">Reset</a>
+  </form>
+</div>
 
    <table class="deposits-table">
     <thead>
       <tr>
         <th>S.No</th>
         <th>Amount</th>
-        <th>Start Date</th>
+        <th>Profit</th>
+
+          <th>By User</th>
+
         <th>Remark</th>
+        <th>Created Date</th>
+
       </tr>
     </thead>
     <tbody>
       @forelse($level_income as $key => $deposit)
         <tr>
           <td>{{ $key + 1 }}</td>
+          <td>${{ number_format($deposit->amt, 2) }}</td>
+
           <td>${{ number_format($deposit->comm, 2) }}</td>
-          <td>{{ \Carbon\Carbon::parse($deposit->created_at)->format('d M Y') }}</td>
+                    <td>{{ ($deposit->rname??'-') }}</td>
+
         <td>{{ ($deposit->remarks) }}</td>
+         <td>{{ $deposit->ttime }}</td>
+
 
         </tr>
       @empty
@@ -131,9 +270,10 @@
     </tbody>
   </table>
   {{-- Pagination --}}
-  <div class="ops-pager">
-    {{ $level_income->links() }}
-  </div>
+ <div class="ops-pager">
+  {{ $level_income->links() }}
+</div>
+
 
       </section>
 </main>
