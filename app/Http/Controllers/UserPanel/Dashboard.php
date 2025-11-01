@@ -19,6 +19,8 @@ use App\Models\Contract;
 use Log;
 use Hash;
 use Helper;
+use DB;
+
 class Dashboard extends Controller
 {
 
@@ -115,6 +117,39 @@ $withdraw = Withdraw::select(
     $item->type = 'withdraw';
     return $item;
 });
+    $latestInvestments = Investment::where('user_id', Auth::id())
+        ->latest()
+        ->take(5)
+        ->get();
+ $investments = DB::table('investments')
+    ->leftJoin('incomes', 'investments.id', '=', 'incomes.invest_id')
+    ->select(
+        'investments.id',
+        'investments.amount',
+        'investments.status',
+        'investments.sdate',
+        DB::raw('COALESCE(SUM(incomes.comm), 0) as profit')
+    )
+    ->where('investments.user_id', $userId)
+    ->whereIn('investments.status', ['Active', 'Decline'])
+    ->groupBy('investments.id', 'investments.amount', 'investments.status', 'investments.sdate')
+    ->orderBy('investments.id', 'desc')
+    ->take(5)
+    ->get()
+    ->map(function ($investment) {
+        // ✅ Har investment ke profit ke hisaab se progress calculate karo
+        // maan lo target profit = investment amount * 200% (ya 2x)
+        $target = $investment->amount * 2;
+        if ($target > 0) {
+            $investment->progress = round(($investment->profit / $target) * 100, 2);
+            if ($investment->progress > 100) {
+                $investment->progress = 100; // max 100% tak limit
+            }
+        } else {
+            $investment->progress = 0;
+        }
+        return $investment;
+    });
 
 $contract = Contract::select(
     'id',
@@ -156,6 +191,8 @@ if ($latest->isEmpty()) {
       $this->data['totalLevelIncome'] = \DB::table('incomes')->where('user_id',$user->id)->whereIn('remarks',['Level Bonus','Team Bonus'])->sum('comm');
       $this->data['balance'] =round($user->principleBalance(),2);
       $this->data['level_income'] =$notes;
+      $this->data['latestInvestments'] =$latestInvestments;
+      $this->data['investments'] =$investments;
 
       $this->data['page'] = 'user.dashboard';
       return $this->dashboard_layout();
