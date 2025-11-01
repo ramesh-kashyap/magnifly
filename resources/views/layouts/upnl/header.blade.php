@@ -1,7 +1,7 @@
 <html lang="en"><head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TeMining: User Dashboard</title>
+        <title>{{sitename()}}: User Dashboard</title>
         <link rel="icon" type="image/png" href="/favicon-96x96.png"
             sizes="96x96">
         <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -51,7 +51,7 @@
                                 class="nav-link  ">Transactions</a>
                             <a href="{{route('user.profile')}}"
                                 class="nav-link  ">Settings</a>
-                            <a href="{{route('user.referrals')}}" class="nav-link  ">Referral </a>
+                            <a href="{{route('user.referral-team')}}" class="nav-link  ">Referral </a>
                         </nav>
 
                         <div class="contacts-block">
@@ -157,9 +157,9 @@
            =================================================================== */
         :root {
             --dark-slate-grey: #30363b;
-                --cp-accent: #f4a159;
+                --cp-accent: #9d7bff;
             --dark-grey-lighter: #3d4348;
-            --sandy-brown: #f4a159;
+            --sandy-brown: #9d7bff;
             --text-muted: #a2a5ad;
             --text-light: #f7f7f9;
             --background: #f7f7f9;
@@ -807,7 +807,7 @@
 }
 
 .date .status-pending {
-    color: #f4a159; /* sandy-brown color */
+    color: #9d7bff; /* sandy-brown color */
     font-weight: 600;
 }
 
@@ -1280,7 +1280,7 @@
     .banner-preview { border-radius: 16px; overflow: hidden; border: 1px solid var(--border-color); }
     .banner-preview img { width: 100%; display: block; }
     .banner-code-wrapper { position: relative; }
-    .banner-code { width: 100%; padding: 12px 15px; padding-right: 90px; border-radius: 12px; background-color: var(--background); border: 1px solid var(--border-color); font-family: monospace; font-size: 12px; color: var(--dark-slate-grey); border: 1px solid #f4a159;    white-space: normal;
+    .banner-code { width: 100%; padding: 12px 15px; padding-right: 90px; border-radius: 12px; background-color: var(--background); border: 1px solid var(--border-color); font-family: monospace; font-size: 12px; color: var(--dark-slate-grey); border: 1px solid #9d7bff;    white-space: normal;
     overflow-wrap: anywhere;
     word-break: break-word;
     line-height: 1.35; }

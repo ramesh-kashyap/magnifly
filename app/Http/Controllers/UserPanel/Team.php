@@ -5,9 +5,10 @@ namespace App\Http\Controllers\UserPanel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Income;
 use App\Models\Reentry;
 use Illuminate\Support\Facades\DB;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 use Log;
 use Session;
 use Redirect;
@@ -23,10 +24,10 @@ class Team extends Controller
     $status = $request->status ? $request->status : null;
     $search = $request->search ? $request->search : null;
     $notes = User::where('sponsor', $user->id)->orderBy('id', 'DESC');
-    $this->data['total_team'] = $notes->count();
-    $this->data['active_total_team'] = User::where('sponsor', $user->id)->where('active_status', 'Active')->count();
+   $total_team = $this->data['total_team'] = $notes->count();
+   $active_total_team = $this->data['active_total_team'] = User::where('sponsor', $user->id)->where('active_status', 'Active')->count();
     $this->data['totalPackage'] = $notes->sum('package');
-
+$total_earned = Income::where('user_id', $user->id)->sum('comm');
     if ($search <> null && $request->reset != "Reset") {
       $notes = $notes->where(function ($q) use ($search) {
         $q->Where('name', 'LIKE', '%' . $search . '%')
@@ -43,6 +44,9 @@ class Team extends Controller
         'limit' => $limit
       ]);
 
+    $this->data['total_earned'] = $total_earned;
+    $this->data['total_team'] = $total_team;
+    $this->data['active_total_team'] = $active_total_team;
     $this->data['direct_team'] = $notes;
     $this->data['search'] = $search;
 
