@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset Password - TeMining</title>
+    <title>Reset Password - {{sitename()}}</title>
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="{{asset('')}}assets/favicon.svg" />
     <link rel="shortcut icon" href="{{asset('')}}assets/favicon.ico" />

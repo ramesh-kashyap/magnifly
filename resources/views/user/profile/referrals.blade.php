@@ -1,44 +1,109 @@
   <main class="referral-wrapper">
-            <div class="page-header">
-                <h1>Referral <span>Program</span></h1>
-                <p>Invite new members using your unique link and earn
-                    commissions from their deposits across multiple levels.</p>
-            </div>
+      <div class="page-header">
+          <h1>Referral <span>Program</span></h1>
+          <p>Invite new members using your unique link and earn
+              commissions from their deposits across multiple levels.</p>
+      </div>
 
-            <div class="referral-main-grid">
-                <div class="referral-link-card">
-                    <div class="referral-link-content">
-                        <h3>Your Unique Referral Link</h3>
-                        <div class="ref-link-wrapper">
-                            <span
-                                class="ref-link">https://temining.cc/?ref=aas098</span>
-                            <button class="btn-copy"
-                                onclick="copyToClipboard(this, 'https://temining.cc/?ref=aas098')">Copy</button>
-                        </div>
-                        <div class="stats-grid">
-                            <div class="stat-card">
-                                <div class="label">Total Referrals</div>
-                                <div class="value">0</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="label">Active Referrals</div>
-                                <div class="value">0</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="label">Total Earned</div>
-                                <div class="value accent">0.00</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="inviter-card">
-                    <div class="inviter-icon">🤝</div>
-                    <div class="inviter-label">Your Inviter</div>
-                    <div class="inviter-name">No Sponsor</div>
-                </div>
-            </div>
+      <div class="referral-main-grid">
+          <div class="referral-link-card">
+              <div class="referral-link-content">
+                  <h3>Your Unique Referral Link</h3>
+                  <div class="ref-link-wrapper">
+                      <span
+                          class="ref-link">https://temining.cc/?ref=aas098</span>
+                      <button class="btn-copy"
+                          onclick="copyToClipboard(this, 'https://temining.cc/?ref=aas098')">Copy</button>
+                  </div>
+                  <div class="stats-grid">
+                      <div class="stat-card">
+                          <div class="label">Total Referrals</div>
+                          <div class="value">0</div>
+                      </div>
+                      <div class="stat-card">
+                          <div class="label">Active Referrals</div>
+                          <div class="value">0</div>
+                      </div>
+                      <div class="stat-card">
+                          <div class="label">Total Earned</div>
+                          <div class="value accent">0.00</div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="inviter-card">
+              <div class="inviter-icon">🤝</div>
+              <div class="inviter-label">Your Inviter</div>
+              <div class="inviter-name">No Sponsor</div>
+          </div>
+      </div>
+      <section class="ops-card">
+          <div class="card-header">
+              <h3>My Networks</h3>
+          </div>
 
-            <section class="section-card">
+          <div class="ops-filter">
+              <a class="active" href="{{route('user.referral-team')}}">Direct Team</a>
+              <a class="" href="{{route('user.left-team')}}">Left Team</a>
+              <a class="" href="{{route('user.right-team')}}">Right Team</a>
+              <a class="" href="{{route('user.tree-view')}}">Geonology Tree</a>
+              <!-- <a class="" href="?type=referrals">Referrals</a>  -->
+          </div>
+
+          <ul class="ops-list">
+
+              <li class="tx-empty">No operations yet.</li>
+          </ul>
+          <style>
+              .ops-card,
+              .dashboard-card {
+                  background: #fff;
+                  border: 1px solid #e0e1e2;
+                  border-radius: 20px;
+                  padding: 16px;
+                  margin-top: 16px;
+              }
+
+              .card-header {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  margin-bottom: 8px;
+              }
+
+              .card-header .right a,
+              .card-header a {
+                  text-decoration: none;
+                  color: #111827;
+                  border: 1px solid #e0e1e2;
+                  padding: 6px 10px;
+                  border-radius: 10px;
+              }
+
+              .ops-filter {
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 8px;
+                  margin: 6px 0 12px;
+              }
+
+              .ops-filter a {
+                  padding: 8px 12px;
+                  border: 1px solid #e0e1e2;
+                  border-radius: 12px;
+                  text-decoration: none;
+                  color: var(--dark-slate-grey);
+                  background: #fff;
+              }
+
+              .ops-filter a.active {
+                  border-color: var(--sandy-brown);
+                  color: #000;
+                  box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+              }
+          </style>
+      </section>
+      <!-- <section class="section-card">
                 <h3>Premium Partner Program</h3>
                 <div class="premium-levels-grid">
                     <div class="premium-card silver">
@@ -111,58 +176,58 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
-            <section class="section-card">
-                <h3>Standard Commission Rates</h3>
-                <div class="levels-grid">
-                    <div class="level-card">
-                        <div class="level-title">Level 1</div>
-                        <div class="level-percent">7%</div>
-                        <div class="level-description">
-                            From deposits of your direct referrals. </div>
-                    </div>
-                    <div class="level-card">
-                        <div class="level-title">Level 2</div>
-                        <div class="level-percent">2%</div>
-                        <div class="level-description">
-                            From your referrals' referrals. </div>
-                    </div>
-                    <div class="level-card">
-                        <div class="level-title">Level 3</div>
-                        <div class="level-percent">1%</div>
-                        <div class="level-description">
-                            From the 3rd line of your structure. </div>
-                    </div>
-                </div>
-            </section>
+      <section class="section-card">
+          <h3>Standard Commission Rates</h3>
+          <div class="levels-grid">
+              <div class="level-card">
+                  <div class="level-title">Level 1</div>
+                  <div class="level-percent">7%</div>
+                  <div class="level-description">
+                      From deposits of your direct referrals. </div>
+              </div>
+              <div class="level-card">
+                  <div class="level-title">Level 2</div>
+                  <div class="level-percent">2%</div>
+                  <div class="level-description">
+                      From your referrals' referrals. </div>
+              </div>
+              <div class="level-card">
+                  <div class="level-title">Level 3</div>
+                  <div class="level-percent">1%</div>
+                  <div class="level-description">
+                      From the 3rd line of your structure. </div>
+              </div>
+          </div>
+      </section>
 
-            <section class="section-card">
-                <h3>Your Referrals (Level 1)</h3>
-                <div class="referrals-table-wrapper">
-                    <table class="referrals-table">
-                        <thead>
-                            <tr>
-                                <th>Username</th>
-                                <th>Registration Date</th>
-                                <th>Total Deposits</th>
-                                <th>Your Commission</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td colspan="4"
-                                    style="text-align:center; color: var(--text-muted); padding: 20px;">
-                                    You have no referrals on this level yet.
-                                </td>
-                            </tr>
-                        </tbody>
+      <section class="section-card">
+          <h3>Your Referrals (Level 1)</h3>
+          <div class="referrals-table-wrapper">
+              <table class="referrals-table">
+                  <thead>
+                      <tr>
+                          <th>Username</th>
+                          <th>Registration Date</th>
+                          <th>Total Deposits</th>
+                          <th>Your Commission</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td colspan="4"
+                              style="text-align:center; color: var(--text-muted); padding: 20px;">
+                              You have no referrals on this level yet.
+                          </td>
+                      </tr>
+                  </tbody>
 
-                    </table>
-                </div>
-            </section>
+              </table>
+          </div>
+      </section>
 
-            <section class="section-card">
+      <!-- <section class="section-card">
                 <h3>Promotional Banners</h3>
 
                 <div class="banners-grid banners-grid-tight">
@@ -371,18 +436,24 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
 
-        </main>
+  </main>
 
-        <script>
-function copyToClipboard(buttonElement, textToCopy) {
-    navigator.clipboard.writeText(textToCopy).then(() => {
-        const originalText = buttonElement.innerText;
-        buttonElement.innerText = 'Copied!';
-        setTimeout(() => { buttonElement.innerText = originalText; }, 2000);
-    }).catch(err => { console.error('Failed to copy text: ', err); });
-}
-</script>
+  <script>
+      function copyToClipboard(buttonElement, textToCopy) {
+          navigator.clipboard.writeText(textToCopy).then(() => {
+              const originalText = buttonElement.innerText;
+              buttonElement.innerText = 'Copied!';
+              setTimeout(() => {
+                  buttonElement.innerText = originalText;
+              }, 2000);
+          }).catch(err => {
+              console.error('Failed to copy text: ', err);
+          });
+      }
+  </script>
 
-    </body></html>
+  </body>
+
+  </html>

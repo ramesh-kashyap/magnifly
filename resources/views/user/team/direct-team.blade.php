@@ -1,208 +1,316 @@
-<div id="main-content" class="flex-grow-1 m-3">
-    <nav class="navbar navbar-expand-lg sticky-top shadow-sm main-header">
-        <div class="container-fluid">
-            <button class="btn btn-outline-secondary d-md-none me-2" type="button" data-bs-toggle="offcanvas"
-                data-bs-target="#mobileMenu" aria-controls="mobileMenu">
-                <i class="fas fa-bars"></i>
-            </button>
+<style>
+    /* ===== Right-to-Left Pagination ===== */
+    :root {
+        --pagination-color: #9d7bff;
+        /* Main accent color */
+        --pagination-text-color: #333;
+        /* Text color */
+        --pagination-bg: #fff;
+        /* Background */
+        --pagination-border: #ddd;
+        /* Border color */
+        --pagination-hover-bg: #f2ebff;
+        /* Hover background */
+    }
 
-            <button id="sidebarToggle" class="btn btn-outline-secondary d-none d-md-inline-block me-3">
-                <i class="fas fa-bars"></i>
-            </button>
+    /* Main container */
+    .pagination-container {
+        display: flex;
+        justify-content: flex-end;
+        /* Align pagination block to right edge */
+        margin-top: 1.5rem;
+        padding-right: 15px;
+    }
 
-            <span class="navbar-brand text-capitalize text-white mb-0 h1 d-none d-sm-inline-block">referals</span>
+    /* Pagination list styling */
+    .pagination {
+        display: flex;
+        flex-direction: row-reverse;
+        /* ✅ Reverse direction: starts from right */
+        flex-wrap: wrap;
+        gap: 6px;
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
 
-             <ul class="navbar-nav ms-auto">
-                <li class="nav-item mb-0 dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUser" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fas fa-user-circle fa-lg me-1"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUser">
-                        <!--<li><a class="dropdown-item" href="{{route('user.GenerateTicket')}}"><i-->
-                        <!--            class="fas fa-headset fa-fw me-2"></i>Support</a></li>-->
-                        <li><a class="dropdown-item" href="{{route('user.profile')}}"><i
-                                    class="fas fa-user-edit fa-fw me-2"></i>Edit Account</a></li>
-                        <li><a class="dropdown-item" href="{{route('user.ChangePass')}}"><i
-                                    class="fas fa-shield-alt fa-fw me-2"></i>Security</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                            class="d-none">
-                            @csrf
-                        </form>
-                        <li><a class="dropdown-item text-danger" href="{{ route('logout') }}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
-                                    class="fas fa-sign-out-alt fa-fw me-2"></i>Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div class="top-video">
-        <video class="top" src="video/top.mp4" type="video/mp4" muted autoplay loop plays-inline
-            poster="video/poster.png"></video>
+    /* Each page item */
+    .page-item {
+        margin: 0;
+    }
+
+    /* Page links */
+    .page-link {
+        display: block;
+        padding: 0.5rem 0.9rem;
+        color: var(--pagination-text-color);
+        background-color: var(--pagination-bg);
+        border: 1px solid var(--pagination-border);
+        border-radius: 0.35rem;
+        font-size: 0.95rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.25s ease;
+    }
+
+    /* Hover effect */
+    .page-link:hover {
+        color: var(--pagination-color);
+        background-color: var(--pagination-hover-bg);
+        border-color: var(--pagination-color);
+    }
+
+    /* Active page */
+    .page-item.active .page-link {
+        color: #fff;
+        background-color: var(--pagination-color);
+        border-color: var(--pagination-color);
+        box-shadow: 0 0 8px rgba(157, 123, 255, 0.4);
+    }
+
+    /* Disabled page */
+    .page-item.disabled .page-link {
+        color: #aaa;
+        background-color: #f8f9fa;
+        border-color: var(--pagination-border);
+        pointer-events: none;
+        opacity: 0.6;
+    }
+
+    /* Responsive behavior */
+    @media (max-width: 576px) {
+        .pagination-container {
+            justify-content: center;
+            /* Center pagination on small screens */
+            padding-right: 0;
+        }
+    }
+</style>
+
+<main class="referral-wrapper">
+    <div class="page-header">
+        <h1>Referral <span>Program</span></h1>
+        <p>Invite new members using your unique link and earn
+            commissions from their deposits across multiple levels.</p>
     </div>
 
-    
-    <div class="card mt-3">
+    <div class="referral-main-grid">
+        <div class="referral-link-card">
+            <div class="referral-link-content">
+                <h3>Your Unique Referral Link</h3>
+                <div class="ref-link-wrapper">
+                    <span id="refLink"
+                        class="ref-link">{{route('login')}}/?{{Auth::user()->username}}</span>
+                    <button class="btn-copy"
+                        onclick="copyToClipboard(this)">Copy</button>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="label">Total Referrals</div>
+                        <div class="value">{{$total_team}}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="label">Active Referrals</div>
+                        <div class="value">{{$active_total_team}}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="label">Total Earned</div>
+                        <div class="value accent">{{$total_earned}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="inviter-card">
+            <div class="inviter-icon">🤝</div>
+            <div class="inviter-label">Your Inviter</div>
+            <div class="inviter-name">{{Auth::user()->sponsorUser->name ?? 'NAN'}}</div>
+        </div>
+    </div>
+    <section class="ops-card">
         <div class="card-header">
-            <h3>Your Referrals</h3>
+            <h3>My Networks</h3>
         </div>
-        <div class="card-body">
 
-            <div class="row mb-4">
-                <div class="col-md-4" style="margin-bottom:16px">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Total Referrals</h5>
-<h2 class="mb-0">{{ Auth::user()->user_directall()->count() }}</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style="margin-bottom:16px">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Active Referrals</h5>
-<h2 class="mb-0">{{ Auth::user()->user_direct()->count() }}</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style="margin-bottom:16px">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Total Commission</h5>
-                            <h2 class="mb-0">${{ number_format(Auth::user()->sponsorship_bonus->sum('comm'), 2) }}  {{generalDetail()->cur_text}}</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="ops-filter">
+            <a class="active" href="{{route('user.referral-team')}}">Direct Team</a>
+            <a class="" href="{{route('user.left-team')}}">Left Team</a>
+            <a class="" href="{{route('user.right-team')}}">Right Team</a>
+            <a class="" href="{{route('user.tree-view')}}">Genealogy Tree</a>
+            <!-- <a class="" href="?type=referrals">Referrals</a>  -->
+        </div>
 
+        <table class="deposits-table">
+            <thead>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Mobile No</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse($direct_team as $key => $deposit)
+                <tr>
+                    <td>{{ $key + 1 }}</td>
+                    <!-- <td>${{ number_format($deposit->amount, 2) }}</td> -->
+                    <!-- <td>{{ \Carbon\Carbon::parse($deposit->created_at)->format('d M Y') }}</td> -->
+                    <td>{{ ucfirst($deposit->name) }}</td>
+                    <td>{{ ucfirst($deposit->username) }}</td>
+                    <td>{{ ucfirst($deposit->phone) }}</td>
+                    <td>{{ ucfirst($deposit->email) }}</td>
 
-            <h4 class="mb-4 mt-5">Your Referral List</h4>
-            <div class="table-responsive">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Username</th>
-                            <th>Mobile No</th>
-                            <th>Email</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                       
-                        @if(is_array($direct_team) || is_object($direct_team))
-                        @foreach ($direct_team as $value)
-                        <tr>
-                             <td>{{ $value->name }}</td>
-                            <td><b>{{ $value->username }}</b></td>
-                            <td>{{ $value->phone }}</td>
-                            <td><a href="mailto:{{ $value->email }}" class="themed-link">{{ $value->email }}</a></td>
-                            <td>
-                               @if ($value->active_status!="Pending")
-                                                            <span class="text-success">${{ number_format($value->package,2) }}</span>
-                                                        @else
-                                                            <span class="text-warning">No deposit yet</span>
-                                                        @endif
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">
-                                <small>
-                                    
-                                    <span class="badge bg-primary"></span>
-                                </small>
-                            </td>
-                        </tr>
-                        @endforeach
+                    <td>
+                        @if($deposit->status == 'pending')
+                        <span style="color:orange;">Pending</span>
+                        @elseif($deposit->status == 'approved')
+                        <span style="color:green;">Approved</span>
+                        @else
+                        <span style="color:red;">Declined</span>
                         @endif
-                    </tbody>
-                    <!-- <tfoot>
-                        <tr>
-                            <td colspan="3">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div><b>2-10 level referrals:</b> 1</div>
-                                    <div><b>2-10 level active referrals:</b> 0</div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tfoot> -->
-                </table>
+                    </td>
+                </tr>
+                @empty
+                <tr>
+                    <td colspan="5" class="text-center">No operations yet.</< /td>
+                </tr>
+                @endforelse
+            </tbody>
 
-                {{-- Pagination --}}
-                <div class="pagination justify-content-center mt-3">
-                    {{ $direct_team->links('pagination::bootstrap-4') }}
-                </div>
+        </table>
+        {{-- Pagination --}}
+        <div class="pagination justify-content-center mt-3">
+            {{ $direct_team->links('pagination::bootstrap-4') }}
+        </div>
 
+        <style>
+            .ops-card,
+            .dashboard-card {
+                background: #fff;
+                border: 1px solid #e0e1e2;
+                border-radius: 20px;
+                padding: 16px;
+                margin-top: 16px;
+            }
+
+            .card-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 8px;
+            }
+
+            .card-header .right a,
+            .card-header a {
+                text-decoration: none;
+                color: #111827;
+                border: 1px solid #e0e1e2;
+                padding: 6px 10px;
+                border-radius: 10px;
+            }
+
+            .ops-filter {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin: 6px 0 12px;
+            }
+
+            .ops-filter a {
+                padding: 8px 12px;
+                border: 1px solid #e0e1e2;
+                border-radius: 12px;
+                text-decoration: none;
+                color: var(--dark-slate-grey);
+                background: #fff;
+            }
+
+            .ops-filter a.active {
+                border-color: var(--sandy-brown);
+                color: #000;
+                box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+            }
+        </style>
+    </section>
+
+
+    <section class="section-card">
+        <h3>Standard Commission Rates</h3>
+        <div class="levels-grid">
+            <div class="level-card">
+                <div class="level-title">Level 1</div>
+                <div class="level-percent">7%</div>
+                <div class="level-description">
+                    From deposits of your direct referrals. </div>
+            </div>
+            <div class="level-card">
+                <div class="level-title">Level 2</div>
+                <div class="level-percent">2%</div>
+                <div class="level-description">
+                    From your referrals' referrals. </div>
+            </div>
+            <div class="level-card">
+                <div class="level-title">Level 3</div>
+                <div class="level-percent">1%</div>
+                <div class="level-description">
+                    From the 3rd line of your structure. </div>
             </div>
         </div>
-    </div>
-   
-</div>
+    </section>
 
-@include('layouts.upnl.sidebar')
+    <section class="section-card">
+        <h3>Your Referrals (Level 1)</h3>
+        <div class="referrals-table-wrapper">
+            <table class="referrals-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Registration Date</th>
+                        <th>Total Deposits</th>
+                        <th>Your Commission</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4"
+                            style="text-align:center; color: var(--text-muted); padding: 20px;">
+                            You have no referrals on this level yet.
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+
+</main>
 
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-</script>
-<script src="{{asset('')}}assets/js/dash.js"></script>
 
 
 <script>
-    window.addEventListener('load', function () {
-        // All resources (images, scripts, stylesheets, etc.) are loaded
-        const preloaderContainer = document.querySelector('.preloader-container');
-        const content = document.querySelector('.content');
+    function copyToClipboard(button) {
+        const textToCopy = document.getElementById('refLink').innerText.trim();
 
-        if (preloaderContainer) {
-            // Add the 'hidden' class to trigger the fade-out animation
-            preloaderContainer.classList.add('hidden');
+        const temp = document.createElement('textarea');
+        temp.value = textToCopy;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
 
-            // Optional: If you want to completely remove the preloader from the DOM
-            // after the transition, you can listen for the 'transitionend' event.
-            preloaderContainer.addEventListener('transitionend', function () {
-                if (preloaderContainer.style.opacity === '0' || getComputedStyle(preloaderContainer)
-                    .opacity === '0') {
-                    preloaderContainer.style.display = 'none'; // Or preloaderContainer.remove();
-                }
-            }, {
-                once: true
-            }); // {once: true} ensures the event listener is removed after it fires
-        }
+        const originalText = button.innerText;
+        button.innerText = 'Copied!';
+        button.style.backgroundColor = '#6c47ff';
 
-        if (content) {
-            content.style.display = 'block'; // Or any other display type you need, e.g., 'flex'
-            // If you used opacity for content:
-            // content.style.opacity = '1';
-            // content.style.visibility = 'visible';
-        }
-    });
-
-    // Fallback in case 'load' event doesn't fire or takes too long (e.g., for broken images)
-    // You might want to adjust the timeout duration
-    setTimeout(function () {
-        const preloaderContainer = document.querySelector('.preloader-container');
-        const content = document.querySelector('.content');
-
-        if (preloaderContainer && !preloaderContainer.classList.contains('hidden')) {
-            console.warn("Preloader timeout reached. Forcing hide.");
-            preloaderContainer.classList.add('hidden');
-            if (preloaderContainer.style.opacity === '0' || getComputedStyle(preloaderContainer).opacity ===
-                '0') {
-                preloaderContainer.style.display = 'none';
-            }
-            if (content) {
-                content.style.display = 'block';
-            }
-        }
-    }, 10000); // 10 seconds timeout as an example
-
+        setTimeout(() => {
+            button.innerText = originalText;
+            button.style.backgroundColor = '#9d7bff';
+        }, 2000);
+    }
 </script>
+
 
 </body>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - TeMining</title>
+    <title>Login - {{sitename()}}</title>
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="{{asset('')}}assets/favicon.svg" />
     <link rel="shortcut icon" href="{{asset('')}}assets/favicon.ico" />
@@ -464,7 +464,7 @@
 
     <div class="login-card">
         <a href="{{route('Index')}}" class="brand">
-            <div class="logo"><img src="{{asset('')}}assets/logo.png" alt="Logo"></div>
+            <div class="logo"><img src="{{asset('')}}assets/logo.png" alt="Logo" style="height: 100px;"></div>
         </a>
 
         <div class="tabs-nav">
@@ -481,6 +481,31 @@
                 <!-- <input type="hidden" name="from" value="/login/">   -->
 
                 @csrf
+
+                {{-- Error Message --}}
+
+                @if ($errors->any())
+                <div style="background: #ffe6e6; color: #cc0000; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+
+                    @foreach ($errors->all() as $error)
+                    <div>⚠️ {{ $error }}</div>
+
+                    @endforeach
+                </div>
+
+                @endif
+
+                {{-- Success Message --}}
+
+                @if (session('status'))
+                <div style="background: #e6ffed; color: #008000; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+
+                    ✅ {{ session('status') }}
+                </div>
+
+                @endif
+
+
                 <div class="input-group">
                     <label for="username">Username</label>
                     <input type="text" class="input-field" name="username" value="" required autocomplete="" placeholder="Your Login" required>
