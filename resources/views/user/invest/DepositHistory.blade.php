@@ -226,22 +226,21 @@
   </div>
 
   {{-- 🔹 Right side: Search + Reset --}}
-  <form action="{{ route('user.roi-bonus') }}" method="GET" class="ops-search-bar">
-    <input type="text" name="search" value="{{ request('search') }}" placeholder="Search ..." class="search-input">
-    <button type="submit" class="btn-search">Search</button>
-    <a href="{{ route('user.roi-bonus') }}" class="btn-reset">Reset</a>
-  </form>
+ <form id="liveSearchForm" class="ops-search-bar">
+  <input type="text" id="searchInput" name="search" placeholder="Search ..." class="search-input">
+</form>
+
 </div>
 
-   <table class="deposits-table">
+   <div id="resultsTable">
+  <table class="deposits-table">
     <thead>
       <tr>
         <th>S.No</th>
         <th>Amount</th>
-         <th>Payment Mode</th>
+        <th>Payment Mode</th>
         <th>Start Date</th>
         <th>Status</th>
-       
       </tr>
     </thead>
     <tbody>
@@ -250,7 +249,6 @@
           <td>{{ $key + 1 }}</td>
           <td>${{ number_format($deposit->amount, 2) }}</td>
           <td>{{ ucfirst($deposit->payment_mode) }}</td>
-
           <td>{{ \Carbon\Carbon::parse($deposit->created_at)->format('d M Y') }}</td>
           <td>
             @if($deposit->status == 'Pending')
@@ -269,6 +267,11 @@
       @endforelse
     </tbody>
   </table>
+  <div class="ops-pager">
+    {{ $deposit_list->links() }}
+  </div>
+</div>
+
   {{-- Pagination --}}
   <div class="ops-pager">
     {{ $deposit_list->links() }}
@@ -277,4 +280,24 @@
 
       </section>
 </main>
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function() {
+    const query = this.value;
+
+    fetch(`{{ route('user.DepositHistory') }}?search=${encodeURIComponent(query)}`, {
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    })
+    .then(response => response.text())
+    .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const newTable = doc.querySelector('#resultsTable');
+        document.querySelector('#resultsTable').innerHTML = newTable.innerHTML;
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+
 </body></html>
