@@ -1,91 +1,232 @@
   <style>
-    /* ===== Right-to-Left Pagination ===== */
-    :root {
-        --pagination-color: #9d7bff;
-        /* Main accent color */
-        --pagination-text-color: #333;
-        /* Text color */
-        --pagination-bg: #fff;
-        /* Background */
-        --pagination-border: #ddd;
-        /* Border color */
-        --pagination-hover-bg: #f2ebff;
-        /* Hover background */
-    }
+      /* ===== Right-to-Left Pagination ===== */
+      :root {
+          --pagination-color: #9d7bff;
+          /* Main accent color */
+          --pagination-text-color: #333;
+          /* Text color */
+          --pagination-bg: #fff;
+          /* Background */
+          --pagination-border: #ddd;
+          /* Border color */
+          --pagination-hover-bg: #f2ebff;
+          /* Hover background */
+      }
 
-    /* Main container */
-    .pagination-container {
-        display: flex;
-        justify-content: flex-end;
-        /* Align pagination block to right edge */
-        margin-top: 1.5rem;
-        padding-right: 15px;
-    }
+      /* Main container */
+      .pagination-container {
+          display: flex;
+          justify-content: flex-end;
+          /* Align pagination block to right edge */
+          margin-top: 1.5rem;
+          padding-right: 15px;
+      }
 
-    /* Pagination list styling */
-    .pagination {
-        display: flex;
-        flex-direction: row-reverse;
-        /* ✅ Reverse direction: starts from right */
-        flex-wrap: wrap;
-        gap: 6px;
-        list-style: none;
-        padding-left: 0;
-        margin: 0;
-    }
+      /* Pagination list styling */
+      .pagination {
+          display: flex;
+          flex-direction: row-reverse;
+          /* ✅ Reverse direction: starts from right */
+          flex-wrap: wrap;
+          gap: 6px;
+          list-style: none;
+          padding-left: 0;
+          margin: 0;
+      }
 
-    /* Each page item */
-    .page-item {
-        margin: 0;
-    }
+      /* Each page item */
+      .page-item {
+          margin: 0;
+      }
 
-    /* Page links */
-    .page-link {
-        display: block;
-        padding: 0.5rem 0.9rem;
-        color: var(--pagination-text-color);
-        background-color: var(--pagination-bg);
-        border: 1px solid var(--pagination-border);
-        border-radius: 0.35rem;
-        font-size: 0.95rem;
-        font-weight: 500;
-        text-decoration: none;
-        transition: all 0.25s ease;
-    }
+      /* Page links */
+      .page-link {
+          display: block;
+          padding: 0.5rem 0.9rem;
+          color: var(--pagination-text-color);
+          background-color: var(--pagination-bg);
+          border: 1px solid var(--pagination-border);
+          border-radius: 0.35rem;
+          font-size: 0.95rem;
+          font-weight: 500;
+          text-decoration: none;
+          transition: all 0.25s ease;
+      }
 
-    /* Hover effect */
-    .page-link:hover {
-        color: var(--pagination-color);
-        background-color: var(--pagination-hover-bg);
-        border-color: var(--pagination-color);
-    }
+      /* Hover effect */
+      .page-link:hover {
+          color: var(--pagination-color);
+          background-color: var(--pagination-hover-bg);
+          border-color: var(--pagination-color);
+      }
 
-    /* Active page */
-    .page-item.active .page-link {
-        color: #fff;
-        background-color: var(--pagination-color);
-        border-color: var(--pagination-color);
-        box-shadow: 0 0 8px rgba(157, 123, 255, 0.4);
-    }
+      /* Active page */
+      .page-item.active .page-link {
+          color: #fff;
+          background-color: var(--pagination-color);
+          border-color: var(--pagination-color);
+          box-shadow: 0 0 8px rgba(157, 123, 255, 0.4);
+      }
 
-    /* Disabled page */
-    .page-item.disabled .page-link {
-        color: #aaa;
-        background-color: #f8f9fa;
-        border-color: var(--pagination-border);
-        pointer-events: none;
-        opacity: 0.6;
-    }
+      /* Disabled page */
+      .page-item.disabled .page-link {
+          color: #aaa;
+          background-color: #f8f9fa;
+          border-color: var(--pagination-border);
+          pointer-events: none;
+          opacity: 0.6;
+      }
 
-    /* Responsive behavior */
-    @media (max-width: 576px) {
-        .pagination-container {
-            justify-content: center;
-            /* Center pagination on small screens */
-            padding-right: 0;
-        }
-    }
-</style>
+      /* Responsive behavior */
+      @media (max-width: 576px) {
+          .pagination-container {
+              justify-content: center;
+              /* Center pagination on small screens */
+              padding-right: 0;
+          }
+      }
+  </style>
+  <style>
+      .ops-card,
+      .dashboard-card {
+          background: #fff;
+          border: 1px solid #e0e1e2;
+          border-radius: 20px;
+          padding: 16px;
+          margin-top: 16px;
+      }
+
+      .card-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 8px;
+      }
+
+      .card-header .right a,
+      .card-header a {
+          text-decoration: none;
+          color: #111827;
+          border: 1px solid #e0e1e2;
+          padding: 6px 10px;
+          border-radius: 10px;
+      }
+
+      .ops-filter {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          margin: 6px 0 12px;
+      }
+
+      .ops-filter a {
+          padding: 8px 12px;
+          border: 1px solid #e0e1e2;
+          border-radius: 12px;
+          text-decoration: none;
+          color: var(--dark-slate-grey);
+          background: #fff;
+      }
+
+      .ops-filter a.active {
+          border-color: var(--sandy-brown);
+          color: #000;
+          box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+      }
+  </style>
+  <style>
+      .history-table-wrapper {
+          display: block;
+          width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+      }
+
+      .history-table {
+          width: 100%;
+          min-width: 600px;
+          border-collapse: collapse;
+      }
+
+      .history-table th,
+      .history-table td {
+          padding: 15px;
+          text-align: left;
+          border-bottom: 1px solid var(--border-color);
+      }
+
+      .history-table thead th {
+          font-family: 'Inter', sans-serif;
+          font-size: 14px;
+          color: var(--text-muted);
+          font-weight: 500;
+          text-transform: uppercase;
+      }
+
+      .history-table tbody tr:hover {
+          background-color: var(--background);
+      }
+
+      .history-table .plan-name {
+          font-weight: 600;
+      }
+
+      .history-table .amount-value {
+          font-weight: 600;
+      }
+
+      .history-table .profit-value {
+          font-weight: 600;
+          color: var(--status-success);
+      }
+
+      /* ===================================================================
+           RESPONSIVE STYLES
+           =================================================================== */
+      @media (max-width: 1200px) {
+          .reinvest-layout {
+              grid-template-columns: 1fr;
+          }
+
+          .sidebar {
+              position: static;
+          }
+      }
+
+      @media (max-width: 991px) {
+          .reinvest-wrapper {
+              padding: 30px 40px;
+          }
+      }
+
+      @media (max-width: 767px) {
+          .reinvest-wrapper {
+              padding: 20px;
+          }
+
+          .page-header h1 {
+              font-size: 36px;
+          }
+
+          .page-header p {
+              font-size: 16px;
+          }
+
+          .reinvest-layout {
+              gap: 30px;
+              display: block;
+          }
+
+          .section-card {
+              padding: 20px;
+              margin-bottom: 20px;
+          }
+
+          .balance-grid {
+              grid-template-columns: 1fr;
+          }
+      }
+  </style>
   <main class="referral-wrapper">
       <!-- <div class="page-header">
           <h1>Referral <span>Program</span></h1>
@@ -137,122 +278,59 @@
               <a class="" href="{{route('user.tree-view')}}">Genealogy Tree</a>
               <!-- <a class="" href="?type=referrals">Referrals</a>  -->
           </div>
-          <!-- <div class="col">
-              <div class="inputLine">
-                  <?php
-                    $segments = request()->segments();
-                    $page = end($segments); ?>
+   
+          <div class="history-table-wrapper">
+              <table class="history-table">
+                  <thead>
+                      <tr>
+                          <th>S.No</th>
+                          <th>Name</th>
+                          <th>User ID</th>
+                          <!-- <th>Mobile No</th> -->
+                          <th>Email</th>
+                          <th>Joining Date</th>
+                          <th>Position</th>
 
-                  <label for="">type:</label>
-                  <select name="type" class="selectricBl" onchange="location = this.value;">
-                      <option value="">--SELECT--</option>
-                      <option <?php ($page == "roi-bonus") ? 'selected' : ''; ?> value="{{route('user.referral-team')}}">Referral Team</option>
+                          <th>Status</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      @forelse($direct_team as $key => $deposit)
+                      <tr>
+                          <td>{{ $key + 1 }}</td>
+                          <!-- <td>${{ number_format($deposit->amount, 2) }}</td> -->
+                          <!-- <td>{{ \Carbon\Carbon::parse($deposit->created_at)->format('d M Y') }}</td> -->
+                          <td>{{ ($deposit->name) }}</td>
+                          <td>{{ ($deposit->username) }}</td>
+                          <td>{{ ($deposit->email) }}</td>
+                          <td>{{ ($deposit->jdate) }}</td>
+                          <td>{{ ($deposit->position) }}</td>
 
-                      <option <?php ($page == "level-income") ? 'selected' : ''; ?> value="{{route('user.level-team')}}">Total Team</option>
-
-
-
-                  </select>
+                          <td>
+                              @if($deposit->status == 'pending')
+                              <span style="color:orange;">Pending</span>
+                              @elseif($deposit->status == 'approved')
+                              <span style="color:green;">Approved</span>
+                              @else
+                              <span style="color:red;">Declined</span>
+                              @endif
+                          </td>
+                      </tr>
+                      @empty
+                      <tr>
+                          <td colspan="5" class="text-center" style="text-align: center;">No operations yet.</< /td>
+                      </tr>
+                      @endforelse
+                  </tbody>
+              </table>
+              {{-- Pagination --}}
+              <div class="pagination justify-content-center mt-3">
+                  {{ $direct_team->links('pagination::bootstrap-4') }}
               </div>
-          </div> -->
-          <table class="deposits-table">
-              <thead>
-                  <tr>
-                      <th>S.No</th>
-                      <th>Name</th>
-                      <th>User ID</th>
-                      <!-- <th>Mobile No</th> -->
-                      <th>Email</th>
-                      <th>Joining Date</th>
-                      <th>Position</th>
-
-                      <th>Status</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  @forelse($direct_team as $key => $deposit)
-                  <tr>
-                      <td>{{ $key + 1 }}</td>
-                      <!-- <td>${{ number_format($deposit->amount, 2) }}</td> -->
-                      <!-- <td>{{ \Carbon\Carbon::parse($deposit->created_at)->format('d M Y') }}</td> -->
-                      <td>{{ ($deposit->name) }}</td>
-                      <td>{{ ($deposit->username) }}</td>
-                      <td>{{ ($deposit->email) }}</td>
-                      <td>{{ ($deposit->jdate) }}</td>
-                      <td>{{ ($deposit->position) }}</td>
-
-                      <td>
-                          @if($deposit->status == 'pending')
-                          <span style="color:orange;">Pending</span>
-                          @elseif($deposit->status == 'approved')
-                          <span style="color:green;">Approved</span>
-                          @else
-                          <span style="color:red;">Declined</span>
-                          @endif
-                      </td>
-                  </tr>
-                  @empty
-                  <tr>
-                      <td colspan="5" class="text-center" style="text-align: center;">No operations yet.</< /td>
-                  </tr>
-                  @endforelse
-              </tbody>
-          </table>
-        {{-- Pagination --}}
-        <div class="pagination justify-content-center mt-3">
-            {{ $direct_team->links('pagination::bootstrap-4') }}
-        </div>
-          <style>
-              .ops-card,
-              .dashboard-card {
-                  background: #fff;
-                  border: 1px solid #e0e1e2;
-                  border-radius: 20px;
-                  padding: 16px;
-                  margin-top: 16px;
-              }
-
-              .card-header {
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                  margin-bottom: 8px;
-              }
-
-              .card-header .right a,
-              .card-header a {
-                  text-decoration: none;
-                  color: #111827;
-                  border: 1px solid #e0e1e2;
-                  padding: 6px 10px;
-                  border-radius: 10px;
-              }
-
-              .ops-filter {
-                  display: flex;
-                  flex-wrap: wrap;
-                  gap: 8px;
-                  margin: 6px 0 12px;
-              }
-
-              .ops-filter a {
-                  padding: 8px 12px;
-                  border: 1px solid #e0e1e2;
-                  border-radius: 12px;
-                  text-decoration: none;
-                  color: var(--dark-slate-grey);
-                  background: #fff;
-              }
-
-              .ops-filter a.active {
-                  border-color: var(--sandy-brown);
-                  color: #000;
-                  box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
-              }
-          </style>
+          </div>
       </section>
 
-
+      <!-- 
       <section class="section-card">
           <h3>Standard Commission Rates</h3>
           <div class="levels-grid">
@@ -300,7 +378,7 @@
 
               </table>
           </div>
-      </section>
+      </section> -->
 
   </main>
 
