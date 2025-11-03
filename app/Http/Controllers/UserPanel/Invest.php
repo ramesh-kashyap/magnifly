@@ -631,32 +631,36 @@ public function cancel_payment($id)
 
 
 
-        public function invest_list(Request $request){
+       public function invest_list(Request $request)
+{
+    $user = Auth::user();
+    $limit = $request->limit ? $request->limit : paginationLimit();
+    $search = $request->search ? $request->search : null;
 
-      $user=Auth::user();
-      $limit = $request->limit ? $request->limit : paginationLimit();
-        $status = $request->status ? $request->status : null;
-        $search = $request->search ? $request->search : null;
-        $notes = Investment::where('user_id',$user->id);
-      if($search <> null && $request->reset!="Reset"){
-        $notes = $notes->where(function($q) use($search){
-          $q->Where('user_id_fk', 'LIKE', '%' . $search . '%')
-          ->orWhere('status', 'LIKE', '%' . $search . '%')
-          ->orWhere('payment_mode', 'LIKE', '%' . $search . '%')
-          ->orWhere('amount', 'LIKE', '%' . $search . '%')
-                    ->orWhere('created_at', 'LIKE', '%' . $search . '%');
+    $notes = Investment::where('user_id', $user->id);
 
+    if (!empty($search)) {
+        $notes = $notes->where(function ($q) use ($search) {
+            $q->where('user_id_fk', 'LIKE', '%' . $search . '%')
+              ->orWhere('status', 'LIKE', '%' . $search . '%')
+              ->orWhere('payment_mode', 'LIKE', '%' . $search . '%')
+              ->orWhere('amount', 'LIKE', '%' . $search . '%')
+              ->orWhere('created_at', 'LIKE', '%' . $search . '%');
         });
-      }
+    }
 
-        $notes = $notes->paginate($limit)->appends(['limit' => $limit ]);
+    $notes = $notes->orderBy('id', 'desc')->paginate($limit)->appends(['limit' => $limit]);
 
-      $this->data['search'] =$search;
-      $this->data['deposit_list'] =$notes;
-      $this->data['page'] = 'user.invest.DepositHistory';
-      return $this->dashboard_layout();
+    $this->data['search'] = $search;
+    $this->data['deposit_list'] = $notes;
+    $this->data['page'] = 'user.invest.DepositHistory';
 
+    if ($request->ajax()) {
+        return view('user.invest.DepositHistory', $this->data)->render();
+    }
 
-        }
+    return $this->dashboard_layout();
+}
+
 
 }

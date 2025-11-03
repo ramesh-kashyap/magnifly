@@ -226,12 +226,11 @@
   </div>
 
   {{-- 🔹 Right side: Search + Reset --}}
-  <form action="{{ route('user.roi-bonus') }}" method="GET" class="ops-search-bar">
-    <input type="text" name="search" value="{{ request('search') }}" placeholder="Search ..." class="search-input">
-    <button type="submit" class="btn-search">Search</button>
-    <a href="{{ route('user.roi-bonus') }}" class="btn-reset">Reset</a>
-  </form>
+   <form id="liveSearchForm" class="ops-search-bar">
+  <input type="text" id="searchInput" name="search" placeholder="Search ..." class="search-input">
+</form>
 </div>
+   <div id="resultsTable">
 
    <table class="deposits-table">
     <thead>
@@ -269,6 +268,7 @@
       @endforelse
     </tbody>
   </table>
+</div>
   {{-- Pagination --}}
   <div class="ops-pager">
     {{ $withdraw_report->links() }}
@@ -276,4 +276,23 @@
 
       </section>
 </main>
+<script>
+document.getElementById('searchInput').addEventListener('keyup', function() {
+    const query = this.value;
+
+    fetch(`{{ route('user.Withdraw-History') }}?search=${encodeURIComponent(query)}`, {
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        }
+    })
+    .then(response => response.text())
+    .then(html => {
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        const newTable = doc.querySelector('#resultsTable');
+        document.querySelector('#resultsTable').innerHTML = newTable.innerHTML;
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
 </body></html>

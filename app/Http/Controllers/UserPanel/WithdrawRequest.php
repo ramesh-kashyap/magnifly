@@ -239,30 +239,43 @@ class WithdrawRequest extends Controller
     }
 
 
-    public function WithdrawHistory(Request $request){
+  public function WithdrawHistory(Request $request)
+{
+    $user = Auth::user();
+    $limit = $request->limit ? $request->limit : paginationLimit();
+    $search = $request->search ? $request->search : null;
 
-        $user=Auth::user();
-        $limit = $request->limit ? $request->limit : paginationLimit();
-         $status = $request->status ? $request->status : null;
-         $search = $request->search ? $request->search : null;
-         $notes = Withdraw::where('user_id',$user->id)->orderBy('wdate','DESC');
-        if($search <> null && $request->reset!="Reset"){
-         $notes = $notes->where(function($q) use($search){
-            $q->Where('wdate', 'LIKE', '%' . $search . '%')
+    // 🔹 Base query
+    $notes = Withdraw::where('user_id', $user->id)
+        ->orderBy('wdate', 'DESC');
+
+    // 🔹 Search logic
+    if (!empty($search) && $request->reset != "Reset") {
+        $notes = $notes->where(function ($q) use ($search) {
+            $q->where('wdate', 'LIKE', '%' . $search . '%')
               ->orWhere('amount', 'LIKE', '%' . $search . '%')
               ->orWhere('status', 'LIKE', '%' . $search . '%')
               ->orWhere('txn_id', 'LIKE', '%' . $search . '%');
-         });
+        });
+    }
 
-        }
+    // 🔹 Pagination
+    $notes = $notes->paginate($limit)->appends(['limit' => $limit]);
 
-         $notes = $notes->paginate($limit)->appends(['limit' => $limit ]);
+    // 🔹 Data to view
+    $this->data['withdraw_report'] = $notes;
+    $this->data['search'] = $search;
+    $this->data['page'] = 'user.withdraw.WithdrawHistory';
 
-       $this->data['search'] =$search;
-       $this->data['withdraw_report'] =$notes;
-       $this->data['page'] = 'user.withdraw.WithdrawHistory';
-       return $this->dashboard_layout();
-    } 
+    // 🔹 If AJAX request, return only the table HTML
+    if ($request->ajax()) {
+        return view('user.withdraw.WithdrawHistory', $this->data)->render();
+    }
+
+    // 🔹 Otherwise return full dashboard layout
+    return $this->dashboard_layout();
+}
+
     
     public function debitReport(Request $request){
 

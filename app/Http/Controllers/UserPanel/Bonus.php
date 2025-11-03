@@ -235,37 +235,38 @@ class Bonus extends Controller
     }
 
  
+  
 
-    public function roi_income(Request $request)
-    {
-           $user=Auth::user();
+public function roi_income(Request $request)
+{
+    $user = Auth::user();
+    $limit = $request->limit ? $request->limit : paginationLimit();
+    $search = $request->search ? $request->search : null;
 
+    $notes = Income::where('user_id', $user->id)->orderBy('id', 'DESC');
 
-          $limit = $request->limit ? $request->limit :  paginationLimit();
-            $status = $request->status ? $request->status : null;
-            $search = $request->search ? $request->search : null;
-            $notes = Income::where('user_id',$user->id)->orderBy('id', 'DESC');
-           if($search <> null && $request->reset!="Reset"){
-            $notes = $notes->where(function($q) use($search){
-              $q->Where('ttime', 'LIKE', '%' . $search . '%')
+    if (!empty($search) && $request->reset != "Reset") {
+        $notes = $notes->where(function ($q) use ($search) {
+            $q->where('ttime', 'LIKE', '%' . $search . '%')
               ->orWhere('amt', 'LIKE', '%' . $search . '%')
               ->orWhere('rname', 'LIKE', '%' . $search . '%')
               ->orWhere('comm', 'LIKE', '%' . $search . '%');
-            });
-
-      }
-
-            $notes = $notes->paginate($limit)
-                ->appends([
-                    'limit' => $limit
-                ]);
-
-    $this->data['level_income'] =$notes;
-    $this->data['search'] =$search;
-    $this->data['page'] = 'user.bonus.level-income';
-    return $this->dashboard_layout();
-
+        });
     }
+
+    $notes = $notes->paginate($limit)->appends(['limit' => $limit]);
+
+    $this->data['level_income'] = $notes;
+    $this->data['search'] = $search;
+    $this->data['page'] = 'user.bonus.level-income';
+
+    if ($request->ajax()) {
+        return view('user.bonus.level-income', $this->data)->render();
+    }
+
+    return $this->dashboard_layout();
+}
+
 
 
 }
