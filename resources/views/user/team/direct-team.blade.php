@@ -89,7 +89,6 @@
         box-shadow: 0 0 8px rgba(157, 123, 255, 0.4);
     }
 
-    /* Disabled page */
     .page-item.disabled .page-link {
         color: #aaa;
         background-color: #f8f9fa;
@@ -218,7 +217,7 @@
                 <h3>Your Unique Referral Link</h3>
                 <div class="ref-link-wrapper">
                     <span id="refLink"
-                        class="ref-link">{{route('login')}}/?{{Auth::user()->username}}</span>
+                        class="ref-link">{{route('login')}}/?ref={{Auth::user()->username}}</span>
                     <button class="btn-copy"
                         onclick="copyToClipboard(this)">Copy</button>
                 </div>
