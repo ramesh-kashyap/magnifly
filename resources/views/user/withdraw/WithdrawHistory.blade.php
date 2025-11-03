@@ -225,7 +225,6 @@
     <a class="" href="{{route('user.roi-bonus')}}">Incomes</a>
   </div>
 
-  {{-- 🔹 Right side: Search + Reset --}}
    <form id="liveSearchForm" class="ops-search-bar">
   <input type="text" id="searchInput" name="search" placeholder="Search ..." class="search-input">
 </form>
