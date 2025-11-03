@@ -639,7 +639,6 @@ public function cancel_payment($id)
 
     $notes = Investment::where('user_id', $user->id);
 
-    // 🔹 Search logic
     if (!empty($search)) {
         $notes = $notes->where(function ($q) use ($search) {
             $q->where('user_id_fk', 'LIKE', '%' . $search . '%')
@@ -656,12 +655,10 @@ public function cancel_payment($id)
     $this->data['deposit_list'] = $notes;
     $this->data['page'] = 'user.invest.DepositHistory';
 
-    // 🔹 If AJAX (live search), return only table HTML
     if ($request->ajax()) {
         return view('user.invest.DepositHistory', $this->data)->render();
     }
 
-    // 🔹 Otherwise return full dashboard layout
     return $this->dashboard_layout();
 }
 
