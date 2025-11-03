@@ -375,7 +375,7 @@
 
 
 
-        <div class="history-table-wrapper">
+        <div class="history-table-wrapper" id="resultsTable">
             <table class="history-table">
                 <thead>
                     <tr>
@@ -482,7 +482,7 @@
     document.getElementById('searchInput').addEventListener('keyup', function() {
         const query = this.value;
 
-        fetch(`{{ route('user.DepositHistory') }}?search=${encodeURIComponent(query)}`, {
+        fetch(`{{ route('user.referral-team') }}?search=${encodeURIComponent(query)}`, {
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest'
                 }

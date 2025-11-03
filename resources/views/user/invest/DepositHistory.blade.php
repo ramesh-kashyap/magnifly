@@ -532,7 +532,7 @@
 
     </div>
 
-    <div class="history-table-wrapper">
+    <div class="history-table-wrapper" id="resultsTable">
       <table class="history-table">
         <thead>
           <tr>

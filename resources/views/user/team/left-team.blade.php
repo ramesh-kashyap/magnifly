@@ -86,89 +86,89 @@
          }
      }
 
-     
-    .ops-filter-bar {
-        display: flex;
-        justify-content: space-between;
-        /* filter left, search right */
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 10px 0 16px;
-        gap: 10px;
-    }
 
-    /* Existing filter style retained */
-    .ops-filter {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
+     .ops-filter-bar {
+         display: flex;
+         justify-content: space-between;
+         /* filter left, search right */
+         align-items: center;
+         flex-wrap: wrap;
+         margin: 10px 0 16px;
+         gap: 10px;
+     }
 
-    .ops-filter a {
-        padding: 8px 12px;
-        border: 1px solid #e0e1e2;
-        border-radius: 12px;
-        text-decoration: none;
-        color: var(--dark-slate-grey);
-        background: #fff;
-    }
+     /* Existing filter style retained */
+     .ops-filter {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 8px;
+     }
 
-    .ops-filter a.active {
-        border-color: var(--sandy-brown);
-        color: #000;
-        box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
-    }
+     .ops-filter a {
+         padding: 8px 12px;
+         border: 1px solid #e0e1e2;
+         border-radius: 12px;
+         text-decoration: none;
+         color: var(--dark-slate-grey);
+         background: #fff;
+     }
 
-    /* 🔍 Right-side search box + reset */
-    .ops-search-bar {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
+     .ops-filter a.active {
+         border-color: var(--sandy-brown);
+         color: #000;
+         box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+     }
 
-    .search-input {
-        padding: 8px 12px;
-        border: 1px solid #e0e1e2;
-        border-radius: 8px;
-        font-size: 14px;
-        width: 220px;
-        outline: none;
-    }
+     /* 🔍 Right-side search box + reset */
+     .ops-search-bar {
+         display: flex;
+         align-items: center;
+         gap: 8px;
+     }
 
-    .search-input:focus {
-        border-color: var(--sandy-brown);
-        box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
-    }
+     .search-input {
+         padding: 8px 12px;
+         border: 1px solid #e0e1e2;
+         border-radius: 8px;
+         font-size: 14px;
+         width: 220px;
+         outline: none;
+     }
 
-    .btn-search,
-    .btn-reset {
-        padding: 8px 14px;
-        border-radius: 8px;
-        font-size: 14px;
-        cursor: pointer;
-        text-decoration: none;
-        transition: all 0.2s ease;
-    }
+     .search-input:focus {
+         border-color: var(--sandy-brown);
+         box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+     }
 
-    .btn-search {
-        background: var(--sandy-brown);
-        color: #fff;
-        border: 1px solid var(--sandy-brown);
-    }
+     .btn-search,
+     .btn-reset {
+         padding: 8px 14px;
+         border-radius: 8px;
+         font-size: 14px;
+         cursor: pointer;
+         text-decoration: none;
+         transition: all 0.2s ease;
+     }
 
-    .btn-search:hover {
-        background: #e09d59;
-    }
+     .btn-search {
+         background: var(--sandy-brown);
+         color: #fff;
+         border: 1px solid var(--sandy-brown);
+     }
 
-    .btn-reset {
-        background: #fff;
-        color: #111827;
-        border: 1px solid #e0e1e2;
-    }
+     .btn-search:hover {
+         background: #e09d59;
+     }
 
-    .btn-reset:hover {
-        background: #f5f5f5;
-    }
+     .btn-reset {
+         background: #fff;
+         color: #111827;
+         border: 1px solid #e0e1e2;
+     }
+
+     .btn-reset:hover {
+         background: #f5f5f5;
+     }
  </style>
  <style>
      .ops-card,
@@ -368,7 +368,7 @@
                  <input type="text" id="searchInput" name="search" placeholder="Search ..." class="search-input">
              </form>
          </div>
-         <div class="history-table-wrapper">
+         <div class="history-table-wrapper" id="resultsTable">
              <table class="history-table">
                  <thead>
                      <tr>
@@ -472,6 +472,25 @@
      </section> -->
 
  </main>
+ <script>
+     document.getElementById('searchInput').addEventListener('keyup', function() {
+         const query = this.value;
+
+         fetch(`{{ route('user.left-team') }}?search=${encodeURIComponent(query)}`, {
+                 headers: {
+                     'X-Requested-With': 'XMLHttpRequest'
+                 }
+             })
+             .then(response => response.text())
+             .then(html => {
+                 const parser = new DOMParser();
+                 const doc = parser.parseFromString(html, 'text/html');
+                 const newTable = doc.querySelector('#resultsTable');
+                 document.querySelector('#resultsTable').innerHTML = newTable.innerHTML;
+             })
+             .catch(error => console.error('Error:', error));
+     });
+ </script>
  <script>
      function copyToClipboard(button) {
          const textToCopy = document.getElementById('refLink').innerText.trim();

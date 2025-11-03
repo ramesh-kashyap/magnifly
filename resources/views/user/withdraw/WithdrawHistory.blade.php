@@ -530,7 +530,7 @@
         <input type="text" id="searchInput" name="search" placeholder="Search ..." class="search-input">
       </form>
     </div>
-    <div class="history-table-wrapper">
+    <div class="history-table-wrapper" id="resultsTable">
       <table class="history-table">
         <thead>
           <tr>
