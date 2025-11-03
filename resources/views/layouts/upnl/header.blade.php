@@ -1233,7 +1233,7 @@
     .referral-link-content { position: relative; z-index: 1; }
     .referral-link-content h3 { color: #fff; }
     .ref-link-wrapper { background-color: var(--dark-slate-grey); padding: 10px 15px; border-radius: 12px; display: flex; align-items: center; justify-content: space-between; margin-top: 20px; border: 1px solid var(--dark-grey-lighter); }
-    .ref-link { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: monospace; font-size: 16px; color: var(--text-light); }
+    .ref-link { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: monospace; font-size: 16px; color: gray; }
     .btn-copy { background: var(--sandy-brown); color: var(--dark-slate-grey); border: none; padding: 10px 15px; border-radius: 8px; cursor: pointer; font-weight: 700; margin-left: 15px; transition: background-color 0.3s ease; }
     .btn-copy:hover { background-color: #fff; }
     .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 30px; }
