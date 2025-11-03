@@ -5,7 +5,7 @@
         <div class="main-block">
             <div class="dop-main-block">
                 <div class="main-title-block">
-                    <h1 class="h1">POWERING<br>YOUR DAILY</h1>
+                    <h1 class="h1"><br>POWERING DAILY</h1>
                     <div class="div-block-7">
                         <h2 class="heading-2"><span class="text-span-9">
                             </span>CRYPTO<span class="text-span-10"> </span><span class="text-span-11">RETURNS</span>
