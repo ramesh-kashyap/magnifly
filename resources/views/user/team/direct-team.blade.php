@@ -25,13 +25,34 @@
     /* Pagination list styling */
     .pagination {
         display: flex;
-        flex-direction: row-reverse;
-        /* ✅ Reverse direction: starts from right */
+        justify-content: flex-end;
+        /* ✅ Aligns pagination to the right */
         flex-wrap: wrap;
         gap: 6px;
         list-style: none;
         padding-left: 0;
-        margin: 0;
+        margin: 2px;
+    }
+
+    .pagination li a,
+    .pagination li span {
+        padding: 8px 14px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #555;
+        transition: 0.3s;
+    }
+
+    .pagination li a:hover {
+        background-color: #f0ebff;
+        color: #9d7bff;
+    }
+
+    .pagination li.active span {
+        background-color: #9d7bff;
+        color: #fff;
+        border-color: #9d7bff;
     }
 
     /* Each page item */
@@ -77,16 +98,113 @@
         opacity: 0.6;
     }
 
-    /* Responsive behavior */
     @media (max-width: 576px) {
         .pagination-container {
-            justify-content: center;
-            /* Center pagination on small screens */
-            padding-right: 0;
+            justify-content: flex-end;
+            /* ✅ Right align container */
+            padding-left: 10px;
+            /* Thoda spacing right side se */
+        }
+
+        .pagination {
+            flex-wrap: nowrap;
+            justify-content: flex-end;
         }
     }
 </style>
+<style>
+    .history-table-wrapper {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
 
+    .history-table {
+        width: 100%;
+        min-width: 600px;
+        border-collapse: collapse;
+    }
+
+    .history-table th,
+    .history-table td {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .history-table thead th {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        color: var(--text-muted);
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .history-table tbody tr:hover {
+        background-color: var(--background);
+    }
+
+    .history-table .plan-name {
+        font-weight: 600;
+    }
+
+    .history-table .amount-value {
+        font-weight: 600;
+    }
+
+    .history-table .profit-value {
+        font-weight: 600;
+        color: var(--status-success);
+    }
+
+    /* ===================================================================
+           RESPONSIVE STYLES
+           =================================================================== */
+    @media (max-width: 1200px) {
+        .reinvest-layout {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+            position: static;
+        }
+    }
+
+    @media (max-width: 991px) {
+        .reinvest-wrapper {
+            padding: 30px 40px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .reinvest-wrapper {
+            padding: 20px;
+        }
+
+        .page-header h1 {
+            font-size: 36px;
+        }
+
+        .page-header p {
+            font-size: 16px;
+        }
+
+        .reinvest-layout {
+            gap: 30px;
+            display: block;
+        }
+
+        .section-card {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .balance-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
 <main class="referral-wrapper">
     <div class="page-header">
         <h1>Referral <span>Program</span></h1>
@@ -123,7 +241,7 @@
         <div class="inviter-card">
             <div class="inviter-icon">🤝</div>
             <div class="inviter-label">Your Inviter</div>
-            <div class="inviter-name">{{Auth::user()->sponsorUser->name ?? 'NAN'}}</div>
+            <div class="inviter-name">{{Auth::user()->sponsorUser->name ?? 'No Sponsor'}}</div>
         </div>
     </div>
     <section class="ops-card">
@@ -139,51 +257,53 @@
             <!-- <a class="" href="?type=referrals">Referrals</a>  -->
         </div>
 
-        <table class="deposits-table">
-            <thead>
-                <tr>
-                    <th>S.No</th>
-                    <th>Name</th>
-                    <th>Username</th>
-                    <th>Mobile No</th>
-                    <th>Email</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                @forelse($direct_team as $key => $deposit)
-                <tr>
-                    <td>{{ $key + 1 }}</td>
-                    <!-- <td>${{ number_format($deposit->amount, 2) }}</td> -->
-                    <!-- <td>{{ \Carbon\Carbon::parse($deposit->created_at)->format('d M Y') }}</td> -->
-                    <td>{{ ucfirst($deposit->name) }}</td>
-                    <td>{{ ucfirst($deposit->username) }}</td>
-                    <td>{{ ucfirst($deposit->phone) }}</td>
-                    <td>{{ ucfirst($deposit->email) }}</td>
 
-                    <td>
-                        @if($deposit->status == 'pending')
-                        <span style="color:orange;">Pending</span>
-                        @elseif($deposit->status == 'approved')
-                        <span style="color:green;">Approved</span>
-                        @else
-                        <span style="color:red;">Declined</span>
-                        @endif
-                    </td>
-                </tr>
-                @empty
-                <tr>
-                    <td colspan="5" class="text-center">No operations yet.</< /td>
-                </tr>
-                @endforelse
-            </tbody>
+        <div class="history-table-wrapper">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Mobile No</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse($direct_team as $key => $deposit)
+                    <tr>
+                        <td>{{ $key + 1 }}</td>
+                        <!-- <td>${{ number_format($deposit->amount, 2) }}</td> -->
+                        <!-- <td>{{ \Carbon\Carbon::parse($deposit->created_at)->format('d M Y') }}</td> -->
+                        <td>{{ ucfirst($deposit->name) }}</td>
+                        <td>{{ ucfirst($deposit->username) }}</td>
+                        <td>{{ ucfirst($deposit->phone) }}</td>
+                        <td>{{ ucfirst($deposit->email) }}</td>
 
-        </table>
-        {{-- Pagination --}}
-        <div class="pagination justify-content-center mt-3">
-            {{ $direct_team->links('pagination::bootstrap-4') }}
+                        <td>
+                            @if($deposit->status == 'pending')
+                            <span style="color:orange;">Pending</span>
+                            @elseif($deposit->status == 'approved')
+                            <span style="color:green;">Approved</span>
+                            @else
+                            <span style="color:red;">Declined</span>
+                            @endif
+                        </td>
+                    </tr>
+                    @empty
+                    <tr>
+                        <td colspan="5" class="text-center">No operations yet.</< /td>
+                    </tr>
+                    @endforelse
+                </tbody>
+
+            </table>
+            {{-- Pagination --}}
+            <div class="pagination justify-content-center mt-3">
+                {{ $direct_team->links('pagination::bootstrap-4') }}
+            </div>
         </div>
-
         <style>
             .ops-card,
             .dashboard-card {
@@ -261,8 +381,8 @@
 
     <section class="section-card">
         <h3>Your Referrals (Level 1)</h3>
-        <div class="referrals-table-wrapper">
-            <table class="referrals-table">
+        <div class="history-table-wrapper">
+            <table class="history-table">
                 <thead>
                     <tr>
                         <th>Username</th>
