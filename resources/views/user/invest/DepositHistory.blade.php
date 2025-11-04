@@ -50,7 +50,7 @@
   .ops-card,
   .dashboard-card {
     background: #2c2c2c;
-    border: 1px solid #e0e1e2;
+    border: 1px solid #505153;
     border-radius: 20px;
     padding: 16px;
     margin-top: 16px;
@@ -79,10 +79,10 @@
   }
 
   .stat {
-    border: 1px solid #e0e1e2;
+    border:0.5px solid #595c5f;
     border-radius: 16px;
     padding: 12px;
-background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
+background: #202223;
   }
 
   .stat .cap {
