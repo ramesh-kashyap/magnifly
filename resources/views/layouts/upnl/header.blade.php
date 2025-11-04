@@ -86,8 +86,7 @@
                 </div>
             </div>
         </header>
-
-        <style>
+  <style>
 
       /* math */
 @font-face {
@@ -177,7 +176,7 @@
         }
 
         body {
-            background-color: var(--background);
+            background-color: #151515;
             font-family: 'Inter', sans-serif;
             color: var(--dark-slate-grey);
             font-size: 16px;
@@ -198,7 +197,7 @@
             font-family: 'Anta', sans-serif;
             font-weight: 400;
             margin: 0 0 15px 0;
-            color: var(--dark-slate-grey);
+            color: #ffffff;
             line-height: 1.2;
         }
 
@@ -225,7 +224,7 @@
         .logo-icon { width: 36px; height: 36px; border-radius: 12px; background: var(--dark-slate-grey); display: grid; place-items: center; color: var(--sandy-brown); font-weight: 800; margin-right: 10px; }
         .nav-menu { display: flex; align-items: center; gap: 44px; transition:opacity .3s ease, transform .4s ease; }
         .nav-link { color: var(--text-muted); font-weight: 500; transition: color 0.3s ease; }
-        .nav-link:hover, .nav-link.active { color: var(--dark-slate-grey); }
+        .nav-link:hover, .nav-link.active { color: #9d7bff; }
         
         .contacts-block { display:flex; gap:10px; align-items:center; transition:opacity .25s ease }
         .get-button {
@@ -489,7 +488,7 @@
         }
 
         .dashboard-card {
-            background: var(--card-bg);
+            background: #2c2c2c;
             border-radius: var(--border-radius);
             padding: 30px;
             box-shadow: 0 10px 40px rgba(48, 54, 59, 0.05);
@@ -525,6 +524,7 @@
             border: 1px solid #e0e1e2;
             text-align: center;
             transition: all 0.3s ease;
+            background: linear-gradient(252deg, #4d4d4d 0%, #353434 21%, #313131 39%, #3c3c3c 100%);
         }
         
         .balance-item:hover {
@@ -541,7 +541,7 @@
         .balance-item .currency-name {
             font-weight: 600;
             font-size: 18px;
-            color: var(--dark-slate-grey);
+            color: #9d7bff;
         }
         
         .balance-item .currency-amount {

@@ -13,7 +13,7 @@
   }
 
   .breadcrumb a {
-    color: var(--dark-slate-grey);
+    color: #ffffff;
     text-decoration: none;
   }
 
@@ -25,10 +25,10 @@
   }
 
   .stat-card {
-    background: #fff;
-    border: 1px solid #e0e1e2;
-    border-radius: 20px;
-    padding: 16px;
+       border: 1px solid #e0e1e2;
+    border-radius: 16px;
+    padding: 12px;
+    background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
   }
 
   .stat-card .label {
@@ -49,7 +49,7 @@
 
   .ops-card,
   .dashboard-card {
-    background: #fff;
+    background: #2c2c2c;
     border: 1px solid #e0e1e2;
     border-radius: 20px;
     padding: 16px;
@@ -66,7 +66,7 @@
   .card-header .right a,
   .card-header a {
     text-decoration: none;
-    color: #111827;
+    color: #ffffff;
     border: 1px solid #e0e1e2;
     padding: 6px 10px;
     border-radius: 10px;
@@ -82,19 +82,19 @@
     border: 1px solid #e0e1e2;
     border-radius: 16px;
     padding: 12px;
-    background: #fff;
+background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
   }
 
   .stat .cap {
-    font-size: 12px;
-    color: #a2a5ad;
+       font-size: 16px;
+    color: #ffffff;
     margin-bottom: 6px;
   }
 
   .stat .big {
-    font-size: 20px;
+       font-size: 20px;
     font-weight: 700;
-    color: var(--dark-slate-grey);
+    color: #9d7bff;
   }
 
   .stat .sub {
@@ -380,6 +380,7 @@
         width: 100%;
         min-width: 600px;
         border-collapse: collapse;
+        color: #fff;
     }
 
     .history-table th,
@@ -398,7 +399,7 @@
     }
 
     .history-table tbody tr:hover {
-        background-color: var(--background);
+        background-color: transparent;
     }
 
     .history-table .plan-name {
