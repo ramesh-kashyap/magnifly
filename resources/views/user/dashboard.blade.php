@@ -163,20 +163,20 @@
                 </div>
                 <div class="balances-grid">
                     <div class="balance-item">
-                        <img src="{{asset('')}}assets/icons/bitcoin.png"
-                            alt="BitCoin"
+                        <img src="{{asset('')}}assets/wallets.png"
+                            alt="Your Balance<"
                             onerror="this.onerror=null;this.src='/img/coin-default.svg';">
-                        <div class="currency-name">BitCoin</div>
-                        <div class="currency-amount">0.00000000
-                            BTC</div>
+                        <div class="currency-name">Your Balance</div>
+                        <div class="currency-amount">$0.00000000
+                            </div>
                     </div>
                     <div class="balance-item">
-                        <img src="{{asset('')}}assets/icons/litecoin.png"
+                        <img src="{{asset('')}}assets/deposits.png"
                             alt="LiteCoin"
                             onerror="this.onerror=null;this.src='/img/coin-default.svg';">
-                        <div class="currency-name">LiteCoin</div>
-                        <div class="currency-amount">0.00000000
-                            LTC</div>
+                        <div class="currency-name">Deposits</div>
+                        <div class="currency-amount">$0.00000000
+                            </div>
                     </div>
                     <div class="balance-item">
                         <img src="{{asset('')}}assets/icons/dogecoin.png"
