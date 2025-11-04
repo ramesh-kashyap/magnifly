@@ -560,7 +560,31 @@
                             </ul>
                         </section>
                     </div>
+                                <button type="submit" class="btn-invest">Invest
+                                    Now</button>
+                            </div>
+                        </section>
+
+                        <section class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Latest Deposits</h3>
+                                <a href="/user/operations">All</a>
+                            </div>
+
+                            <ul class="transactions-list">
+                                <li class="transaction-item-empty">
+                                    <p>No deposits yet.</p>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
                 </div>
+                <input type="hidden" name="plan" id="selected-plan-input"
+                    value="2">
+                <input type="hidden" name="system" id="selected-system-input"
+                    value="3">
+            </form>
+        </main>
                 <input type="hidden" name="plan" id="selected-plan-input"
                     value="2">
                 <input type="hidden" name="system" id="selected-system-input"

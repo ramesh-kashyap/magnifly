@@ -248,7 +248,7 @@
                 </div>
             </section>
 
-            <section class="dashboard-card">
+            {{-- <section class="dashboard-card">
                 <div class="card-header">
                     <h3>Active &amp; Closed Deposits</h3>
                     <a href="/user/invest">Investment History</a>
@@ -299,7 +299,7 @@
                         </tbody>
                     </table>
                 </div>
-            </section>
+            </section> --}}
 
 
         </div>
@@ -332,18 +332,18 @@
 
             <section class="dashboard-card">
                 <div class="card-header" style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
-                    <h3 style="font-size:16px; font-weight:600; color:#333;">Latest Activity</h3>
+                    <h3 style="font-size:16px; font-weight:600; color:#fff;">Latest Activity</h3>
                     <a href="{{route('user.DepositHistory')}}" style="text-decoration:none; color:#007bff;">All</a>
                 </div>
 
                 <ul class="transactions-list" style="list-style:none; margin:0; padding:0;">
                     @forelse($latestInvestments as $investment)
                     <li class="transaction-item"
-                        style="display:flex; align-items:center; justify-content:space-between; border:1px solid #e0e1e2; border-radius:10px; padding:10px 14px; margin-bottom:10px; background:#fff;">
+                        style="display:flex; align-items:center; justify-content:space-between; border:1px solid #e0e1e2; border-radius:10px; padding:10px 14px; margin-bottom:10px; background:#272626;">
 
                         <!-- Left side -->
                         <div class="left" style="display:flex; flex-direction:column;">
-                            <span style="font-weight:600; color:#111;">₹{{ number_format($investment->amount, 2) }}</span>
+                            <span style="font-weight:600; color:#fff;">{{currency()}}{{ number_format($investment->amount, 2) }}</span>
                             <span style="font-size:12px; color:#777;">{{ $investment->created_at->format('d M Y, h:i A') }}</span>
                         </div>
 
