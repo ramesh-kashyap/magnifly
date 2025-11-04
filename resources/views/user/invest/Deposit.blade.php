@@ -377,7 +377,7 @@
                                     <div class="plan-term">
                                         Total: 108% after 1 day </div>
 
-                                    <div class="plan-details">TeMining: Hash
+                                    <div class="plan-details">MEgnifly: Hash
                                         Key</div>
                                     <div class="plan-limits"
                                         data-plan-id-limits="2"></div>
@@ -391,7 +391,7 @@
                                     <div class="plan-term">
                                         after 1 day </div>
 
-                                    <div class="plan-details">TeMining: Cipher
+                                    <div class="plan-details">MEgnifly: Cipher
                                         Rig</div>
                                     <div class="plan-limits"
                                         data-plan-id-limits="3"></div>
@@ -405,7 +405,7 @@
                                     <div class="plan-term">
                                         after 7 days </div>
 
-                                    <div class="plan-details">TeMining: Enigma
+                                    <div class="plan-details">MEgnifly: Enigma
                                         Protocol</div>
                                     <div class="plan-limits"
                                         data-plan-id-limits="4"></div>
@@ -419,7 +419,7 @@
                                     <div class="plan-term">
                                         after 12 days </div>
 
-                                    <div class="plan-details">TeMining: Genesis
+                                    <div class="plan-details">MEgnifly: Genesis
                                         Code</div>
                                     <div class="plan-limits"
                                         data-plan-id-limits="5"></div>
@@ -521,7 +521,7 @@
                                     <div class="summary-row">
                                         <span class="label">Selected Plan</span>
                                         <span class="value"
-                                            id="summary-plan">TeMining: Hash
+                                            id="summary-plan">MEgnifly: Hash
                                             Key</span>
                                     </div>
                                     <div class="summary-row">
@@ -570,7 +570,7 @@
 
         <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const plans = [{"id":2,"description":"TeMining: Hash Key","percent":4.5,"count":24,"seconds":3600,"min":[],"max":[],"return":0},{"id":3,"description":"TeMining: Cipher Rig","percent":114,"count":1,"seconds":86400,"min":[],"max":[],"return":0},{"id":4,"description":"TeMining: Enigma Protocol","percent":300,"count":1,"seconds":604800,"min":[],"max":[],"return":0},{"id":5,"description":"TeMining: Genesis Code","percent":1200,"count":1,"seconds":1036800,"min":[],"max":[],"return":0}];
+        const plans = [{"id":2,"description":"MEgnifly: Hash Key","percent":4.5,"count":24,"seconds":3600,"min":[],"max":[],"return":0},{"id":3,"description":"MEgnifly: Cipher Rig","percent":114,"count":1,"seconds":86400,"min":[],"max":[],"return":0},{"id":4,"description":"MEgnifly: Enigma Protocol","percent":300,"count":1,"seconds":604800,"min":[],"max":[],"return":0},{"id":5,"description":"MEgnifly: Genesis Code","percent":1200,"count":1,"seconds":1036800,"min":[],"max":[],"return":0}];
         const rates = {"USD":1,"BTC":122988.2,"LTC":120,"DOGE":0.26,"ETH":4539.5,"XRP":3,"TRX":0.34,"BNB":1168,"USDT":1,"TON":2.81};
 
         const plansContainer = document.getElementById('plans-container');

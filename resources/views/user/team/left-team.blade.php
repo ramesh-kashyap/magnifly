@@ -85,6 +85,90 @@
              padding-right: 0;
          }
      }
+
+
+     .ops-filter-bar {
+         display: flex;
+         justify-content: space-between;
+         /* filter left, search right */
+         align-items: center;
+         flex-wrap: wrap;
+         margin: 10px 0 16px;
+         gap: 10px;
+     }
+
+     /* Existing filter style retained */
+     .ops-filter {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 8px;
+     }
+
+     .ops-filter a {
+         padding: 8px 12px;
+         border: 1px solid #e0e1e2;
+         border-radius: 12px;
+         text-decoration: none;
+         color: var(--dark-slate-grey);
+         background: #fff;
+     }
+
+     .ops-filter a.active {
+         border-color: var(--sandy-brown);
+         color: #000;
+         box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+     }
+
+     /* 🔍 Right-side search box + reset */
+     .ops-search-bar {
+         display: flex;
+         align-items: center;
+         gap: 8px;
+     }
+
+     .search-input {
+         padding: 8px 12px;
+         border: 1px solid #e0e1e2;
+         border-radius: 8px;
+         font-size: 14px;
+         width: 220px;
+         outline: none;
+     }
+
+     .search-input:focus {
+         border-color: var(--sandy-brown);
+         box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+     }
+
+     .btn-search,
+     .btn-reset {
+         padding: 8px 14px;
+         border-radius: 8px;
+         font-size: 14px;
+         cursor: pointer;
+         text-decoration: none;
+         transition: all 0.2s ease;
+     }
+
+     .btn-search {
+         background: var(--sandy-brown);
+         color: #fff;
+         border: 1px solid var(--sandy-brown);
+     }
+
+     .btn-search:hover {
+         background: #e09d59;
+     }
+
+     .btn-reset {
+         background: #fff;
+         color: #111827;
+         border: 1px solid #e0e1e2;
+     }
+
+     .btn-reset:hover {
+         background: #f5f5f5;
+     }
  </style>
  <style>
      .ops-card,
@@ -136,98 +220,98 @@
  </style>
 
  <style>
-    .history-table-wrapper {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-    }
+     .history-table-wrapper {
+         display: block;
+         width: 100%;
+         overflow-x: auto;
+         -webkit-overflow-scrolling: touch;
+     }
 
-    .history-table {
-        width: 100%;
-        min-width: 600px;
-        border-collapse: collapse;
-    }
+     .history-table {
+         width: 100%;
+         min-width: 600px;
+         border-collapse: collapse;
+     }
 
-    .history-table th,
-    .history-table td {
-        padding: 15px;
-        text-align: left;
-        border-bottom: 1px solid var(--border-color);
-    }
+     .history-table th,
+     .history-table td {
+         padding: 15px;
+         text-align: left;
+         border-bottom: 1px solid var(--border-color);
+     }
 
-    .history-table thead th {
-        font-family: 'Inter', sans-serif;
-        font-size: 14px;
-        color: var(--text-muted);
-        font-weight: 500;
-        text-transform: uppercase;
-    }
+     .history-table thead th {
+         font-family: 'Inter', sans-serif;
+         font-size: 14px;
+         color: var(--text-muted);
+         font-weight: 500;
+         text-transform: uppercase;
+     }
 
-    .history-table tbody tr:hover {
-        background-color: var(--background);
-    }
+     .history-table tbody tr:hover {
+         background-color: var(--background);
+     }
 
-    .history-table .plan-name {
-        font-weight: 600;
-    }
+     .history-table .plan-name {
+         font-weight: 600;
+     }
 
-    .history-table .amount-value {
-        font-weight: 600;
-    }
+     .history-table .amount-value {
+         font-weight: 600;
+     }
 
-    .history-table .profit-value {
-        font-weight: 600;
-        color: var(--status-success);
-    }
+     .history-table .profit-value {
+         font-weight: 600;
+         color: var(--status-success);
+     }
 
-    /* ===================================================================
+     /* ===================================================================
            RESPONSIVE STYLES
            =================================================================== */
-    @media (max-width: 1200px) {
-        .reinvest-layout {
-            grid-template-columns: 1fr;
-        }
+     @media (max-width: 1200px) {
+         .reinvest-layout {
+             grid-template-columns: 1fr;
+         }
 
-        .sidebar {
-            position: static;
-        }
-    }
+         .sidebar {
+             position: static;
+         }
+     }
 
-    @media (max-width: 991px) {
-        .reinvest-wrapper {
-            padding: 30px 40px;
-        }
-    }
+     @media (max-width: 991px) {
+         .reinvest-wrapper {
+             padding: 30px 40px;
+         }
+     }
 
-    @media (max-width: 767px) {
-        .reinvest-wrapper {
-            padding: 20px;
-        }
+     @media (max-width: 767px) {
+         .reinvest-wrapper {
+             padding: 20px;
+         }
 
-        .page-header h1 {
-            font-size: 36px;
-        }
+         .page-header h1 {
+             font-size: 36px;
+         }
 
-        .page-header p {
-            font-size: 16px;
-        }
+         .page-header p {
+             font-size: 16px;
+         }
 
-        .reinvest-layout {
-            gap: 30px;
-            display: block;
-        }
+         .reinvest-layout {
+             gap: 30px;
+             display: block;
+         }
 
-        .section-card {
-            padding: 20px;
-            margin-bottom: 20px;
-        }
+         .section-card {
+             padding: 20px;
+             margin-bottom: 20px;
+         }
 
-        .balance-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>
+         .balance-grid {
+             grid-template-columns: 1fr;
+         }
+     }
+ </style>
  <main class="referral-wrapper">
      <!-- <div class="page-header">
           <h1>Referral <span>Program</span></h1>
@@ -271,16 +355,20 @@
          <div class="card-header">
              <h3>My Networks</h3>
          </div>
+         <div class="ops-filter-bar">
 
-         <div class="ops-filter">
-             <a class="" href="{{route('user.referral-team')}}">Direct Team</a>
-             <a class="active" href="{{route('user.left-team')}}">Left Team</a>
-             <a class="" href="{{route('user.right-team')}}">Right Team</a>
-             <a class="" href="{{route('user.tree-view')}}">Genealogy Tree</a>
-             <!-- <a class="" href="?type=referrals">Referrals</a>  -->
+             <div class="ops-filter">
+                 <a class="" href="{{route('user.referral-team')}}">Direct Team</a>
+                 <a class="active" href="{{route('user.left-team')}}">Left Team</a>
+                 <a class="" href="{{route('user.right-team')}}">Right Team</a>
+                 <a class="" href="{{route('user.tree-view')}}">Genealogy Tree</a>
+                 <!-- <a class="" href="?type=referrals">Referrals</a>  -->
+             </div>
+             <form id="liveSearchForm" class="ops-search-bar">
+                 <input type="text" id="searchInput" name="search" placeholder="Search ..." class="search-input">
+             </form>
          </div>
-
-         <div class="history-table-wrapper">
+         <div class="history-table-wrapper" id="resultsTable">
              <table class="history-table">
                  <thead>
                      <tr>
@@ -384,6 +472,25 @@
      </section> -->
 
  </main>
+ <script>
+     document.getElementById('searchInput').addEventListener('keyup', function() {
+         const query = this.value;
+
+         fetch(`{{ route('user.left-team') }}?search=${encodeURIComponent(query)}`, {
+                 headers: {
+                     'X-Requested-With': 'XMLHttpRequest'
+                 }
+             })
+             .then(response => response.text())
+             .then(html => {
+                 const parser = new DOMParser();
+                 const doc = parser.parseFromString(html, 'text/html');
+                 const newTable = doc.querySelector('#resultsTable');
+                 document.querySelector('#resultsTable').innerHTML = newTable.innerHTML;
+             })
+             .catch(error => console.error('Error:', error));
+     });
+ </script>
  <script>
      function copyToClipboard(button) {
          const textToCopy = document.getElementById('refLink').innerText.trim();

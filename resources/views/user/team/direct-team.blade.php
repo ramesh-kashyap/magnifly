@@ -204,6 +204,117 @@
         }
     }
 </style>
+<style>
+    .ops-card,
+    .dashboard-card {
+        background: #fff;
+        border: 1px solid #e0e1e2;
+        border-radius: 20px;
+        padding: 16px;
+        margin-top: 16px;
+    }
+
+    .card-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 8px;
+    }
+
+    .card-header .right a,
+    .card-header a {
+        text-decoration: none;
+        color: #111827;
+        border: 1px solid #e0e1e2;
+        padding: 6px 10px;
+        border-radius: 10px;
+    }
+
+
+    /* 🔹 Container holding both filter and search */
+    .ops-filter-bar {
+        display: flex;
+        justify-content: space-between;
+        /* filter left, search right */
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 10px 0 16px;
+        gap: 10px;
+    }
+
+    /* Existing filter style retained */
+    .ops-filter {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .ops-filter a {
+        padding: 8px 12px;
+        border: 1px solid #e0e1e2;
+        border-radius: 12px;
+        text-decoration: none;
+        color: var(--dark-slate-grey);
+        background: #fff;
+    }
+
+    .ops-filter a.active {
+        border-color: var(--sandy-brown);
+        color: #000;
+        box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+    }
+
+    /* 🔍 Right-side search box + reset */
+    .ops-search-bar {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .search-input {
+        padding: 8px 12px;
+        border: 1px solid #e0e1e2;
+        border-radius: 8px;
+        font-size: 14px;
+        width: 220px;
+        outline: none;
+    }
+
+    .search-input:focus {
+        border-color: var(--sandy-brown);
+        box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
+    }
+
+    .btn-search,
+    .btn-reset {
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .btn-search {
+        background: var(--sandy-brown);
+        color: #fff;
+        border: 1px solid var(--sandy-brown);
+    }
+
+    .btn-search:hover {
+        background: #e09d59;
+    }
+
+    .btn-reset {
+        background: #fff;
+        color: #111827;
+        border: 1px solid #e0e1e2;
+    }
+
+    .btn-reset:hover {
+        background: #f5f5f5;
+    }
+</style>
 <main class="referral-wrapper">
     <div class="page-header">
         <h1>Referral <span>Program</span></h1>
@@ -247,17 +358,24 @@
         <div class="card-header">
             <h3>My Networks</h3>
         </div>
+        <div class="ops-filter-bar">
 
-        <div class="ops-filter">
-            <a class="active" href="{{route('user.referral-team')}}">Direct Team</a>
-            <a class="" href="{{route('user.left-team')}}">Left Team</a>
-            <a class="" href="{{route('user.right-team')}}">Right Team</a>
-            <a class="" href="{{route('user.tree-view')}}">Genealogy Tree</a>
-            <!-- <a class="" href="?type=referrals">Referrals</a>  -->
+            <div class="ops-filter">
+                <a class="active" href="{{route('user.referral-team')}}">Direct Team</a>
+                <a class="" href="{{route('user.left-team')}}">Left Team</a>
+                <a class="" href="{{route('user.right-team')}}">Right Team</a>
+                <a class="" href="{{route('user.tree-view')}}">Genealogy Tree</a>
+
+
+            </div>
+            <form id="liveSearchForm" class="ops-search-bar">
+                <input type="text" id="searchInput" name="search" placeholder="Search ..." class="search-input">
+            </form>
         </div>
 
 
-        <div class="history-table-wrapper">
+
+        <div class="history-table-wrapper" id="resultsTable">
             <table class="history-table">
                 <thead>
                     <tr>
@@ -303,54 +421,7 @@
                 {{ $direct_team->links('pagination::bootstrap-4') }}
             </div>
         </div>
-        <style>
-            .ops-card,
-            .dashboard-card {
-                background: #fff;
-                border: 1px solid #e0e1e2;
-                border-radius: 20px;
-                padding: 16px;
-                margin-top: 16px;
-            }
 
-            .card-header {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                margin-bottom: 8px;
-            }
-
-            .card-header .right a,
-            .card-header a {
-                text-decoration: none;
-                color: #111827;
-                border: 1px solid #e0e1e2;
-                padding: 6px 10px;
-                border-radius: 10px;
-            }
-
-            .ops-filter {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 8px;
-                margin: 6px 0 12px;
-            }
-
-            .ops-filter a {
-                padding: 8px 12px;
-                border: 1px solid #e0e1e2;
-                border-radius: 12px;
-                text-decoration: none;
-                color: var(--dark-slate-grey);
-                background: #fff;
-            }
-
-            .ops-filter a.active {
-                border-color: var(--sandy-brown);
-                color: #000;
-                box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
-            }
-        </style>
     </section>
 
 
@@ -407,7 +478,25 @@
 
 
 
+<script>
+    document.getElementById('searchInput').addEventListener('keyup', function() {
+        const query = this.value;
 
+        fetch(`{{ route('user.referral-team') }}?search=${encodeURIComponent(query)}`, {
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+            })
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                const newTable = doc.querySelector('#resultsTable');
+                document.querySelector('#resultsTable').innerHTML = newTable.innerHTML;
+            })
+            .catch(error => console.error('Error:', error));
+    });
+</script>
 <script>
     function copyToClipboard(button) {
         const textToCopy = document.getElementById('refLink').innerText.trim();
