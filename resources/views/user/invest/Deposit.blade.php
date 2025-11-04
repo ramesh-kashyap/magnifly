@@ -68,7 +68,7 @@
         }
         .plan-card {
             /* background-color: var(--background); */
-background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
+    background-color: var(--dark-grey-lighter);
             border: 2px solid var(--border-color);
             border-radius: 16px;
             padding: 25px;
@@ -86,7 +86,7 @@ background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1
         .plan-card.selected {
             border-color: var(--sandy-brown);
             /* background-color: #fff; */
-            background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
+    background-color: var(--dark-grey-lighter);
     box-shadow: 0 18px 48px rgba(0, 0, 0, .18), 0 0 0 2px 
  color-mix(in oklab, var(--cp-accent), transparent 60%), 0 0 0 6px 
  color-mix(in oklab, var(--cp-accent), transparent 88%);
@@ -267,7 +267,7 @@ background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1
 
         .btn-invest {
             background-color: var(--sandy-brown);
-            color: var(--dark-slate-grey);
+            color: #fff;
             padding: 18px;
             text-align: center;
             border-radius: 14px;

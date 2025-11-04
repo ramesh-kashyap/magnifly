@@ -114,7 +114,7 @@
 
     .btn-primary {
         background-color: var(--sandy-brown);
-        color: var(--dark-slate-grey);
+        color: #fff;
         padding: 15px 30px;
         border-radius: 14px;
         font-family: 'Bowler', sans-serif;
@@ -224,7 +224,7 @@
 
     .btn-security {
         background-color: var(--sandy-brown);
-        color: var(--dark-slate-grey);
+        color: #fff;
         padding: 12px 25px;
         border-radius: 12px;
         font-family: 'Bowler', sans-serif;

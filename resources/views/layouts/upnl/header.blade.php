@@ -234,7 +234,7 @@
             height: 56px;
             display: inline-flex;
             align-items: center;
-            color: var(--dark-slate-grey);
+            color: #fff;
             font-family: 'Anta', sans-serif;
             font-size: 14px;
             transition: all 0.4s ease;
@@ -1264,12 +1264,12 @@
     .progress-left span { font-weight: 700; color: var(--sandy-brown); }
     .levels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
     .level-card { text-align: center; padding: 30px; border-radius: var(--border-radius); 
-            background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
-        border: 1px solid var(--border-color); transition: all 0.3s ease; }
+    background-color: var(--dark-grey-lighter);
+            border: 1px solid var(--border-color); transition: all 0.3s ease; }
     .level-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
     .level-card .level-title { font-size: 18px; font-weight: 700; color: var(--text-muted); }
     .level-card .level-percent { font-family: 'Bowler', sans-serif; font-size: 64px; color: var(--sandy-brown); margin: 15px 0; line-height: 1; }
-    .level-card .level-description { font-size: 14px; color: var(--dark-slate-grey); }
+    .level-card .level-description { font-size: 14px; color: #7c7f81; }
     .level-card:nth-child(2) .level-percent { opacity: 0.8; }
     .level-card:nth-child(3) .level-percent { opacity: 0.6; }
     .referrals-table-wrapper { overflow-x: auto; }

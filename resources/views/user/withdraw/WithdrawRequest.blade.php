@@ -196,7 +196,7 @@
     }
     .btn-withdraw {
         background-color: var(--sandy-brown);
-        color: var(--dark-slate-grey);
+        color: #fff;
         padding: 18px;
         text-align: center;
         border-radius: 14px;
