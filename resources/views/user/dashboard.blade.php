@@ -164,7 +164,7 @@
                 <div class="balances-grid">
                     <div class="balance-item">
                         <img src="{{asset('')}}assets/wallets.png"
-                            alt="Your Balance<"
+                            alt="Your Balance"
                             onerror="this.onerror=null;this.src='/img/coin-default.svg';">
                         <div class="currency-name">Your Balance</div>
                         <div class="currency-amount">$0.00000000
