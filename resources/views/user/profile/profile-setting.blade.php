@@ -47,7 +47,7 @@
     }
 
     .section-card {
-        background: var(--card-bg);
+            background: #2c2c2c;
         border-radius: var(--border-radius);
         padding: 30px;
         box-shadow: 0 10px 40px rgba(48, 54, 59, 0.05);
@@ -91,9 +91,9 @@
         width: 100%;
         padding: 15px 20px;
         border-radius: 14px;
-        border: 2px solid var(--border-color);
-        background-color: var(--background);
-        color: var(--dark-slate-grey);
+        border: 2px solid #3d4348;
+        background-color: #30363b;
+        color: #a2a5ad;
         font-size: 16px;
         font-family: 'Inter', sans-serif;
         outline: none;
@@ -102,7 +102,7 @@
 
     .input-field:focus {
         border-color: var(--sandy-brown);
-        background-color: #fff;
+        background-color: #30363b;
         box-shadow: 0 0 0 4px rgba(244, 161, 89, 0.1);
     }
 
@@ -157,6 +157,7 @@
         font-weight: 600;
         margin-bottom: 8px;
         display: block;
+        color: var(--sandy-brown);
     }
 
     .security-card {

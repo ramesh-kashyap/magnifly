@@ -37,7 +37,8 @@
         top: 40px;
     }
     .section-card {
-        background: var(--card-bg);
+                background-color: #2c2c2c;
+
         border-radius: var(--border-radius);
         padding: 30px;
         box-shadow: 0 10px 40px rgba(48, 54, 59, 0.05);
@@ -56,7 +57,8 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        background-color: var(--background);
+            background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
+
         border: 2px solid var(--border-color);
         border-radius: 16px;
         padding: 20px;
@@ -70,7 +72,8 @@
     }
     .balance-card.selected {
         border-color: var(--sandy-brown);
-        background-color: #fff;
+                   background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
+
                         box-shadow: 0 18px 48px rgba(0, 0, 0, .18), 0 0 0 2px 
  color-mix(in oklab, var(--cp-accent), transparent 60%), 0 0 0 6px 
  color-mix(in oklab, var(--cp-accent), transparent 88%);
@@ -85,6 +88,7 @@
     .balance-card .crypto-name {
         font-weight: 600;
         font-size: 18px;
+        color: var(--sandy-brown);
     }
     .balance-card .crypto-amount {
         font-size: 16px;

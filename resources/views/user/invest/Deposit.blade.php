@@ -46,7 +46,8 @@
         }
 
         .section-card {
-            background: var(--card-bg);
+            background: #2c2c2c;
+            
             border-radius: var(--border-radius);
             padding: 30px;
             box-shadow: 0 10px 40px rgba(48, 54, 59, 0.05);
@@ -66,7 +67,8 @@
             gap: 20px;
         }
         .plan-card {
-            background-color: var(--background);
+            /* background-color: var(--background); */
+background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
             border: 2px solid var(--border-color);
             border-radius: 16px;
             padding: 25px;
@@ -79,11 +81,12 @@
         .plan-card:hover {
             transform: translateY(-5px);
             border-color: var(--sandy-brown);
-            box-shadow: 0 8px 25px rgba(244, 161, 89, 0.15);
+            box-shadow: 0 8px 25px rgba(109, 83, 204, 0.15);
         }
         .plan-card.selected {
             border-color: var(--sandy-brown);
-            background-color: #fff;
+            /* background-color: #fff; */
+            background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
     box-shadow: 0 18px 48px rgba(0, 0, 0, .18), 0 0 0 2px 
  color-mix(in oklab, var(--cp-accent), transparent 60%), 0 0 0 6px 
  color-mix(in oklab, var(--cp-accent), transparent 88%);
@@ -97,7 +100,7 @@
         .plan-card .plan-term {
             font-size: 18px;
             font-weight: 600;
-            color: var(--dark-slate-grey);
+            color: var(--text-muted);
             margin: 8px 0;
         }
         .plan-card .plan-details {
@@ -126,7 +129,8 @@
             gap: 10px;
             padding: 20px 10px;
             border: 2px solid var(--border-color);
-            background-color: var(--background);
+            background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
+
             border-radius: 16px;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -149,6 +153,7 @@
         .crypto-card .crypto-name {
             font-weight: 600;
             font-size: 16px;
+                color: var(--sandy-brown);
         }
 
         /* ===================================================================
@@ -339,7 +344,7 @@
                 gap: 10px;
             }
             .crypto-card img { width: 40px; height: 40px; }
-            .crypto-card .crypto-name { font-size: 14px; }
+            .crypto-card .crypto-name { font-size: 14px;    color: var(--sandy-brown); }
             .history-table { display: block; overflow-x: auto; }
         }
         .amount.pending {

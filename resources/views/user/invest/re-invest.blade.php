@@ -43,7 +43,7 @@
         }
 
         .section-card {
-            background: var(--card-bg);
+            background: #2c2c2c;
             border-radius: var(--border-radius);
             padding: 30px;
             box-shadow: 0 10px 40px rgba(48, 54, 59, 0.05);
@@ -63,7 +63,7 @@
             gap: 20px;
         }
         .balance-card {
-            background-color: var(--background);
+            background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
             border: 2px solid var(--border-color);
             border-radius: 16px;
             padding: 20px;
@@ -85,7 +85,7 @@
         }
         .balance-card-content { display: flex; align-items: center; gap: 15px; }
         .balance-card img { width: 40px; height: 40px; }
-        .balance-info .crypto-name { font-weight: 600; font-size: 18px; }
+        .balance-info .crypto-name { font-weight: 600; font-size: 18px; color: var(--sandy-brown); }
         .balance-info .crypto-amount { font-size: 16px; color: var(--text-muted); }
         .balance-info .crypto-usd { font-size: 12px; color: var(--status-success); font-weight: 500; }
 
