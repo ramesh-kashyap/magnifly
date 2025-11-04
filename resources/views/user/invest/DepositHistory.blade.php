@@ -534,7 +534,7 @@ background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1
     </div>
 
     <div class="history-table-wrapper">
-      <table class="history-table">
+      <table class="history-table" id="resultsTable">
         <thead>
           <tr>
             <th>S.No</th>
