@@ -347,104 +347,65 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="inviter-card">
-            <div class="inviter-icon">🤝</div>
-            <div class="inviter-label">Your Inviter</div>
-            <div class="inviter-name">{{Auth::user()->sponsorUser->name ?? 'No Sponsor'}}</div>
-        </div>
-    </div>
-    <section class="ops-card">
-        <div class="card-header">
-            <h3>My Networks</h3>
-        </div>
-        <div class="ops-filter-bar">
-
-            <div class="ops-filter">
-                <a class="active" href="{{route('user.referral-team')}}">Direct Team</a>
-                <a class="" href="{{route('user.left-team')}}">Left Team</a>
-                <a class="" href="{{route('user.right-team')}}">Right Team</a>
-                <a class="" href="{{route('user.tree-view')}}">Genealogy Tree</a>
 
 
-            </div>
-            <form id="liveSearchForm" class="ops-search-bar">
-                <input type="text" id="searchInput" name="search" placeholder="Search ..." class="search-input">
-            </form>
-        </div>
+            <h4 class="mb-4 mt-5">Your Referral List</h4>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Username</th>
+                            <th>Mobile No</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                        @if(is_array($direct_team) || is_object($direct_team))
+                        @foreach ($direct_team as $value)
+                        <tr>
+                             <td>{{ $value->name }}</td>
+                            <td><b>{{ $value->username }}</b></td>
+                            <td>{{ $value->phone }}</td>
+                            <td><a href="mailto:{{ $value->email }}" class="themed-link">{{ $value->email }}</a></td>
+                            <td>
+                               @if ($value->active_status!="Pending")
+                                                            <span class="text-success">${{ number_format($value->package,2) }}</span>
+                                                        @else
+                                                            <span class="text-warning">No deposit yet</span>
+                                                        @endif
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <small>
+                                    
+                                    <span class="badge bg-primary"></span>
+                                </small>
+                            </td>
+                        </tr>
+                        @endforeach
+                        @endif
+                    </tbody>
+                    <!-- <tfoot>
+                        <tr>
+                            <td colspan="3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div><b>2-10 level referrals:</b> 1</div>
+                                    <div><b>2-10 level active referrals:</b> 0</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tfoot> -->
+                </table>
 
+                {{-- Pagination --}}
+                <div class="pagination justify-content-center mt-3">
+                    {{ $direct_team->links('pagination::bootstrap-4') }}
+                </div>
 
-
-        <div class="history-table-wrapper" id="resultsTable">
-            <table class="history-table">
-                <thead>
-                    <tr>
-                        <th>S.No</th>
-                        <th>Name</th>
-                        <th>Username</th>
-                        <th>Mobile No</th>
-                        <th>Email</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @forelse($direct_team as $key => $deposit)
-                    <tr>
-                        <td>{{ $key + 1 }}</td>
-                        <!-- <td>${{ number_format($deposit->amount, 2) }}</td> -->
-                        <!-- <td>{{ \Carbon\Carbon::parse($deposit->created_at)->format('d M Y') }}</td> -->
-                        <td>{{ ucfirst($deposit->name) }}</td>
-                        <td>{{ ucfirst($deposit->username) }}</td>
-                        <td>{{ ucfirst($deposit->phone) }}</td>
-                        <td>{{ ucfirst($deposit->email) }}</td>
-
-                        <td>
-                            @if($deposit->status == 'pending')
-                            <span style="color:orange;">Pending</span>
-                            @elseif($deposit->status == 'approved')
-                            <span style="color:green;">Approved</span>
-                            @else
-                            <span style="color:red;">Declined</span>
-                            @endif
-                        </td>
-                    </tr>
-                    @empty
-                    <tr>
-                        <td colspan="5" class="text-center">No operations yet.</< /td>
-                    </tr>
-                    @endforelse
-                </tbody>
-
-            </table>
-            {{-- Pagination --}}
-            <div class="pagination justify-content-center mt-3">
-                {{ $direct_team->links('pagination::bootstrap-4') }}
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="section-card">
-        <h3>Standard Commission Rates</h3>
-        <div class="levels-grid">
-            <div class="level-card">
-                <div class="level-title">Level 1</div>
-                <div class="level-percent">7%</div>
-                <div class="level-description">
-                    From deposits of your direct referrals. </div>
-            </div>
-            <div class="level-card">
-                <div class="level-title">Level 2</div>
-                <div class="level-percent">2%</div>
-                <div class="level-description">
-                    From your referrals' referrals. </div>
-            </div>
-            <div class="level-card">
-                <div class="level-title">Level 3</div>
-                <div class="level-percent">1%</div>
-                <div class="level-description">
-                    From the 3rd line of your structure. </div>
             </div>
         </div>
     </section>
@@ -479,44 +440,54 @@
 
 
 <script>
-    document.getElementById('searchInput').addEventListener('keyup', function() {
-        const query = this.value;
+    window.addEventListener('load', function () {
+        // All resources (images, scripts, stylesheets, etc.) are loaded
+        const preloaderContainer = document.querySelector('.preloader-container');
+        const content = document.querySelector('.content');
 
-        fetch(`{{ route('user.referral-team') }}?search=${encodeURIComponent(query)}`, {
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest'
+        if (preloaderContainer) {
+            // Add the 'hidden' class to trigger the fade-out animation
+            preloaderContainer.classList.add('hidden');
+
+            // Optional: If you want to completely remove the preloader from the DOM
+            // after the transition, you can listen for the 'transitionend' event.
+            preloaderContainer.addEventListener('transitionend', function () {
+                if (preloaderContainer.style.opacity === '0' || getComputedStyle(preloaderContainer)
+                    .opacity === '0') {
+                    preloaderContainer.style.display = 'none'; // Or preloaderContainer.remove();
                 }
-            })
-            .then(response => response.text())
-            .then(html => {
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(html, 'text/html');
-                const newTable = doc.querySelector('#resultsTable');
-                document.querySelector('#resultsTable').innerHTML = newTable.innerHTML;
-            })
-            .catch(error => console.error('Error:', error));
+            }, {
+                once: true
+            }); // {once: true} ensures the event listener is removed after it fires
+        }
+
+        if (content) {
+            content.style.display = 'block'; // Or any other display type you need, e.g., 'flex'
+            // If you used opacity for content:
+            // content.style.opacity = '1';
+            // content.style.visibility = 'visible';
+        }
     });
-</script>
-<script>
-    function copyToClipboard(button) {
-        const textToCopy = document.getElementById('refLink').innerText.trim();
 
-        const temp = document.createElement('textarea');
-        temp.value = textToCopy;
-        document.body.appendChild(temp);
-        temp.select();
-        document.execCommand('copy');
-        document.body.removeChild(temp);
+    // Fallback in case 'load' event doesn't fire or takes too long (e.g., for broken images)
+    // You might want to adjust the timeout duration
+    setTimeout(function () {
+        const preloaderContainer = document.querySelector('.preloader-container');
+        const content = document.querySelector('.content');
 
-        const originalText = button.innerText;
-        button.innerText = 'Copied!';
-        button.style.backgroundColor = '#6c47ff';
+        if (preloaderContainer && !preloaderContainer.classList.contains('hidden')) {
+            console.warn("Preloader timeout reached. Forcing hide.");
+            preloaderContainer.classList.add('hidden');
+            if (preloaderContainer.style.opacity === '0' || getComputedStyle(preloaderContainer).opacity ===
+                '0') {
+                preloaderContainer.style.display = 'none';
+            }
+            if (content) {
+                content.style.display = 'block';
+            }
+        }
+    }, 10000); // 10 seconds timeout as an example
 
-        setTimeout(() => {
-            button.innerText = originalText;
-            button.style.backgroundColor = '#9d7bff';
-        }, 2000);
-    }
 </script>
 
 
