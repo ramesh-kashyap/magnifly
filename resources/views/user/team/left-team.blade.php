@@ -128,7 +128,8 @@
 
      .search-input {
          padding: 8px 12px;
-         border: 1px solid #e0e1e2;
+         border: 1px solid #595a5bff;
+         background-color: #2c2c2c;
          border-radius: 8px;
          font-size: 14px;
          width: 220px;
@@ -173,8 +174,8 @@
  <style>
      .ops-card,
      .dashboard-card {
-         background: #fff;
-         border: 1px solid #e0e1e2;
+         background: #2c2c2c;
+         border: 1px solid #595a5bff;
          border-radius: 20px;
          padding: 16px;
          margin-top: 16px;
@@ -205,16 +206,16 @@
 
      .ops-filter a {
          padding: 8px 12px;
-         border: 1px solid #e0e1e2;
+         border: 1px solid #595a5bff;
          border-radius: 12px;
          text-decoration: none;
-         color: var(--dark-slate-grey);
-         background: #fff;
+         color: gray;
+         background: #2c2c2c;
      }
 
      .ops-filter a.active {
          border-color: var(--sandy-brown);
-         color: #000;
+         color: #fff;
          box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
      }
  </style>
@@ -385,7 +386,7 @@
                  </thead>
                  <tbody>
                      @forelse($direct_team as $key => $deposit)
-                     <tr>
+                     <tr style="color: gray;">
                          <td>{{ $key + 1 }}</td>
                          <!-- <td>${{ number_format($deposit->amount, 2) }}</td> -->
                          <!-- <td>{{ \Carbon\Carbon::parse($deposit->created_at)->format('d M Y') }}</td> -->

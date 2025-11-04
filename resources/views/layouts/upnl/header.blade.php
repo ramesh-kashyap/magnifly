@@ -1225,7 +1225,7 @@
     .page-header h1 { font-size: 46px; margin-bottom: 5px; }
     .page-header h1 span { color: var(--sandy-brown); }
     .page-header p { color: var(--text-muted); font-size: 18px; max-width: 600px; margin: 0; }
-    .section-card { background: var(--card-bg); border-radius: var(--border-radius); padding: 30px; box-shadow: 0 10px 40px rgba(48, 54, 59, 0.05); border: 1px solid var(--border-color); }
+    .section-card { background: #2c2c2c; border-radius: var(--border-radius); padding: 30px; box-shadow: 0 10px 40px rgba(48, 54, 59, 0.05); border: 1px solid var(--border-color); }
     .section-card h3 { font-size: 24px; margin-bottom: 25px; }
     .referral-main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; }
     .referral-link-card { background: var(--card-dark-bg); color: var(--text-light); border-radius: var(--border-radius); padding: 30px; position: relative; overflow: hidden; }
@@ -1241,7 +1241,9 @@
     .stat-card .label { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
     .stat-card .value { font-family: 'Bowler', sans-serif; font-size: 32px; color: #fff; line-height: 1; }
     .stat-card .value.accent { color: var(--sandy-brown); }
-    .inviter-card { padding: 30px; background-color: var(--card-bg); border-radius: var(--border-radius); border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .inviter-card { padding: 30px;
+         background-color: #2c2c2c; 
+         border-radius: var(--border-radius); border: 1px solid var(--border-color); display: flex; flex-direction: column; align-items: center; text-align: center; }
     .inviter-card .inviter-label { font-size: 18px; font-weight: 700; color: var(--text-muted); }
     .inviter-card .inviter-name { font-family: 'Bowler', sans-serif; font-size: 36px; color: var(--sandy-brown); margin: 10px 0; line-height: 1; }
     .inviter-card .inviter-icon { font-size: 48px; margin-bottom: 15px; }
@@ -1261,7 +1263,9 @@
     .progress-left { font-size: 14px; font-weight: 500; text-align: center; margin-top: 10px; }
     .progress-left span { font-weight: 700; color: var(--sandy-brown); }
     .levels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-    .level-card { text-align: center; padding: 30px; border-radius: var(--border-radius); background-color: var(--background); border: 1px solid var(--border-color); transition: all 0.3s ease; }
+    .level-card { text-align: center; padding: 30px; border-radius: var(--border-radius); 
+            background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
+        border: 1px solid var(--border-color); transition: all 0.3s ease; }
     .level-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.08); }
     .level-card .level-title { font-size: 18px; font-weight: 700; color: var(--text-muted); }
     .level-card .level-percent { font-family: 'Bowler', sans-serif; font-size: 64px; color: var(--sandy-brown); margin: 15px 0; line-height: 1; }

@@ -50,7 +50,7 @@
   .ops-card,
   .dashboard-card {
     background: #2c2c2c;
-    border: 1px solid #e0e1e2;
+    border: 1px solid #202223;
     border-radius: 20px;
     padding: 16px;
     margin-top: 16px;
@@ -79,7 +79,7 @@
   }
 
   .stat {
-    border: 1px solid #e0e1e2;
+    border: 1px solid #202223;
     border-radius: 16px;
     padding: 12px;
 background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1a 100%);
@@ -143,16 +143,16 @@ background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1
 
   .ops-filter a {
     padding: 8px 12px;
-    border: 1px solid #e0e1e2;
+    border: 1px solid #595a5bff;
     border-radius: 12px;
     text-decoration: none;
-    color: var(--dark-slate-grey);
-    background: #fff;
+    color: gray;
+    background: #2c2c2c;
   }
 
   .ops-filter a.active {
     border-color: var(--sandy-brown);
-    color: #000;
+    color: #fff;
     box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
   }
 
@@ -304,16 +304,16 @@ background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1
 
   .ops-filter a {
     padding: 8px 12px;
-    border: 1px solid #e0e1e2;
+    border: 1px solid #595a5bff;
     border-radius: 12px;
     text-decoration: none;
-    color: var(--dark-slate-grey);
-    background: #fff;
+    color: gray;
+    background: #2c2c2c;
   }
 
   .ops-filter a.active {
     border-color: var(--sandy-brown);
-    color: #000;
+    color: #fff;
     box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
   }
 
@@ -326,7 +326,8 @@ background: linear-gradient(252deg, #0c0c0c 0%, #353434 21%, #2f2e2e 39%, #1a1a1
 
   .search-input {
     padding: 8px 12px;
-    border: 1px solid #e0e1e2;
+    border: 1px solid #595a5bff;
+    background-color: #2c2c2c;
     border-radius: 8px;
     font-size: 14px;
     width: 220px;

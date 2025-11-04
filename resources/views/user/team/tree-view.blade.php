@@ -29,7 +29,7 @@
 
     .modal-content {
         position: relative;
-        background-color: #f7f7f9;
+        background-color: #151515;
         background-clip: padding-box;
         border: 1px solid #f7f7f9;
         border: 1px solid rgba(0, 0, 0, .2);
@@ -104,8 +104,8 @@
 <style>
     .ops-card,
     .dashboard-card {
-        background: #fff;
-        border: 1px solid #e0e1e2;
+        background: #2c2c2c;
+        border: 1px solid #595a5bff;
         border-radius: 20px;
         padding: 16px;
         margin-top: 16px;
@@ -122,7 +122,7 @@
     .card-header a {
         text-decoration: none;
         color: #111827;
-        border: 1px solid #e0e1e2;
+        border: 1px solid #202223;
         padding: 6px 10px;
         border-radius: 10px;
     }
@@ -136,16 +136,16 @@
 
     .ops-filter a {
         padding: 8px 12px;
-        border: 1px solid #e0e1e2;
+        border: 1px solid #595a5bff;
         border-radius: 12px;
         text-decoration: none;
-        color: var(--dark-slate-grey);
-        background: #fff;
+        color: #828282ff;
+        background: #2c2c2c;
     }
 
     .ops-filter a.active {
         border-color: var(--sandy-brown);
-        color: #000;
+        color: #fff;
         box-shadow: 0 0 0 2px rgb(244 161 89 / 20%);
     }
 </style>
@@ -180,10 +180,11 @@
                                 </td>
                             </tr>
                             <tr class="text-center">
-                                <td colspan="8" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="8" style="border-color:#fff; background-color:#151515;"
                                     class="text-center">Downline ID -&gt;
                                     <form method="get" action="{{route('user.tree-view')}}">
-                                        <input name="suser" type="text" id="suser">
+                                        <input name="suser" type="text" id="suser" style="background-color:#595a5bff;color:'#fff; "
+                                            placeholder="Enter User ID" required>
                                         <input type="submit" name="submit" value="Search" id="submit">
 
                                     </form>
@@ -209,7 +210,7 @@
                             }
                             ?>
                             <tr class="text-center">
-                                <td colspan="8" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="8" 
                                     class="text-center">
                                     <input type="image" name="ctl00$ContentPlaceHolder1$ImageButton0"
                                         id="ctl00_ContentPlaceHolder1_ImageButton0" data-toggle="tooltip"
@@ -217,7 +218,7 @@
                                         data-toggle="tooltip" data-html="true" data-trigger="hover" title=""
                                         data-placement="bottom" data-original-title=""
                                         src="{{asset('assets')}}/{{$color}}.png"
-                                        style="border-width: 0px; width: 78px; height: 59px; background: #f7f7f9;">
+                                        style="border-width: 0px; width: 78px; height: 59px; background: #151515;">
                                     <br>
                                     <span id="ctl00_ContentPlaceHolder1_Label0" style=" font-weight: 700">
                                         <?= @$mydata->name ? strtoupper(@$mydata->name) : "" ?>
@@ -228,7 +229,7 @@
                                 </td>
                             </tr>
                             <tr class="text-center">
-                                <td colspan="8" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="8" style="border-color:#f7f7f9; background-color:#151515;"
                                     class="text-center">
                                     <div class="tree-border"></div>
                                 </td>
@@ -251,7 +252,7 @@
 
                             ?>
                             <tr class="text-center">
-                                <td colspan="4" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="4" style="border-color:#f7f7f9; background-color:#151515;"
                                     class="text-center"><a
                                         href="{{route('user.tree-view')}}?user_id={{@$childs_1->username}}">
 
@@ -262,7 +263,7 @@
                                             data-toggle="tooltip" data-html="true" data-trigger="hover" title=""
                                             data-placement="bottom" data-original-title=""
                                             src="{{asset('assets')}}/{{$color}}.png"
-                                            style="border-width: 0px;width: 78px;height: 59px;background: #f7f7f9;"
+                                            style="border-width: 0px;width: 78px;height: 59px;background: #151515;"
                                             userName="<?= @$childs_1[0]['name'] ? strtoupper(@$childs_1[0]['name']) : "" ?>">
                                     </a> <br>
                                     <span id="ctl00_ContentPlaceHolder1_Label1" style=" font-weight: 700">
@@ -289,7 +290,7 @@
                                     $color = "empty";
                                 }
                                 ?>
-                                <td colspan="4" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="4" style="border-color:#f7f7f9; background-color:#151515;"
                                     class="text-center"><a
                                         href="{{route('user.tree-view')}}?user_id={{@$childs_2->username}}">
                                         <input type="image" name="ctl00$ContentPlaceHolder1$ImageButton2"
@@ -301,7 +302,7 @@
                                             src="{{asset('assets')}}/{{$color}}.png" style="border-width: 0px;
                                             width: 78px;
                                             height: 59px;
-                                            background: #f7f7f9;
+                                            background: #151515;
                                             ">
                                     </a> <br>
                                     <span id="ctl00_ContentPlaceHolder1_Label2" style=" font-weight: 700">
@@ -313,11 +314,11 @@
                                 </td>
                             </tr>
                             <tr class="text-center">
-                                <td colspan="4" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="4" style="border-color:#f7f7f9; background-color:#151515;"
                                     class="text-center">
                                     <div class="tree-border"></div>
                                 </td>
-                                <td colspan="4" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="4" style="border-color:#f7f7f9; background-color:#151515;"
                                     class="text-center">
                                     <div class="tree-border"></div>
                                 </td>
@@ -340,7 +341,7 @@
                             }
                             ?>
                             <tr class="text-center">
-                                <td colspan="2" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="2" style="border-color:#f7f7f9; background-color:#151515;"
                                     class="text-center"><a
                                         href="{{route('user.tree-view')}}?user_id={{@$childs_3->username}}">
                                         <input type="image" name="ctl00$ContentPlaceHolder1$ImageButton3"
@@ -351,7 +352,7 @@
                                             src="{{asset('assets')}}/{{$color}}.png" style="border-width: 0px;
                                         width: 78px;
                                         height: 59px;
-                                        background: #f7f7f9;
+                                        background: #151515;
                                         ">
                                     </a> <br>
                                     <span id="ctl00_ContentPlaceHolder1_Label3" style=" font-weight: 700">
@@ -378,7 +379,7 @@
                                     $color = "empty";
                                 }
                                 ?>
-                                <td colspan="2" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="2" style="border-color:#f7f7f9; background-color:#151515;"
                                     class="text-center"><a
                                         href="{{route('user.tree-view')}}?user_id={{@$childs_4->username}}">
                                         <input type="image" name="ctl00$ContentPlaceHolder1$ImageButton4"
@@ -390,7 +391,7 @@
                                             src="{{asset('assets')}}/{{$color}}.png" style="border-width: 0px;
                                     width: 78px;
                                     height: 59px;
-                                    background: #f7f7f9;
+                                    background: #151515;
                                     ">
                                     </a> <br>
                                     <span id="ctl00_ContentPlaceHolder1_Label4" style=" font-weight: 700">
@@ -417,7 +418,7 @@
                                     $color = "empty";
                                 }
                                 ?>
-                                <td colspan="2" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="2" style="border-color:#f7f7f9; background-color:#151515;"
                                     class="text-center"><a
                                         href="{{route('user.tree-view')}}?user_id={{@$childs_5->username}}">
                                         <input type="image" name="ctl00$ContentPlaceHolder1$ImageButton5"
@@ -429,7 +430,7 @@
                                             data-placement="bottom" data-original-title="" style="border-width: 0px;
                                         width: 78px;
                                         height: 59px;
-                                        background: #f7f7f9;
+                                        background: #151515;
                                         ">
                                     </a> <br>
                                     <span id="ctl00_ContentPlaceHolder1_Label5" style=" font-weight: 700">
@@ -455,7 +456,7 @@
                                     $color = "empty";
                                 }
                                 ?>
-                                <td colspan="2" style="border-color:#f7f7f9; background-color:#f7f7f9;"
+                                <td colspan="2" style="border-color:#f7f7f9; background-color:#151515;"
                                     class="text-center"><a
                                         href="{{route('user.tree-view')}}?user_id={{@$childs_6->username}}">
                                         <input type="image" name="ctl00$ContentPlaceHolder1$ImageButton6"
@@ -466,7 +467,7 @@
                                             src="{{asset('assets')}}/{{$color}}.png" style="border-width: 0px;
                                         width: 78px;
                                         height: 59px;
-                                        background: #f7f7f9;
+                                        background: #151515;
                                         ">
                                     </a> <br>
                                     <span id="ctl00_ContentPlaceHolder1_Label6" style=" font-weight: 700">
